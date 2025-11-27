@@ -117,8 +117,8 @@ export default function MathsModule() {
                                         key={lesson.id}
                                         onClick={() => setSelectedLesson(index)}
                                         className={`w-full text-left px-4 py-3 rounded-xl transition-all ${selectedLesson === index
-                                                ? 'bg-gradient-to-r from-orange-600 to-red-600 text-white shadow-lg'
-                                                : 'hover:bg-orange-50 text-slate-700'
+                                            ? 'bg-gradient-to-r from-orange-600 to-red-600 text-white shadow-lg'
+                                            : 'hover:bg-orange-50 text-slate-700'
                                             }`}
                                     >
                                         <span className="font-medium">{lesson.title}</span>
@@ -137,7 +137,7 @@ export default function MathsModule() {
                     >
                         <div className="glass rounded-3xl p-8">
                             <div className="flex items-center gap-4 mb-6">
-                                {Icon ? <Icon className="w-12 h-12 text-orange-600" /> : <span className="text-6xl">{currentLesson.icon}</span>}
+                                {Icon ? <Icon className="w-12 h-12 text-orange-600" /> : <span className="text-6xl">{typeof currentLesson.icon === 'string' ? currentLesson.icon : ''}</span>}
                                 <h2 className="text-3xl font-bold text-slate-900">{currentLesson.title}</h2>
                             </div>
 
