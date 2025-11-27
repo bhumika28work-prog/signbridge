@@ -17,7 +17,7 @@ export default function HandTracker() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
     const lastRecognitionTime = useRef(0);
-    const requestRef = useRef<number>();
+    const requestRef = useRef<number>(0);
 
     useEffect(() => {
         const createHandLandmarker = async () => {
