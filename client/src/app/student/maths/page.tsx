@@ -98,7 +98,7 @@ export default function MathsModule() {
                     className="mb-8"
                 >
                     <h1 className="text-4xl font-bold mb-2 gradient-text">Mathematics</h1>
-                    <p className="text-lg text-slate-600">Learn numbers and basic math operations</p>
+                    <p className="text-lg text-cyan-400">Learn numbers and basic math operations</p>
                 </motion.div>
 
                 <div className="grid lg:grid-cols-3 gap-8">
@@ -110,7 +110,7 @@ export default function MathsModule() {
                         className="lg:col-span-1"
                     >
                         <div className="glass rounded-3xl p-6 sticky top-24">
-                            <h2 className="text-xl font-bold mb-4 text-slate-900">Lessons</h2>
+                            <h2 className="text-xl font-bold mb-4 text-white">Lessons</h2>
                             <div className="space-y-2">
                                 {lessons.map((lesson, index) => (
                                     <button
@@ -118,7 +118,7 @@ export default function MathsModule() {
                                         onClick={() => setSelectedLesson(index)}
                                         className={`w-full text-left px-4 py-3 rounded-xl transition-all ${selectedLesson === index
                                             ? 'bg-gradient-to-r from-orange-600 to-red-600 text-white shadow-lg'
-                                            : 'hover:bg-orange-50 text-slate-700'
+                                            : 'hover:bg-orange-50 text-slate-300'
                                             }`}
                                     >
                                         <span className="font-medium">{lesson.title}</span>
@@ -138,17 +138,17 @@ export default function MathsModule() {
                         <div className="glass rounded-3xl p-8">
                             <div className="flex items-center gap-4 mb-6">
                                 {Icon ? <Icon className="w-12 h-12 text-orange-600" /> : <span className="text-6xl">{typeof currentLesson.icon === 'string' ? currentLesson.icon : ''}</span>}
-                                <h2 className="text-3xl font-bold text-slate-900">{currentLesson.title}</h2>
+                                <h2 className="text-3xl font-bold text-white">{currentLesson.title}</h2>
                             </div>
 
                             <div className="mb-6 p-6 bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl">
-                                <p className="text-lg text-slate-700">{currentLesson.content}</p>
+                                <p className="text-lg text-slate-300">{currentLesson.content}</p>
                             </div>
 
                             {/* Numbers Grid (for lesson 1) */}
                             {currentLesson.numbers && (
                                 <div className="mb-6">
-                                    <h3 className="text-xl font-bold mb-4 text-slate-900">Click to see in ISL</h3>
+                                    <h3 className="text-xl font-bold mb-4 text-white">Click to see in ISL</h3>
                                     <div className="grid grid-cols-5 gap-4">
                                         {currentLesson.numbers.map((num) => (
                                             <button
@@ -166,7 +166,7 @@ export default function MathsModule() {
                             {/* Examples (for operations) */}
                             {currentLesson.examples && (
                                 <div className="mb-6">
-                                    <h3 className="text-xl font-bold mb-4 text-slate-900">Examples</h3>
+                                    <h3 className="text-xl font-bold mb-4 text-white">Examples</h3>
                                     <div className="grid sm:grid-cols-2 gap-4">
                                         {currentLesson.examples.map((example, index) => (
                                             <button
@@ -174,7 +174,7 @@ export default function MathsModule() {
                                                 onClick={() => handleShowISL(example)}
                                                 className="p-6 glass rounded-xl hover:shadow-lg transition-all group"
                                             >
-                                                <span className="text-2xl font-bold text-slate-900">{example}</span>
+                                                <span className="text-2xl font-bold text-white">{example}</span>
                                             </button>
                                         ))}
                                     </div>
@@ -186,7 +186,7 @@ export default function MathsModule() {
                                 <div className="mb-6 p-6 bg-blue-50 rounded-2xl">
                                     <h3 className="text-xl font-bold mb-4 text-blue-900">Practice Quiz</h3>
                                     <div className="flex items-center gap-4">
-                                        <span className="text-3xl font-bold text-slate-900">{currentLesson.quiz.question}</span>
+                                        <span className="text-3xl font-bold text-white">{currentLesson.quiz.question}</span>
                                         <input
                                             type="text"
                                             value={quizAnswer}

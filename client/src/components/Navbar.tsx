@@ -21,16 +21,16 @@ export default function Navbar() {
                     </Link>
 
                     <div className="hidden md:flex items-center gap-6">
-                        <a href="#about" className="text-slate-700 hover:text-cyan- font-medium transition-colors">
+                        <a href="#about" className="text-slate-300 hover:text-cyan- font-medium transition-colors">
                             About
                         </a>
-                        <a href="#mission" className="text-slate-700 hover:text-cyan- font-medium transition-colors">
+                        <a href="#mission" className="text-slate-300 hover:text-cyan- font-medium transition-colors">
                             Mission
                         </a>
-                        <Link href="/learn" className="text-slate-700 hover:text-cyan- font-medium transition-colors">
+                        <Link href="/learn" className="text-slate-300 hover:text-cyan- font-medium transition-colors">
                             Learn
                         </Link>
-                        <Link href="/practice" className="text-slate-700 hover:text-cyan- font-medium transition-colors">
+                        <Link href="/practice" className="text-slate-300 hover:text-cyan- font-medium transition-colors">
                             Practice
                         </Link>
 
@@ -40,11 +40,11 @@ export default function Navbar() {
                                     <div className="w-8 h-8 bg-gradient-to-br from-cyan- to-teal- rounded-full flex items-center justify-center">
                                         <User className="w-4 h-4 text-white" />
                                     </div>
-                                    <span className="text-sm font-medium text-slate-700">{user.username}</span>
+                                    <span className="text-sm font-medium text-slate-300">{user.username}</span>
                                 </div>
                                 <button
                                     onClick={logout}
-                                    className="p-2 hover:bg-red-50 rounded-full text-slate-600 hover:text-red-600 transition-colors duration-200"
+                                    className="p-2 hover:bg-red-50 rounded-full text-cyan-400 hover:text-red-600 transition-colors duration-200"
                                 >
                                     <LogOut className="w-5 h-5" />
                                 </button>
@@ -98,7 +98,7 @@ export default function Navbar() {
                                 Practice
                             </Link>
                             {user ? (
-                                <div className="pt-4 border-t border-slate-200">
+                                <div className="pt-4 border-t border-cyan-500/30">
                                     <div className="flex items-center gap-2 px-4 py-3 mb-2">
                                         <User className="w-5 h-5 text-cyan-" />
                                         <span className="font-medium">{user.username}</span>

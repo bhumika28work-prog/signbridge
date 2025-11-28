@@ -104,7 +104,7 @@ export default function SignQuizGame() {
                     className="mb-8"
                 >
                     <h1 className="text-4xl font-bold gradient-text mb-2">Sign Quiz Challenge</h1>
-                    <p className="text-xl text-slate-600">Identify the correct ISL sign!</p>
+                    <p className="text-xl text-cyan-400">Identify the correct ISL sign!</p>
                 </motion.div>
 
                 {/* Start Screen */}
@@ -146,18 +146,18 @@ export default function SignQuizGame() {
                         <div className="grid grid-cols-3 gap-4">
                             <div className="glass rounded-xl p-4 text-center">
                                 <Target className="w-6 h-6 mx-auto mb-2 text-blue-600" />
-                                <p className="text-2xl font-bold text-slate-900">{currentQuestion + 1}/{questions.length}</p>
-                                <p className="text-sm text-slate-600">Question</p>
+                                <p className="text-2xl font-bold text-white">{currentQuestion + 1}/{questions.length}</p>
+                                <p className="text-sm text-cyan-400">Question</p>
                             </div>
                             <div className="glass rounded-xl p-4 text-center">
                                 <Trophy className="w-6 h-6 mx-auto mb-2 text-green-600" />
-                                <p className="text-2xl font-bold text-slate-900">{score}</p>
-                                <p className="text-sm text-slate-600">Score</p>
+                                <p className="text-2xl font-bold text-white">{score}</p>
+                                <p className="text-sm text-cyan-400">Score</p>
                             </div>
                             <div className="glass rounded-xl p-4 text-center">
                                 <Zap className="w-6 h-6 mx-auto mb-2 text-yellow-600" />
-                                <p className="text-2xl font-bold text-slate-900">{streak}</p>
-                                <p className="text-sm text-slate-600">Streak</p>
+                                <p className="text-2xl font-bold text-white">{streak}</p>
+                                <p className="text-sm text-cyan-400">Streak</p>
                             </div>
                         </div>
 
@@ -199,7 +199,7 @@ export default function SignQuizGame() {
                                             className="object-contain"
                                         />
                                     </div>
-                                    <p className="text-3xl font-bold text-slate-900">{option}</p>
+                                    <p className="text-3xl font-bold text-white">{option}</p>
 
                                     {/* Feedback Icons */}
                                     <AnimatePresence>
@@ -279,7 +279,7 @@ export default function SignQuizGame() {
                                     </button>
                                     <Link
                                         href="/student/games"
-                                        className="flex-1 px-6 py-3 bg-white text-cyan- font-bold rounded-xl hover:shadow-xl transition-all flex items-center justify-center gap-2"
+                                        className="flex-1 px-6 py-3 bg-slate-800 text-cyan- font-bold rounded-xl hover:shadow-xl transition-all flex items-center justify-center gap-2"
                                     >
                                         Games Menu
                                     </Link>

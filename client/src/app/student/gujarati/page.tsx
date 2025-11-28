@@ -119,7 +119,7 @@ export default function GujaratiModule() {
                     className="mb-8"
                 >
                     <h1 className="text-4xl font-bold mb-2 gradient-text">Gujarati Module</h1>
-                    <p className="text-lg text-slate-600">Learn Gujarati with Indian Sign Language</p>
+                    <p className="text-lg text-cyan-400">Learn Gujarati with Indian Sign Language</p>
                 </motion.div>
 
                 {/* Tab Navigation */}
@@ -134,7 +134,7 @@ export default function GujaratiModule() {
                             onClick={() => setActiveTab('lessons')}
                             className={`flex items-center gap-2 px-4 py-2 rounded-xl font-semibold transition-all ${activeTab === 'lessons'
                                     ? 'bg-gradient-to-r from-cyan- to-teal- text-white shadow-lg'
-                                    : 'text-slate-600 hover:bg-white/50'
+                                    : 'text-cyan-400 hover:bg-white/50'
                                 }`}
                         >
                             <BookOpen className="w-4 h-4" />
@@ -144,7 +144,7 @@ export default function GujaratiModule() {
                             onClick={() => setActiveTab('alphabet')}
                             className={`flex items-center gap-2 px-4 py-2 rounded-xl font-semibold transition-all ${activeTab === 'alphabet'
                                     ? 'bg-gradient-to-r from-cyan- to-teal- text-white shadow-lg'
-                                    : 'text-slate-600 hover:bg-white/50'
+                                    : 'text-cyan-400 hover:bg-white/50'
                                 }`}
                         >
                             <Grid3x3 className="w-4 h-4" />
@@ -154,7 +154,7 @@ export default function GujaratiModule() {
                             onClick={() => setActiveTab('text-to-sign')}
                             className={`flex items-center gap-2 px-4 py-2 rounded-xl font-semibold transition-all ${activeTab === 'text-to-sign'
                                     ? 'bg-gradient-to-r from-cyan- to-teal- text-white shadow-lg'
-                                    : 'text-slate-600 hover:bg-white/50'
+                                    : 'text-cyan-400 hover:bg-white/50'
                                 }`}
                         >
                             <MessageSquare className="w-4 h-4" />
@@ -164,7 +164,7 @@ export default function GujaratiModule() {
                             onClick={() => setActiveTab('sign-to-text')}
                             className={`flex items-center gap-2 px-4 py-2 rounded-xl font-semibold transition-all ${activeTab === 'sign-to-text'
                                     ? 'bg-gradient-to-r from-cyan- to-teal- text-white shadow-lg'
-                                    : 'text-slate-600 hover:bg-white/50'
+                                    : 'text-cyan-400 hover:bg-white/50'
                                 }`}
                         >
                             <Camera className="w-4 h-4" />
@@ -174,7 +174,7 @@ export default function GujaratiModule() {
                             onClick={() => setActiveTab('speech-to-sign')}
                             className={`flex items-center gap-2 px-4 py-2 rounded-xl font-semibold transition-all ${activeTab === 'speech-to-sign'
                                     ? 'bg-gradient-to-r from-cyan- to-teal- text-white shadow-lg'
-                                    : 'text-slate-600 hover:bg-white/50'
+                                    : 'text-cyan-400 hover:bg-white/50'
                                 }`}
                         >
                             <Mic className="w-4 h-4" />
@@ -189,7 +189,7 @@ export default function GujaratiModule() {
                         {/* Lesson List */}
                         <div className="lg:col-span-1">
                             <div className="glass rounded-3xl p-6 sticky top-24">
-                                <h2 className="text-xl font-bold mb-4 text-slate-900">Lessons</h2>
+                                <h2 className="text-xl font-bold mb-4 text-white">Lessons</h2>
                                 <div className="space-y-2">
                                     {lessons.map((lesson, index) => (
                                         <button
@@ -197,7 +197,7 @@ export default function GujaratiModule() {
                                             onClick={() => setSelectedLesson(index)}
                                             className={`w-full text-left px-4 py-3 rounded-xl transition-all ${selectedLesson === index
                                                     ? 'bg-gradient-to-r from-cyan- to-teal- text-white shadow-lg'
-                                                    : 'hover:bg-cyan- text-slate-700'
+                                                    : 'hover:bg-cyan- text-slate-300'
                                                 }`}
                                         >
                                             <div className="flex items-center justify-between">
@@ -214,12 +214,12 @@ export default function GujaratiModule() {
                         <div className="lg:col-span-2">
                             <div className="glass rounded-3xl p-8">
                                 <div className="flex items-center justify-between mb-6">
-                                    <h2 className="text-3xl font-bold text-slate-900">{currentLesson.title}</h2>
+                                    <h2 className="text-3xl font-bold text-white">{currentLesson.title}</h2>
                                     <div className="text-6xl font-bold gradient-text">{currentLesson.character}</div>
                                 </div>
 
                                 <div className="mb-6 p-6 bg-gradient-to-br from-cyan- to-teal- rounded-2xl">
-                                    <p className="text-lg text-slate-700 mb-4">{currentLesson.content}</p>
+                                    <p className="text-lg text-slate-300 mb-4">{currentLesson.content}</p>
                                     <div className="flex items-center gap-2 text-cyan-">
                                         <Volume2 className="w-5 h-5" />
                                         <span className="font-semibold">Pronunciation: {currentLesson.pronunciation}</span>
@@ -245,11 +245,11 @@ export default function GujaratiModule() {
                                 {/* Practice Section */}
                                 <div className="mt-8 p-6 bg-blue-50 rounded-2xl">
                                     <h3 className="text-xl font-bold mb-4 text-blue-900">Practice Writing</h3>
-                                    <div className="bg-white rounded-xl p-8 border-2 border-dashed border-blue-300">
+                                    <div className="bg-slate-800 rounded-xl p-8 border-2 border-dashed border-blue-300">
                                         <p className="text-center text-7xl font-bold text-slate-300 select-none">
                                             {currentLesson.character}
                                         </p>
-                                        <p className="text-center text-sm text-slate-500 mt-4">
+                                        <p className="text-center text-sm text-slate-400 mt-4">
                                             Trace the character above to practice
                                         </p>
                                     </div>
@@ -280,9 +280,9 @@ export default function GujaratiModule() {
                 {activeTab === 'alphabet' && (
                     <div className="glass rounded-3xl p-8">
                         <h2 className="text-3xl font-bold mb-6 gradient-text">Complete Gujarati Alphabet Chart</h2>
-                        <p className="text-slate-600 mb-6">Click any character to see its ISL sign</p>
+                        <p className="text-cyan-400 mb-6">Click any character to see its ISL sign</p>
 
-                        <h3 className="text-xl font-bold mb-4 text-slate-900">Vowels (સ્વરો)</h3>
+                        <h3 className="text-xl font-bold mb-4 text-white">Vowels (સ્વરો)</h3>
                         <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-12 gap-4 mb-8">
                             {gujaratiVowels.map((char) => (
                                 <button
@@ -295,7 +295,7 @@ export default function GujaratiModule() {
                             ))}
                         </div>
 
-                        <h3 className="text-xl font-bold mb-4 text-slate-900">Consonants (વ્યંજનો)</h3>
+                        <h3 className="text-xl font-bold mb-4 text-white">Consonants (વ્યંજનો)</h3>
                         <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-12 gap-4 mb-8">
                             {gujaratiConsonants.map((char) => (
                                 <button
@@ -322,16 +322,16 @@ export default function GujaratiModule() {
                                 value={inputText}
                                 onChange={(e) => handleTextConversion(e.target.value)}
                                 placeholder="ગુજરાતી લખો..."
-                                className="w-full h-40 px-4 py-3 rounded-xl border-2 border-slate-200 focus:border-cyan- focus:ring-4 focus:ring-cyan- transition-all resize-none mb-4"
+                                className="w-full h-40 px-4 py-3 rounded-xl border-2 border-cyan-500/30 focus:border-cyan- focus:ring-4 focus:ring-cyan- transition-all resize-none mb-4"
                             />
                             <div className="space-y-2">
-                                <p className="text-sm font-semibold text-slate-700">Quick Phrases:</p>
+                                <p className="text-sm font-semibold text-slate-300">Quick Phrases:</p>
                                 <div className="flex flex-wrap gap-2">
                                     {['નમસ્તે', 'આભાર', 'શુભ પ્રભાત', 'તમે કેમ છો?', 'મારું નામ'].map((phrase) => (
                                         <button
                                             key={phrase}
                                             onClick={() => handleTextConversion(phrase)}
-                                            className="px-4 py-2 bg-white rounded-lg text-sm font-medium text-slate-700 hover:bg-gradient-to-r hover:from-cyan- hover:to-teal- hover:text-white transition-all"
+                                            className="px-4 py-2 bg-slate-800 rounded-lg text-sm font-medium text-slate-300 hover:bg-gradient-to-r hover:from-cyan- hover:to-teal- hover:text-white transition-all"
                                         >
                                             {phrase}
                                         </button>
@@ -345,7 +345,7 @@ export default function GujaratiModule() {
                                 <ISLSignDisplay signs={gujaratiToISL(inputText)} autoPlay={false} />
                             ) : (
                                 <div className="h-40 flex items-center justify-center bg-gradient-to-br from-cyan- to-teal- rounded-xl">
-                                    <p className="text-slate-500">Type Gujarati text to see ISL signs</p>
+                                    <p className="text-slate-400">Type Gujarati text to see ISL signs</p>
                                 </div>
                             )}
                         </div>
@@ -355,7 +355,7 @@ export default function GujaratiModule() {
                 {activeTab === 'sign-to-text' && (
                     <div className="glass rounded-3xl p-8">
                         <h2 className="text-2xl font-bold mb-6 gradient-text">Real-time Sign Recognition</h2>
-                        <p className="text-slate-600 mb-6">
+                        <p className="text-cyan-400 mb-6">
                             Show hand signs to the camera. Our AI will recognize and convert them to Gujarati text.
                         </p>
                         <HandTracker />
@@ -371,7 +371,7 @@ export default function GujaratiModule() {
                                     onClick={handleSpeechToText}
                                     className={`p-8 rounded-full transition-all duration-300 ${isListening
                                             ? 'bg-red-500 text-white animate-pulse scale-110'
-                                            : 'bg-white text-cyan- hover:scale-110'
+                                            : 'bg-slate-800 text-cyan- hover:scale-110'
                                         } shadow-xl`}
                                 >
                                     <Mic className="w-12 h-12" />
@@ -400,7 +400,7 @@ export default function GujaratiModule() {
                                 <ISLSignDisplay signs={gujaratiToISL(inputText)} autoPlay={true} />
                             ) : (
                                 <div className="h-40 flex items-center justify-center bg-gradient-to-br from-cyan- to-teal- rounded-xl">
-                                    <p className="text-slate-500">Speak to see ISL signs</p>
+                                    <p className="text-slate-400">Speak to see ISL signs</p>
                                 </div>
                             )}
                         </div>

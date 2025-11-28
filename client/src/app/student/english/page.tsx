@@ -117,7 +117,7 @@ export default function EnglishModule() {
                     className="mb-8"
                 >
                     <h1 className="text-4xl font-bold mb-2 gradient-text">English Module</h1>
-                    <p className="text-lg text-slate-600">Learn English with Indian Sign Language</p>
+                    <p className="text-lg text-cyan-400">Learn English with Indian Sign Language</p>
                 </motion.div>
 
                 {/* Tab Navigation */}
@@ -132,7 +132,7 @@ export default function EnglishModule() {
                             onClick={() => setActiveTab('lessons')}
                             className={`flex items-center gap-2 px-4 py-2 rounded-xl font-semibold transition-all ${activeTab === 'lessons'
                                     ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg'
-                                    : 'text-slate-600 hover:bg-white/50'
+                                    : 'text-cyan-400 hover:bg-white/50'
                                 }`}
                         >
                             <BookOpen className="w-4 h-4" />
@@ -142,7 +142,7 @@ export default function EnglishModule() {
                             onClick={() => setActiveTab('alphabet')}
                             className={`flex items-center gap-2 px-4 py-2 rounded-xl font-semibold transition-all ${activeTab === 'alphabet'
                                     ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg'
-                                    : 'text-slate-600 hover:bg-white/50'
+                                    : 'text-cyan-400 hover:bg-white/50'
                                 }`}
                         >
                             <Grid3x3 className="w-4 h-4" />
@@ -152,7 +152,7 @@ export default function EnglishModule() {
                             onClick={() => setActiveTab('text-to-sign')}
                             className={`flex items-center gap-2 px-4 py-2 rounded-xl font-semibold transition-all ${activeTab === 'text-to-sign'
                                     ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg'
-                                    : 'text-slate-600 hover:bg-white/50'
+                                    : 'text-cyan-400 hover:bg-white/50'
                                 }`}
                         >
                             <MessageSquare className="w-4 h-4" />
@@ -162,7 +162,7 @@ export default function EnglishModule() {
                             onClick={() => setActiveTab('sign-to-text')}
                             className={`flex items-center gap-2 px-4 py-2 rounded-xl font-semibold transition-all ${activeTab === 'sign-to-text'
                                     ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg'
-                                    : 'text-slate-600 hover:bg-white/50'
+                                    : 'text-cyan-400 hover:bg-white/50'
                                 }`}
                         >
                             <Camera className="w-4 h-4" />
@@ -172,7 +172,7 @@ export default function EnglishModule() {
                             onClick={() => setActiveTab('speech-to-sign')}
                             className={`flex items-center gap-2 px-4 py-2 rounded-xl font-semibold transition-all ${activeTab === 'speech-to-sign'
                                     ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg'
-                                    : 'text-slate-600 hover:bg-white/50'
+                                    : 'text-cyan-400 hover:bg-white/50'
                                 }`}
                         >
                             <Mic className="w-4 h-4" />
@@ -187,7 +187,7 @@ export default function EnglishModule() {
                         {/* Lesson List */}
                         <div className="lg:col-span-1">
                             <div className="glass rounded-3xl p-6 sticky top-24">
-                                <h2 className="text-xl font-bold mb-4 text-slate-900">Lessons</h2>
+                                <h2 className="text-xl font-bold mb-4 text-white">Lessons</h2>
                                 <div className="space-y-2">
                                     {lessons.map((lesson, index) => (
                                         <button
@@ -195,7 +195,7 @@ export default function EnglishModule() {
                                             onClick={() => setSelectedLesson(index)}
                                             className={`w-full text-left px-4 py-3 rounded-xl transition-all ${selectedLesson === index
                                                     ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg'
-                                                    : 'hover:bg-blue-50 text-slate-700'
+                                                    : 'hover:bg-blue-50 text-slate-300'
                                                 }`}
                                         >
                                             <span className="font-medium">{lesson.title}</span>
@@ -208,9 +208,9 @@ export default function EnglishModule() {
                         {/* Lesson Content */}
                         <div className="lg:col-span-2">
                             <div className="glass rounded-3xl p-8">
-                                <h2 className="text-3xl font-bold text-slate-900 mb-6">{currentLesson.title}</h2>
+                                <h2 className="text-3xl font-bold text-white mb-6">{currentLesson.title}</h2>
                                 <div className="mb-6 p-6 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl">
-                                    <p className="text-lg text-slate-700">{currentLesson.content}</p>
+                                    <p className="text-lg text-slate-300">{currentLesson.content}</p>
                                 </div>
 
                                 {/* Letters Grid */}
@@ -222,7 +222,7 @@ export default function EnglishModule() {
                                             className="aspect-square glass rounded-2xl flex flex-col items-center justify-center hover:shadow-lg transition-all group"
                                         >
                                             <span className="text-4xl font-bold gradient-text mb-2">{char}</span>
-                                            <span className="text-xs text-slate-600 group-hover:text-blue-600 transition-colors">
+                                            <span className="text-xs text-cyan-400 group-hover:text-blue-600 transition-colors">
                                                 Show ISL
                                             </span>
                                         </button>
@@ -231,7 +231,7 @@ export default function EnglishModule() {
 
                                 {/* Words Section */}
                                 <div className="mb-6">
-                                    <h3 className="text-xl font-bold mb-4 text-slate-900">Practice Words</h3>
+                                    <h3 className="text-xl font-bold mb-4 text-white">Practice Words</h3>
                                     <div className="grid sm:grid-cols-2 gap-4">
                                         {currentLesson.words.map((word, index) => (
                                             <button
@@ -239,7 +239,7 @@ export default function EnglishModule() {
                                                 onClick={() => handleShowISL(word)}
                                                 className="flex items-center justify-between p-4 glass rounded-xl hover:shadow-lg transition-all group"
                                             >
-                                                <span className="font-semibold text-slate-900">{word}</span>
+                                                <span className="font-semibold text-white">{word}</span>
                                                 <BookOpen className="w-5 h-5 text-blue-600 group-hover:scale-110 transition-transform" />
                                             </button>
                                         ))}
@@ -278,7 +278,7 @@ export default function EnglishModule() {
                 {activeTab === 'alphabet' && (
                     <div className="glass rounded-3xl p-8">
                         <h2 className="text-3xl font-bold mb-6 gradient-text">Complete A-Z Alphabet Chart</h2>
-                        <p className="text-slate-600 mb-8">Click any letter to see its ISL sign</p>
+                        <p className="text-cyan-400 mb-8">Click any letter to see its ISL sign</p>
                         <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-10 gap-4 mb-8">
                             {alphabet.map((letter) => (
                                 <button
@@ -304,16 +304,16 @@ export default function EnglishModule() {
                                 value={inputText}
                                 onChange={(e) => handleTextConversion(e.target.value)}
                                 placeholder="Type any English text to convert to ISL..."
-                                className="w-full h-40 px-4 py-3 rounded-xl border-2 border-slate-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-100 transition-all resize-none mb-4"
+                                className="w-full h-40 px-4 py-3 rounded-xl border-2 border-cyan-500/30 focus:border-blue-500 focus:ring-4 focus:ring-blue-100 transition-all resize-none mb-4"
                             />
                             <div className="space-y-2">
-                                <p className="text-sm font-semibold text-slate-700">Quick Phrases:</p>
+                                <p className="text-sm font-semibold text-slate-300">Quick Phrases:</p>
                                 <div className="flex flex-wrap gap-2">
                                     {['Hello', 'Thank you', 'Good morning', 'How are you?', 'My name is'].map((phrase) => (
                                         <button
                                             key={phrase}
                                             onClick={() => handleTextConversion(phrase)}
-                                            className="px-4 py-2 bg-white rounded-lg text-sm font-medium text-slate-700 hover:bg-gradient-to-r hover:from-blue-600 hover:to-cyan-600 hover:text-white transition-all"
+                                            className="px-4 py-2 bg-slate-800 rounded-lg text-sm font-medium text-slate-300 hover:bg-gradient-to-r hover:from-blue-600 hover:to-cyan-600 hover:text-white transition-all"
                                         >
                                             {phrase}
                                         </button>
@@ -327,7 +327,7 @@ export default function EnglishModule() {
                                 <ISLSignDisplay signs={textToISL(inputText)} autoPlay={false} />
                             ) : (
                                 <div className="h-40 flex items-center justify-center bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl">
-                                    <p className="text-slate-500">Type text to see ISL signs</p>
+                                    <p className="text-slate-400">Type text to see ISL signs</p>
                                 </div>
                             )}
                         </div>
@@ -337,7 +337,7 @@ export default function EnglishModule() {
                 {activeTab === 'sign-to-text' && (
                     <div className="glass rounded-3xl p-8">
                         <h2 className="text-2xl font-bold mb-6 gradient-text">Real-time Sign Recognition</h2>
-                        <p className="text-slate-600 mb-6">
+                        <p className="text-cyan-400 mb-6">
                             Show hand signs to the camera. Our AI will recognize and convert them to text.
                         </p>
                         <HandTracker />
@@ -353,7 +353,7 @@ export default function EnglishModule() {
                                     onClick={handleSpeechToText}
                                     className={`p-8 rounded-full transition-all duration-300 ${isListening
                                             ? 'bg-red-500 text-white animate-pulse scale-110'
-                                            : 'bg-white text-blue-600 hover:scale-110'
+                                            : 'bg-slate-800 text-blue-600 hover:scale-110'
                                         } shadow-xl`}
                                 >
                                     <Mic className="w-12 h-12" />
@@ -382,7 +382,7 @@ export default function EnglishModule() {
                                 <ISLSignDisplay signs={textToISL(inputText)} autoPlay={true} />
                             ) : (
                                 <div className="h-40 flex items-center justify-center bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl">
-                                    <p className="text-slate-500">Speak to see ISL signs</p>
+                                    <p className="text-slate-400">Speak to see ISL signs</p>
                                 </div>
                             )}
                         </div>

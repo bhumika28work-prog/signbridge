@@ -178,7 +178,7 @@ export default function HandTracker() {
         return (
             <div className="flex flex-col items-center justify-center p-12 glass rounded-2xl">
                 <div className="w-12 h-12 border-4 border-purple-600 border-t-transparent rounded-full animate-spin mb-4"></div>
-                <p className="text-lg font-semibold text-slate-700">Loading AI Model...</p>
+                <p className="text-lg font-semibold text-slate-300">Loading AI Model...</p>
             </div>
         );
     }
@@ -217,26 +217,26 @@ export default function HandTracker() {
                             Clear
                         </button>
                     </div>
-                    <div className="bg-white rounded-xl p-6 border-2 border-purple-200 min-h-24">
-                        <p className="text-3xl font-bold text-slate-900">
+                    <div className="bg-slate-800 rounded-xl p-6 border-2 border-purple-200 min-h-24">
+                        <p className="text-3xl font-bold text-white">
                             {recognizedText || <span className="text-slate-300">Make a sign to start...</span>}
                         </p>
                     </div>
                     {currentLetter && (
                         <div className="mt-4 flex items-center gap-4">
                             <div className="flex items-center gap-2">
-                                <span className="text-sm font-semibold text-slate-600">Current Sign:</span>
+                                <span className="text-sm font-semibold text-cyan-400">Current Sign:</span>
                                 <span className="text-4xl font-bold gradient-text">{currentLetter}</span>
                             </div>
                             <div className="flex items-center gap-2">
-                                <span className="text-sm font-semibold text-slate-600">Confidence:</span>
+                                <span className="text-sm font-semibold text-cyan-400">Confidence:</span>
                                 <div className="w-32 h-2 bg-slate-200 rounded-full overflow-hidden">
                                     <div
                                         className="h-full bg-gradient-to-r from-green-500 to-emerald-500 transition-all duration-300"
                                         style={{ width: `${confidence * 100}%` }}
                                     />
                                 </div>
-                                <span className="text-sm font-bold text-slate-900">{Math.round(confidence * 100)}%</span>
+                                <span className="text-sm font-bold text-white">{Math.round(confidence * 100)}%</span>
                             </div>
                         </div>
                     )}
@@ -321,19 +321,19 @@ export default function HandTracker() {
                     animate={{ opacity: 1, y: 0 }}
                     className="glass rounded-2xl p-6"
                 >
-                    <h4 className="font-bold text-slate-900 mb-3">✋ Supported Signs</h4>
+                    <h4 className="font-bold text-white mb-3">✋ Supported Signs</h4>
                     <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                        <div className="bg-white rounded-xl p-3 text-center">
+                        <div className="bg-slate-800 rounded-xl p-3 text-center">
                             <p className="text-2xl font-bold gradient-text mb-1">0-5</p>
-                            <p className="text-xs text-slate-600">Numbers</p>
+                            <p className="text-xs text-cyan-400">Numbers</p>
                         </div>
-                        <div className="bg-white rounded-xl p-3 text-center">
+                        <div className="bg-slate-800 rounded-xl p-3 text-center">
                             <p className="text-2xl font-bold gradient-text mb-1">A</p>
-                            <p className="text-xs text-slate-600">Thumbs Up</p>
+                            <p className="text-xs text-cyan-400">Thumbs Up</p>
                         </div>
-                        <div className="bg-white rounded-xl p-3 text-center">
+                        <div className="bg-slate-800 rounded-xl p-3 text-center">
                             <p className="text-2xl font-bold gradient-text mb-1">B</p>
-                            <p className="text-xs text-slate-600">Open Palm</p>
+                            <p className="text-xs text-cyan-400">Open Palm</p>
                         </div>
                     </div>
                 </motion.div>

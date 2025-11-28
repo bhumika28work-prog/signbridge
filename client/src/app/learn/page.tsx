@@ -74,7 +74,7 @@ export default function LearnPage() {
                     <h1 className="text-5xl sm:text-6xl font-extrabold mb-6">
                         <span className="gradient-text">Learning Modules</span>
                     </h1>
-                    <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+                    <p className="text-xl text-cyan-400 max-w-2xl mx-auto">
                         Select a module to begin your sign language learning journey
                     </p>
                 </motion.div>
@@ -101,19 +101,19 @@ export default function LearnPage() {
                                         </div>
 
                                         {/* Content */}
-                                        <h3 className="text-2xl font-bold mb-3 text-slate-900 group-hover:gradient-text transition-all duration-300">
+                                        <h3 className="text-2xl font-bold mb-3 text-white group-hover:gradient-text transition-all duration-300">
                                             {module.title}
                                         </h3>
-                                        <p className="text-slate-600 mb-6 leading-relaxed">
+                                        <p className="text-cyan-400 mb-6 leading-relaxed">
                                             {module.description}
                                         </p>
 
                                         {/* Meta Info */}
                                         <div className="flex items-center gap-4 mb-6">
-                                            <span className="px-3 py-1 bg-slate-100 rounded-full text-sm font-medium text-slate-700">
+                                            <span className="px-3 py-1 bg-slate-800 rounded-full text-sm font-medium text-slate-300">
                                                 {module.lessons} Lessons
                                             </span>
-                                            <span className="px-3 py-1 bg-slate-100 rounded-full text-sm font-medium text-slate-700">
+                                            <span className="px-3 py-1 bg-slate-800 rounded-full text-sm font-medium text-slate-300">
                                                 {module.difficulty}
                                             </span>
                                         </div>
@@ -139,7 +139,7 @@ export default function LearnPage() {
                 >
                     <div className="glass rounded-3xl p-8 max-w-2xl mx-auto">
                         <h3 className="text-2xl font-bold mb-3">Need Help Getting Started?</h3>
-                        <p className="text-slate-600 mb-6">
+                        <p className="text-cyan-400 mb-6">
                             Not sure which module to choose? Try our AI-powered practice mode to assess your current level.
                         </p>
                         <Link

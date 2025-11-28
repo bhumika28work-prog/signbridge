@@ -58,7 +58,7 @@ export default function TeacherSyllabus() {
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
                     <div>
                         <h1 className="text-4xl font-bold gradient-text">Manage Syllabus</h1>
-                        <p className="text-slate-600 mt-2">Create and organize learning materials</p>
+                        <p className="text-cyan-400 mt-2">Create and organize learning materials</p>
                     </div>
                     <button
                         onClick={() => setIsAdding(true)}
@@ -78,7 +78,7 @@ export default function TeacherSyllabus() {
                                 onClick={() => setActiveModule(module)}
                                 className={`w-full text-left px-4 py-3 rounded-xl font-medium transition-all ${activeModule === module
                                         ? 'bg-purple-600 text-white shadow-lg'
-                                        : 'bg-white text-slate-600 hover:bg-purple-50'
+                                        : 'bg-slate-800 text-cyan-400 hover:bg-purple-50'
                                     }`}
                             >
                                 {module}
@@ -100,31 +100,31 @@ export default function TeacherSyllabus() {
                                     <h3 className="text-lg font-bold mb-4">Add New Lesson</h3>
                                     <div className="grid md:grid-cols-2 gap-4 mb-4">
                                         <div>
-                                            <label className="block text-sm font-medium text-slate-700 mb-1">Title</label>
+                                            <label className="block text-sm font-medium text-slate-300 mb-1">Title</label>
                                             <input
                                                 type="text"
                                                 value={newLesson.title}
                                                 onChange={e => setNewLesson({ ...newLesson, title: e.target.value })}
-                                                className="w-full px-4 py-2 rounded-xl border border-slate-200 focus:ring-2 focus:ring-purple-500 outline-none"
+                                                className="w-full px-4 py-2 rounded-xl border border-cyan-500/30 focus:ring-2 focus:ring-purple-500 outline-none"
                                                 placeholder="Lesson Title"
                                             />
                                         </div>
                                         <div>
-                                            <label className="block text-sm font-medium text-slate-700 mb-1">Duration</label>
+                                            <label className="block text-sm font-medium text-slate-300 mb-1">Duration</label>
                                             <input
                                                 type="text"
                                                 value={newLesson.duration}
                                                 onChange={e => setNewLesson({ ...newLesson, duration: e.target.value })}
-                                                className="w-full px-4 py-2 rounded-xl border border-slate-200 focus:ring-2 focus:ring-purple-500 outline-none"
+                                                className="w-full px-4 py-2 rounded-xl border border-cyan-500/30 focus:ring-2 focus:ring-purple-500 outline-none"
                                                 placeholder="e.g. 15 mins"
                                             />
                                         </div>
                                         <div>
-                                            <label className="block text-sm font-medium text-slate-700 mb-1">Type</label>
+                                            <label className="block text-sm font-medium text-slate-300 mb-1">Type</label>
                                             <select
                                                 value={newLesson.type}
                                                 onChange={e => setNewLesson({ ...newLesson, type: e.target.value })}
-                                                className="w-full px-4 py-2 rounded-xl border border-slate-200 focus:ring-2 focus:ring-purple-500 outline-none"
+                                                className="w-full px-4 py-2 rounded-xl border border-cyan-500/30 focus:ring-2 focus:ring-purple-500 outline-none"
                                             >
                                                 <option>Video</option>
                                                 <option>Text</option>
@@ -133,11 +133,11 @@ export default function TeacherSyllabus() {
                                             </select>
                                         </div>
                                         <div>
-                                            <label className="block text-sm font-medium text-slate-700 mb-1">Module</label>
+                                            <label className="block text-sm font-medium text-slate-300 mb-1">Module</label>
                                             <select
                                                 value={newLesson.module}
                                                 onChange={e => setNewLesson({ ...newLesson, module: e.target.value })}
-                                                className="w-full px-4 py-2 rounded-xl border border-slate-200 focus:ring-2 focus:ring-purple-500 outline-none"
+                                                className="w-full px-4 py-2 rounded-xl border border-cyan-500/30 focus:ring-2 focus:ring-purple-500 outline-none"
                                             >
                                                 <option>English</option>
                                                 <option>Gujarati</option>
@@ -149,7 +149,7 @@ export default function TeacherSyllabus() {
                                     <div className="flex justify-end gap-3">
                                         <button
                                             onClick={() => setIsAdding(false)}
-                                            className="px-4 py-2 text-slate-600 hover:bg-slate-100 rounded-lg transition-colors"
+                                            className="px-4 py-2 text-cyan-400 hover:bg-slate-800 rounded-lg transition-colors"
                                         >
                                             Cancel
                                         </button>
@@ -168,7 +168,7 @@ export default function TeacherSyllabus() {
                         {/* Lessons List */}
                         <div className="space-y-4">
                             {filteredLessons.length === 0 ? (
-                                <div className="text-center py-12 text-slate-500 bg-white/50 rounded-2xl border-2 border-dashed border-slate-200">
+                                <div className="text-center py-12 text-slate-400 bg-white/50 rounded-2xl border-2 border-dashed border-cyan-500/30">
                                     No lessons found for this module. Add one to get started!
                                 </div>
                             ) : (
@@ -189,8 +189,8 @@ export default function TeacherSyllabus() {
                                                         <BookOpen className="w-6 h-6" />}
                                             </div>
                                             <div>
-                                                <h3 className="font-bold text-slate-900">{lesson.title}</h3>
-                                                <p className="text-sm text-slate-500">{lesson.duration} • {lesson.type}</p>
+                                                <h3 className="font-bold text-white">{lesson.title}</h3>
+                                                <p className="text-sm text-slate-400">{lesson.duration} • {lesson.type}</p>
                                             </div>
                                         </div>
                                         <div className="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">

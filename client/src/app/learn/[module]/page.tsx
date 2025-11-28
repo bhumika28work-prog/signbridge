@@ -53,7 +53,7 @@ export default function ModulePage() {
             <div className="flex justify-center items-center min-h-screen">
                 <div className="text-center">
                     <div className="w-16 h-16 border-4 border-purple-600 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-                    <p className="text-slate-600 font-medium">Loading lessons...</p>
+                    <p className="text-cyan-400 font-medium">Loading lessons...</p>
                 </div>
             </div>
         );

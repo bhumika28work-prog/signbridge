@@ -141,7 +141,7 @@ export default function MemoryMatchGame() {
                     className="mb-8"
                 >
                     <h1 className="text-4xl font-bold gradient-text mb-2">Sign Memory Match</h1>
-                    <p className="text-xl text-slate-600">Match pairs of ISL signs!</p>
+                    <p className="text-xl text-cyan-400">Match pairs of ISL signs!</p>
                 </motion.div>
 
                 {/* Game Stats */}
@@ -149,18 +149,18 @@ export default function MemoryMatchGame() {
                     <div className="grid grid-cols-3 gap-4 mb-8">
                         <div className="glass rounded-xl p-4 text-center">
                             <Timer className="w-6 h-6 mx-auto mb-2 text-blue-600" />
-                            <p className="text-2xl font-bold text-slate-900">{formatTime(timer)}</p>
-                            <p className="text-sm text-slate-600">Time</p>
+                            <p className="text-2xl font-bold text-white">{formatTime(timer)}</p>
+                            <p className="text-sm text-cyan-400">Time</p>
                         </div>
                         <div className="glass rounded-xl p-4 text-center">
                             <Trophy className="w-6 h-6 mx-auto mb-2 text-green-600" />
-                            <p className="text-2xl font-bold text-slate-900">{moves}</p>
-                            <p className="text-sm text-slate-600">Moves</p>
+                            <p className="text-2xl font-bold text-white">{moves}</p>
+                            <p className="text-sm text-cyan-400">Moves</p>
                         </div>
                         <div className="glass rounded-xl p-4 text-center">
                             <Star className="w-6 h-6 mx-auto mb-2 text-yellow-600" />
-                            <p className="text-2xl font-bold text-slate-900">{matches}/{cards.length / 2}</p>
-                            <p className="text-sm text-slate-600">Matches</p>
+                            <p className="text-2xl font-bold text-white">{matches}/{cards.length / 2}</p>
+                            <p className="text-sm text-cyan-400">Matches</p>
                         </div>
                     </div>
                 )}
@@ -233,7 +233,7 @@ export default function MemoryMatchGame() {
 
                                         {/* Card Front */}
                                         <div
-                                            className="absolute w-full h-full bg-white rounded-2xl p-3 shadow-lg flex items-center justify-center"
+                                            className="absolute w-full h-full bg-slate-800 rounded-2xl p-3 shadow-lg flex items-center justify-center"
                                             style={{
                                                 backfaceVisibility: 'hidden',
                                                 transform: 'rotateY(180deg)'
@@ -301,7 +301,7 @@ export default function MemoryMatchGame() {
                                     </button>
                                     <Link
                                         href="/student/games"
-                                        className="flex-1 px-6 py-3 bg-white text-cyan- font-bold rounded-xl hover:shadow-xl transition-all flex items-center justify-center gap-2"
+                                        className="flex-1 px-6 py-3 bg-slate-800 text-cyan- font-bold rounded-xl hover:shadow-xl transition-all flex items-center justify-center gap-2"
                                     >
                                         <ArrowLeft className="w-5 h-5" />
                                         Games Menu

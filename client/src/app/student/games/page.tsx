@@ -85,7 +85,7 @@ export default function GamesPage() {
                             <h1 className="text-4xl sm:text-5xl font-bold gradient-text">
                                 Learning Games
                             </h1>
-                            <p className="text-xl text-slate-600 mt-2">
+                            <p className="text-xl text-cyan-400 mt-2">
                                 Practice ISL through fun and interactive games
                             </p>
                         </div>
@@ -102,7 +102,7 @@ export default function GamesPage() {
                     >
                         <div className="flex items-center justify-between">
                             <div>
-                                <p className="text-slate-600 text-sm font-medium mb-1">Games Played</p>
+                                <p className="text-cyan-400 text-sm font-medium mb-1">Games Played</p>
                                 <p className="text-3xl font-bold gradient-text">0</p>
                             </div>
                             <div className="p-3 bg-cyan- rounded-xl">
@@ -119,7 +119,7 @@ export default function GamesPage() {
                     >
                         <div className="flex items-center justify-between">
                             <div>
-                                <p className="text-slate-600 text-sm font-medium mb-1">High Score</p>
+                                <p className="text-cyan-400 text-sm font-medium mb-1">High Score</p>
                                 <p className="text-3xl font-bold gradient-text">0</p>
                             </div>
                             <div className="p-3 bg-green-100 rounded-xl">
@@ -136,7 +136,7 @@ export default function GamesPage() {
                     >
                         <div className="flex items-center justify-between">
                             <div>
-                                <p className="text-slate-600 text-sm font-medium mb-1">Achievements</p>
+                                <p className="text-cyan-400 text-sm font-medium mb-1">Achievements</p>
                                 <p className="text-3xl font-bold gradient-text">0</p>
                             </div>
                             <div className="p-3 bg-yellow-100 rounded-xl">
@@ -163,7 +163,7 @@ export default function GamesPage() {
                                     </div>
 
                                     <div className="flex items-center justify-between mb-3">
-                                        <h3 className="text-2xl font-bold text-slate-900">{game.title}</h3>
+                                        <h3 className="text-2xl font-bold text-white">{game.title}</h3>
                                         <span className={`px-3 py-1 rounded-full text-xs font-bold ${game.difficulty === 'Easy' ? 'bg-green-100 text-green-700' :
                                                 game.difficulty === 'Medium' ? 'bg-yellow-100 text-yellow-700' :
                                                     'bg-red-100 text-red-700'
@@ -172,7 +172,7 @@ export default function GamesPage() {
                                         </span>
                                     </div>
 
-                                    <p className="text-lg text-slate-600 leading-relaxed mb-6">
+                                    <p className="text-lg text-cyan-400 leading-relaxed mb-6">
                                         {game.description}
                                     </p>
 

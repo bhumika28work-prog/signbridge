@@ -39,7 +39,7 @@ export default function LessonView({ lessons, onComplete }: LessonViewProps) {
             <div className="mb-8">
                 <div className="flex justify-between items-center mb-2">
                     <h2 className="text-2xl font-bold gradient-text">{currentLesson.title}</h2>
-                    <span className="text-sm font-medium text-slate-600">
+                    <span className="text-sm font-medium text-cyan-400">
                         Lesson {currentIndex + 1} of {lessons.length}
                     </span>
                 </div>
@@ -70,10 +70,10 @@ export default function LessonView({ lessons, onComplete }: LessonViewProps) {
                                 <div className="aspect-video bg-gradient-to-br from-purple-500/10 via-pink-500/10 to-blue-500/10 rounded-2xl flex items-center justify-center relative overflow-hidden group">
                                     <div className="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-pink-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                     <div className="relative z-10 text-center">
-                                        <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mb-4 mx-auto shadow-lg group-hover:scale-110 transition-transform duration-300">
+                                        <div className="w-20 h-20 bg-slate-800 rounded-full flex items-center justify-center mb-4 mx-auto shadow-lg group-hover:scale-110 transition-transform duration-300">
                                             <Play className="w-10 h-10 text-purple-600 ml-1" />
                                         </div>
-                                        <p className="text-slate-600 font-medium">Sign Language Video</p>
+                                        <p className="text-cyan-400 font-medium">Sign Language Video</p>
                                     </div>
                                 </div>
                             </div>
@@ -82,7 +82,7 @@ export default function LessonView({ lessons, onComplete }: LessonViewProps) {
                         {/* Text Content */}
                         <div className="prose max-w-none">
                             <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 mb-6">
-                                <p className="text-2xl text-slate-800 leading-relaxed font-medium">
+                                <p className="text-2xl text-slate-100 leading-relaxed font-medium">
                                     {currentLesson.content}
                                 </p>
                             </div>

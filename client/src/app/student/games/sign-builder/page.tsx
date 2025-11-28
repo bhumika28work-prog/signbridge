@@ -104,7 +104,7 @@ export default function SignBuilderGame() {
                     className="mb-8"
                 >
                     <h1 className="text-4xl font-bold gradient-text mb-2">Sign Builder</h1>
-                    <p className="text-xl text-slate-600">Build words using ISL signs!</p>
+                    <p className="text-xl text-cyan-400">Build words using ISL signs!</p>
                 </motion.div>
 
                 {/* Start Screen */}
@@ -116,7 +116,7 @@ export default function SignBuilderGame() {
                     >
                         <div className="text-6xl mb-6">🏗️</div>
                         <h2 className="text-3xl font-bold mb-4">How to Play</h2>
-                        <div className="text-left max-w-md mx-auto mb-8 space-y-3 text-slate-600">
+                        <div className="text-left max-w-md mx-auto mb-8 space-y-3 text-cyan-400">
                             <p>• You'll see a target word to spell</p>
                             <p>• Drag ISL signs to build the word</p>
                             <p>• Arrange them in the correct order</p>
@@ -138,11 +138,11 @@ export default function SignBuilderGame() {
                         {/* Stats */}
                         <div className="grid grid-cols-2 gap-4">
                             <div className="glass rounded-xl p-4 text-center">
-                                <p className="text-sm text-slate-600 mb-1">Round</p>
+                                <p className="text-sm text-cyan-400 mb-1">Round</p>
                                 <p className="text-3xl font-bold gradient-text">{round + 1}/{totalRounds}</p>
                             </div>
                             <div className="glass rounded-xl p-4 text-center">
-                                <p className="text-sm text-slate-600 mb-1">Score</p>
+                                <p className="text-sm text-cyan-400 mb-1">Score</p>
                                 <p className="text-3xl font-bold gradient-text">{score}</p>
                             </div>
                         </div>
@@ -154,7 +154,7 @@ export default function SignBuilderGame() {
                             animate={{ opacity: 1, y: 0 }}
                             className="glass rounded-2xl p-8 text-center"
                         >
-                            <p className="text-lg text-slate-600 mb-4">Build this word:</p>
+                            <p className="text-lg text-cyan-400 mb-4">Build this word:</p>
                             <div className="inline-block px-8 py-4 bg-gradient-to-br from-cyan- to-teal- rounded-xl">
                                 <p className="text-5xl font-bold gradient-text tracking-wider">
                                     {showHint ? targetWord : '???'}
@@ -164,7 +164,7 @@ export default function SignBuilderGame() {
 
                         {/* User Answer Area */}
                         <div className="glass rounded-2xl p-6">
-                            <p className="text-center text-slate-600 mb-4">Your Answer:</p>
+                            <p className="text-center text-cyan-400 mb-4">Your Answer:</p>
                             <div className="flex justify-center gap-3 min-h-[140px] items-center flex-wrap">
                                 {userAnswer.length === 0 ? (
                                     <p className="text-slate-400 text-lg">Click signs below to build the word</p>
@@ -175,7 +175,7 @@ export default function SignBuilderGame() {
                                             initial={{ scale: 0 }}
                                             animate={{ scale: 1 }}
                                             onClick={() => handleRemoveSign(index)}
-                                            className="relative w-24 h-24 bg-white rounded-xl p-2 cursor-pointer hover:shadow-lg transition-all border-2 border-cyan-"
+                                            className="relative w-24 h-24 bg-slate-800 rounded-xl p-2 cursor-pointer hover:shadow-lg transition-all border-2 border-cyan-"
                                         >
                                             <Image
                                                 src={islDictionary[sign]}
@@ -194,7 +194,7 @@ export default function SignBuilderGame() {
 
                         {/* Available Signs */}
                         <div className="glass rounded-2xl p-6">
-                            <p className="text-center text-slate-600 mb-4">Available Signs:</p>
+                            <p className="text-center text-cyan-400 mb-4">Available Signs:</p>
                             <div className="flex justify-center gap-3 flex-wrap">
                                 {shuffledSigns.map((sign, index) => (
                                     <motion.div
@@ -203,7 +203,7 @@ export default function SignBuilderGame() {
                                         animate={{ opacity: 1, scale: 1 }}
                                         transition={{ delay: index * 0.1 }}
                                         onClick={() => handleSignClick(sign, index)}
-                                        className="relative w-24 h-24 bg-white rounded-xl p-2 cursor-pointer hover:shadow-lg hover:scale-110 transition-all border-2 border-slate-200"
+                                        className="relative w-24 h-24 bg-slate-800 rounded-xl p-2 cursor-pointer hover:shadow-lg hover:scale-110 transition-all border-2 border-cyan-500/30"
                                     >
                                         <Image
                                             src={islDictionary[sign]}
@@ -293,7 +293,7 @@ export default function SignBuilderGame() {
                                     </button>
                                     <Link
                                         href="/student/games"
-                                        className="flex-1 px-6 py-3 bg-white text-cyan- font-bold rounded-xl hover:shadow-xl transition-all flex items-center justify-center gap-2"
+                                        className="flex-1 px-6 py-3 bg-slate-800 text-cyan- font-bold rounded-xl hover:shadow-xl transition-all flex items-center justify-center gap-2"
                                     >
                                         Games Menu
                                     </Link>

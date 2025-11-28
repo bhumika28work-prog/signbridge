@@ -58,7 +58,7 @@ export default function ISLSignDisplay({ signs, autoPlay = false, speed = 1500 }
     if (signs.length === 0) {
         return (
             <div className="glass rounded-2xl p-12 text-center">
-                <p className="text-slate-600">Enter text to see ISL signs</p>
+                <p className="text-cyan-400">Enter text to see ISL signs</p>
             </div>
         );
     }
@@ -99,7 +99,7 @@ export default function ISLSignDisplay({ signs, autoPlay = false, speed = 1500 }
                                 {currentSign.character.toUpperCase()}
                             </h3>
                             {currentSign.description && (
-                                <p className="text-slate-600">{currentSign.description}</p>
+                                <p className="text-cyan-400">{currentSign.description}</p>
                             )}
                             <span className="inline-block px-3 py-1 bg-cyan- text-cyan- rounded-full text-sm font-medium">
                                 {currentSign.category}
@@ -112,7 +112,7 @@ export default function ISLSignDisplay({ signs, autoPlay = false, speed = 1500 }
             <div className="flex items-center justify-between gap-4">
                 <div className="flex-1">
                     <div className="flex items-center gap-2 mb-2">
-                        <span className="text-sm font-medium text-slate-700">
+                        <span className="text-sm font-medium text-slate-300">
                             {currentIndex + 1} / {signs.length}
                         </span>
                     </div>
@@ -152,7 +152,7 @@ export default function ISLSignDisplay({ signs, autoPlay = false, speed = 1500 }
             </div>
 
             <div className="glass rounded-2xl p-6">
-                <h4 className="font-semibold text-slate-700 mb-4">Sign Sequence:</h4>
+                <h4 className="font-semibold text-slate-300 mb-4">Sign Sequence:</h4>
                 <div className="flex flex-wrap gap-2">
                     {signs.map((sign, index) => (
                         <button
@@ -163,7 +163,7 @@ export default function ISLSignDisplay({ signs, autoPlay = false, speed = 1500 }
                             }}
                             className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${index === currentIndex
                                 ? 'bg-gradient-to-r from-cyan- to-teal- text-white shadow-lg scale-110'
-                                : 'bg-white text-slate-700 hover:bg-slate-50'
+                                : 'bg-slate-800 text-slate-300 hover:bg-slate-900'
                                 }`}
                         >
                             {sign.character.toUpperCase()}

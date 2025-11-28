@@ -50,7 +50,7 @@ export default function Home() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.4 }}
-                            className="max-w-3xl mx-auto text-2xl text-slate-600 mb-4 leading-relaxed font-medium"
+                            className="max-w-3xl mx-auto text-2xl text-cyan-400 mb-4 leading-relaxed font-medium"
                         >
                             Bridging Communication for Deaf & Mute Children
                         </motion.p>
@@ -59,7 +59,7 @@ export default function Home() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.5 }}
-                            className="max-w-3xl mx-auto text-lg text-slate-600 mb-12 leading-relaxed"
+                            className="max-w-3xl mx-auto text-lg text-cyan-400 mb-12 leading-relaxed"
                         >
                             An AI-powered platform designed to help deaf and mute children learn Indian Sign Language through interactive lessons, real-time feedback, and engaging practice sessions.
                         </motion.p>
@@ -117,10 +117,10 @@ export default function Home() {
                             <h2 className="text-4xl sm:text-5xl font-bold mb-6">
                                 <span className="gradient-text">About SignBridge</span>
                             </h2>
-                            <p className="text-xl text-slate-600 mb-6 leading-relaxed">
+                            <p className="text-xl text-cyan-400 mb-6 leading-relaxed">
                                 SignBridge is an innovative educational platform designed specifically for deaf and mute children to learn Indian Sign Language (ISL) in an engaging, interactive way.
                             </p>
-                            <p className="text-lg text-slate-600 mb-6 leading-relaxed">
+                            <p className="text-lg text-cyan-400 mb-6 leading-relaxed">
                                 Using cutting-edge AI technology, we provide personalized learning experiences that adapt to each child's pace and learning style. Our platform combines visual learning, real-time feedback, and gamification to make learning ISL fun and effective.
                             </p>
                             <div className="space-y-4">
@@ -129,8 +129,8 @@ export default function Home() {
                                         <Users className="w-5 h-5 text-cyan-" />
                                     </div>
                                     <div>
-                                        <h3 className="font-semibold text-slate-900 mb-1">For Children</h3>
-                                        <p className="text-slate-600">Interactive lessons designed for young learners</p>
+                                        <h3 className="font-semibold text-white mb-1">For Children</h3>
+                                        <p className="text-cyan-400">Interactive lessons designed for young learners</p>
                                     </div>
                                 </div>
                                 <div className="flex items-start gap-3">
@@ -138,8 +138,8 @@ export default function Home() {
                                         <BookOpen className="w-5 h-5 text-teal-" />
                                     </div>
                                     <div>
-                                        <h3 className="font-semibold text-slate-900 mb-1">For Educators</h3>
-                                        <p className="text-slate-600">Tools to track progress and customize learning paths</p>
+                                        <h3 className="font-semibold text-white mb-1">For Educators</h3>
+                                        <p className="text-cyan-400">Tools to track progress and customize learning paths</p>
                                     </div>
                                 </div>
                                 <div className="flex items-start gap-3">
@@ -147,8 +147,8 @@ export default function Home() {
                                         <Heart className="w-5 h-5 text-blue-600" />
                                     </div>
                                     <div>
-                                        <h3 className="font-semibold text-slate-900 mb-1">For Parents</h3>
-                                        <p className="text-slate-600">Support your child's learning journey at home</p>
+                                        <h3 className="font-semibold text-white mb-1">For Parents</h3>
+                                        <p className="text-cyan-400">Support your child's learning journey at home</p>
                                     </div>
                                 </div>
                             </div>
@@ -180,7 +180,7 @@ export default function Home() {
                         <h2 className="text-4xl sm:text-5xl font-bold mb-6">
                             <span className="gradient-text">Our Mission</span>
                         </h2>
-                        <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+                        <p className="text-xl text-cyan-400 max-w-3xl mx-auto leading-relaxed">
                             To empower every deaf and mute child with the tools and confidence to communicate effectively through Indian Sign Language
                         </p>
                     </motion.div>
@@ -222,8 +222,8 @@ export default function Home() {
                                     <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-br ${item.gradient} mb-6 group-hover:scale-110 transition-transform duration-300`}>
                                         <item.icon className="w-8 h-8 text-white" />
                                     </div>
-                                    <h3 className="text-2xl font-bold mb-3 text-slate-900">{item.title}</h3>
-                                    <p className="text-slate-600 leading-relaxed">{item.description}</p>
+                                    <h3 className="text-2xl font-bold mb-3 text-white">{item.title}</h3>
+                                    <p className="text-cyan-400 leading-relaxed">{item.description}</p>
                                 </div>
                             </motion.div>
                         ))}
@@ -261,7 +261,7 @@ export default function Home() {
                         <h2 className="text-4xl sm:text-5xl font-bold mb-4">
                             <span className="gradient-text">Powerful Features</span>
                         </h2>
-                        <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+                        <p className="text-xl text-cyan-400 max-w-2xl mx-auto">
                             Everything you need to master sign language with cutting-edge AI technology
                         </p>
                     </motion.div>
@@ -324,8 +324,8 @@ export default function Home() {
                                     <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-br ${feature.gradient} mb-6 group-hover:scale-110 transition-transform duration-300`}>
                                         <feature.icon className="w-8 h-8 text-white" />
                                     </div>
-                                    <h3 className="text-2xl font-bold mb-3 text-slate-900">{feature.title}</h3>
-                                    <p className="text-slate-600 leading-relaxed">{feature.description}</p>
+                                    <h3 className="text-2xl font-bold mb-3 text-white">{feature.title}</h3>
+                                    <p className="text-cyan-400 leading-relaxed">{feature.description}</p>
                                 </div>
                             </motion.div>
                         ))}
@@ -353,7 +353,7 @@ export default function Home() {
                             </p>
                             <Link
                                 href="/learn"
-                                className="inline-flex items-center gap-2 px-10 py-5 bg-white text-cyan- font-bold rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
+                                className="inline-flex items-center gap-2 px-10 py-5 bg-slate-800 text-cyan- font-bold rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
                             >
                                 Get Started Free
                                 <ArrowRight className="w-5 h-5" />

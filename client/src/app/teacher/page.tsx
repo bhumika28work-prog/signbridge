@@ -53,7 +53,7 @@ export default function TeacherDashboard() {
                     <h1 className="text-4xl sm:text-5xl font-bold mb-4">
                         Teacher Dashboard
                     </h1>
-                    <p className="text-xl text-slate-600">
+                    <p className="text-xl text-cyan-400">
                         Manage your students and curriculum
                     </p>
                 </motion.div>
@@ -72,8 +72,8 @@ export default function TeacherDashboard() {
                                     <div className={`inline-flex p-6 rounded-2xl bg-gradient-to-br ${section.gradient} mb-6 group-hover:scale-110 transition-transform duration-300`}>
                                         <section.icon className="w-12 h-12 text-white" />
                                     </div>
-                                    <h3 className="text-3xl font-bold mb-4 text-slate-900">{section.title}</h3>
-                                    <p className="text-lg text-slate-600 leading-relaxed mb-6">{section.description}</p>
+                                    <h3 className="text-3xl font-bold mb-4 text-white">{section.title}</h3>
+                                    <p className="text-lg text-cyan-400 leading-relaxed mb-6">{section.description}</p>
                                     <div className={`inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r ${section.gradient} text-white font-semibold rounded-xl group-hover:shadow-lg transition-all`}>
                                         Open
                                         <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -91,23 +91,23 @@ export default function TeacherDashboard() {
                     transition={{ delay: 0.4, duration: 0.6 }}
                     className="mt-12 glass rounded-3xl p-8"
                 >
-                    <h2 className="text-2xl font-bold mb-6 text-slate-900">Quick Overview</h2>
+                    <h2 className="text-2xl font-bold mb-6 text-white">Quick Overview</h2>
                     <div className="grid md:grid-cols-4 gap-6">
                         <div className="text-center">
                             <div className="text-4xl font-bold gradient-text mb-2">45</div>
-                            <p className="text-slate-600">Total Students</p>
+                            <p className="text-cyan-400">Total Students</p>
                         </div>
                         <div className="text-center">
                             <div className="text-4xl font-bold gradient-text mb-2">12</div>
-                            <p className="text-slate-600">Active Lessons</p>
+                            <p className="text-cyan-400">Active Lessons</p>
                         </div>
                         <div className="text-center">
                             <div className="text-4xl font-bold gradient-text mb-2">87%</div>
-                            <p className="text-slate-600">Avg. Completion</p>
+                            <p className="text-cyan-400">Avg. Completion</p>
                         </div>
                         <div className="text-center">
                             <div className="text-4xl font-bold gradient-text mb-2">92%</div>
-                            <p className="text-slate-600">Avg. Score</p>
+                            <p className="text-cyan-400">Avg. Score</p>
                         </div>
                     </div>
                 </motion.div>

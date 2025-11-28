@@ -65,7 +65,7 @@ export default function PracticePage() {
                     <h1 className="text-5xl sm:text-6xl font-extrabold mb-6">
                         <span className="gradient-text">ISL Practice Lab</span>
                     </h1>
-                    <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+                    <p className="text-xl text-cyan-400 max-w-2xl mx-auto">
                         Convert text, speech, and Gujarati to Indian Sign Language with real-time visualization
                     </p>
                 </motion.div>
@@ -82,7 +82,7 @@ export default function PracticePage() {
                             onClick={() => setActiveTab('text')}
                             className={`flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${activeTab === 'text'
                                     ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
-                                    : 'text-slate-600 hover:bg-white/50'
+                                    : 'text-cyan-400 hover:bg-white/50'
                                 }`}
                         >
                             <MessageSquare className="w-5 h-5" />
@@ -92,7 +92,7 @@ export default function PracticePage() {
                             onClick={() => setActiveTab('speech')}
                             className={`flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${activeTab === 'speech'
                                     ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
-                                    : 'text-slate-600 hover:bg-white/50'
+                                    : 'text-cyan-400 hover:bg-white/50'
                                 }`}
                         >
                             <Mic className="w-5 h-5" />
@@ -102,7 +102,7 @@ export default function PracticePage() {
                             onClick={() => setActiveTab('gujarati')}
                             className={`flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${activeTab === 'gujarati'
                                     ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
-                                    : 'text-slate-600 hover:bg-white/50'
+                                    : 'text-cyan-400 hover:bg-white/50'
                                 }`}
                         >
                             <Languages className="w-5 h-5" />
@@ -112,7 +112,7 @@ export default function PracticePage() {
                             onClick={() => setActiveTab('camera')}
                             className={`flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${activeTab === 'camera'
                                     ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
-                                    : 'text-slate-600 hover:bg-white/50'
+                                    : 'text-cyan-400 hover:bg-white/50'
                                 }`}
                         >
                             <Camera className="w-5 h-5" />
@@ -143,7 +143,7 @@ export default function PracticePage() {
                                             value={inputText}
                                             onChange={(e) => handleTextConversion(e.target.value)}
                                             placeholder={activeTab === 'gujarati' ? 'ગુજરાતી લખો...' : 'Type any text to convert to ISL...'}
-                                            className="w-full h-40 px-4 py-3 rounded-xl border-2 border-slate-200 focus:border-purple-500 focus:ring-4 focus:ring-purple-100 transition-all duration-300 resize-none"
+                                            className="w-full h-40 px-4 py-3 rounded-xl border-2 border-cyan-500/30 focus:border-purple-500 focus:ring-4 focus:ring-purple-100 transition-all duration-300 resize-none"
                                         />
                                     ) : (
                                         <div className="h-40 flex items-center justify-center bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl">
@@ -151,7 +151,7 @@ export default function PracticePage() {
                                                 onClick={handleSpeechToText}
                                                 className={`p-8 rounded-full transition-all duration-300 ${isListening
                                                         ? 'bg-red-500 text-white animate-pulse scale-110'
-                                                        : 'bg-white text-purple-600 hover:scale-110'
+                                                        : 'bg-slate-800 text-purple-600 hover:scale-110'
                                                     } shadow-xl`}
                                             >
                                                 <Mic className="w-12 h-12" />
@@ -185,7 +185,7 @@ export default function PracticePage() {
 
                                 {/* Quick Phrases */}
                                 <div className="mt-6">
-                                    <p className="text-sm font-semibold text-slate-700 mb-3">Quick Phrases:</p>
+                                    <p className="text-sm font-semibold text-slate-300 mb-3">Quick Phrases:</p>
                                     <div className="flex flex-wrap gap-2">
                                         {(activeTab === 'gujarati'
                                             ? ['નમસ્તે', 'આભાર', 'શુભ પ્રભાત', 'તમે કેમ છો?']
@@ -194,7 +194,7 @@ export default function PracticePage() {
                                             <button
                                                 key={phrase}
                                                 onClick={() => handleTextConversion(phrase)}
-                                                className="px-4 py-2 bg-white rounded-lg text-sm font-medium text-slate-700 hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-600 hover:text-white transition-all duration-300"
+                                                className="px-4 py-2 bg-slate-800 rounded-lg text-sm font-medium text-slate-300 hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-600 hover:text-white transition-all duration-300"
                                             >
                                                 {phrase}
                                             </button>
@@ -216,7 +216,7 @@ export default function PracticePage() {
                             {activeTab === 'camera' ? (
                                 <>
                                     <h2 className="text-2xl font-bold mb-6 gradient-text">Real-time Hand Tracking</h2>
-                                    <p className="text-slate-600 mb-6">
+                                    <p className="text-cyan-400 mb-6">
                                         Practice your ISL signs in front of the camera. Our AI will detect your hand movements and provide instant feedback.
                                     </p>
                                     <HandTracker />
@@ -263,7 +263,7 @@ export default function PracticePage() {
                                 <card.icon className="w-6 h-6 text-white" />
                             </div>
                             <h3 className="font-bold text-lg mb-2">{card.title}</h3>
-                            <p className="text-slate-600 text-sm">{card.description}</p>
+                            <p className="text-cyan-400 text-sm">{card.description}</p>
                         </div>
                     ))}
                 </motion.div>
@@ -276,8 +276,8 @@ export default function PracticePage() {
                     className="mt-8 glass rounded-2xl p-6"
                 >
                     <h3 className="font-bold text-lg mb-4 gradient-text">📝 How to Add Real ISL Images</h3>
-                    <div className="space-y-2 text-slate-600 text-sm">
-                        <p>1. Create folders: <code className="bg-slate-100 px-2 py-1 rounded">public/isl/alphabet/</code>, <code className="bg-slate-100 px-2 py-1 rounded">public/isl/numbers/</code>, <code className="bg-slate-100 px-2 py-1 rounded">public/isl/words/</code></p>
+                    <div className="space-y-2 text-cyan-400 text-sm">
+                        <p>1. Create folders: <code className="bg-slate-800 px-2 py-1 rounded">public/isl/alphabet/</code>, <code className="bg-slate-800 px-2 py-1 rounded">public/isl/numbers/</code>, <code className="bg-slate-800 px-2 py-1 rounded">public/isl/words/</code></p>
                         <p>2. Add ISL sign images (PNG/JPG) named as: a.png, b.png, 1.png, 2.png, hello.png, etc.</p>
                         <p>3. The app will automatically display them instead of placeholders</p>
                         <p>4. You can download free ISL images from: <a href="https://www.indiansignlanguage.org/" target="_blank" className="text-purple-600 hover:underline">Indian Sign Language Research</a></p>

@@ -59,7 +59,7 @@ export default function LoginPage() {
                     <h1 className="text-4xl font-extrabold mb-2">
                         <span className="gradient-text">Sign In</span>
                     </h1>
-                    <p className="text-slate-600">Continue your learning journey</p>
+                    <p className="text-cyan-400">Continue your learning journey</p>
                 </div>
 
                 {/* Login Form */}
@@ -67,7 +67,7 @@ export default function LoginPage() {
                     <form onSubmit={handleLogin} className="space-y-6">
                         {/* Username Input */}
                         <div>
-                            <label htmlFor="username" className="block text-sm font-semibold text-slate-700 mb-2">
+                            <label htmlFor="username" className="block text-sm font-semibold text-slate-300 mb-2">
                                 Username
                             </label>
                             <div className="relative">
@@ -80,7 +80,7 @@ export default function LoginPage() {
                                     required
                                     value={username}
                                     onChange={(e) => setUsername(e.target.value)}
-                                    className="block w-full pl-12 pr-4 py-3 border-2 border-slate-200 rounded-xl focus:ring-4 focus:ring-cyan- focus:border-cyan- transition-all duration-300"
+                                    className="block w-full pl-12 pr-4 py-3 border-2 border-cyan-500/30 rounded-xl focus:ring-4 focus:ring-cyan- focus:border-cyan- transition-all duration-300"
                                     placeholder="Enter your username"
                                 />
                             </div>
@@ -88,7 +88,7 @@ export default function LoginPage() {
 
                         {/* Password Input */}
                         <div>
-                            <label htmlFor="password" className="block text-sm font-semibold text-slate-700 mb-2">
+                            <label htmlFor="password" className="block text-sm font-semibold text-slate-300 mb-2">
                                 Password
                             </label>
                             <div className="relative">
@@ -101,7 +101,7 @@ export default function LoginPage() {
                                     required
                                     value={password}
                                     onChange={(e) => setPassword(e.target.value)}
-                                    className="block w-full pl-12 pr-4 py-3 border-2 border-slate-200 rounded-xl focus:ring-4 focus:ring-cyan- focus:border-cyan- transition-all duration-300"
+                                    className="block w-full pl-12 pr-4 py-3 border-2 border-cyan-500/30 rounded-xl focus:ring-4 focus:ring-cyan- focus:border-cyan- transition-all duration-300"
                                     placeholder="Enter your password"
                                 />
                             </div>
@@ -149,7 +149,7 @@ export default function LoginPage() {
 
                 {/* Back to Home */}
                 <div className="mt-6 text-center">
-                    <Link href="/" className="text-sm text-slate-600 hover:text-cyan- font-medium transition-colors">
+                    <Link href="/" className="text-sm text-cyan-400 hover:text-cyan- font-medium transition-colors">
                         ← Back to Home
                     </Link>
                 </div>
