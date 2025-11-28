@@ -26,8 +26,8 @@ export default function GamesPage() {
             title: 'Sign Memory Match',
             description: 'Match pairs of ISL signs to improve your memory',
             icon: Brain,
-            gradient: 'from-purple-500 to-pink-500',
-            bgGradient: 'from-purple-50 to-pink-50',
+            gradient: 'from-cyan- to-teal-',
+            bgGradient: 'from-cyan- to-teal-',
             difficulty: 'Easy',
             href: '/student/games/memory-match',
         },
@@ -66,7 +66,7 @@ export default function GamesPage() {
     return (
         <div className="min-h-screen pt-24 pb-12 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
-                <Link href="/student" className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-700 font-medium mb-8">
+                <Link href="/student" className="inline-flex items-center gap-2 text-cyan- hover:text-cyan- font-medium mb-8">
                     <ArrowLeft className="w-5 h-5" />
                     Back to Dashboard
                 </Link>
@@ -78,7 +78,7 @@ export default function GamesPage() {
                     className="mb-12"
                 >
                     <div className="flex items-center gap-4 mb-4">
-                        <div className="p-4 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl">
+                        <div className="p-4 bg-gradient-to-br from-cyan- to-teal- rounded-2xl">
                             <Gamepad2 className="w-10 h-10 text-white" />
                         </div>
                         <div>
@@ -105,8 +105,8 @@ export default function GamesPage() {
                                 <p className="text-slate-600 text-sm font-medium mb-1">Games Played</p>
                                 <p className="text-3xl font-bold gradient-text">0</p>
                             </div>
-                            <div className="p-3 bg-purple-100 rounded-xl">
-                                <Gamepad2 className="w-6 h-6 text-purple-600" />
+                            <div className="p-3 bg-cyan- rounded-xl">
+                                <Gamepad2 className="w-6 h-6 text-cyan-" />
                             </div>
                         </div>
                     </motion.div>

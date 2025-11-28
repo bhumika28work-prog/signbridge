@@ -9,9 +9,9 @@ export default function Home() {
         <div className="min-h-screen overflow-hidden">
             {/* Animated Background Blobs */}
             <div className="fixed inset-0 -z-10 overflow-hidden">
-                <div className="absolute top-0 -left-4 w-96 h-96 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-float"></div>
+                <div className="absolute top-0 -left-4 w-96 h-96 bg-cyan- rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-float"></div>
                 <div className="absolute top-0 -right-4 w-96 h-96 bg-yellow-300 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-float" style={{ animationDelay: '2s' }}></div>
-                <div className="absolute -bottom-8 left-20 w-96 h-96 bg-pink-300 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-float" style={{ animationDelay: '4s' }}></div>
+                <div className="absolute -bottom-8 left-20 w-96 h-96 bg-teal- rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-float" style={{ animationDelay: '4s' }}></div>
             </div>
 
             {/* Hero Section */}
@@ -30,8 +30,8 @@ export default function Home() {
                             transition={{ delay: 0.2 }}
                             className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-8"
                         >
-                            <Sparkles className="w-4 h-4 text-purple-600" />
-                            <span className="text-sm font-medium bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+                            <Sparkles className="w-4 h-4 text-cyan-" />
+                            <span className="text-sm font-medium bg-gradient-to-r from-cyan- to-teal- bg-clip-text text-transparent">
                                 Empowering Every Child to Communicate
                             </span>
                         </motion.div>
@@ -73,7 +73,7 @@ export default function Home() {
                         >
                             <Link
                                 href="/login"
-                                className="group relative inline-flex items-center gap-2 px-10 py-5 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold text-lg rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 animate-glow"
+                                className="group relative inline-flex items-center gap-2 px-10 py-5 bg-gradient-to-r from-cyan- to-teal- text-white font-semibold text-lg rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 animate-glow"
                             >
                                 <span>Login to Continue</span>
                                 <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
@@ -125,8 +125,8 @@ export default function Home() {
                             </p>
                             <div className="space-y-4">
                                 <div className="flex items-start gap-3">
-                                    <div className="p-2 bg-purple-100 rounded-lg">
-                                        <Users className="w-5 h-5 text-purple-600" />
+                                    <div className="p-2 bg-cyan- rounded-lg">
+                                        <Users className="w-5 h-5 text-cyan-" />
                                     </div>
                                     <div>
                                         <h3 className="font-semibold text-slate-900 mb-1">For Children</h3>
@@ -134,8 +134,8 @@ export default function Home() {
                                     </div>
                                 </div>
                                 <div className="flex items-start gap-3">
-                                    <div className="p-2 bg-pink-100 rounded-lg">
-                                        <BookOpen className="w-5 h-5 text-pink-600" />
+                                    <div className="p-2 bg-teal- rounded-lg">
+                                        <BookOpen className="w-5 h-5 text-teal-" />
                                     </div>
                                     <div>
                                         <h3 className="font-semibold text-slate-900 mb-1">For Educators</h3>
@@ -191,7 +191,7 @@ export default function Home() {
                                 icon: Target,
                                 title: "Inclusive Education",
                                 description: "Breaking down communication barriers and ensuring every child has access to quality education",
-                                gradient: "from-purple-500 to-pink-500",
+                                gradient: "from-cyan- to-teal-",
                                 delay: 0.1
                             },
                             {
@@ -205,7 +205,7 @@ export default function Home() {
                                 icon: Heart,
                                 title: "Empowering Children",
                                 description: "Building confidence and independence through effective communication skills",
-                                gradient: "from-pink-500 to-rose-500",
+                                gradient: "from-teal- to-rose-500",
                                 delay: 0.3
                             }
                         ].map((item, index) => (
@@ -272,7 +272,7 @@ export default function Home() {
                                 icon: BookOpen,
                                 title: "Structured Modules",
                                 description: "Comprehensive lessons covering Gujarati alphabets, numbers, and science concepts",
-                                gradient: "from-purple-500 to-pink-500",
+                                gradient: "from-cyan- to-teal-",
                                 delay: 0.1
                             },
                             {
@@ -286,7 +286,7 @@ export default function Home() {
                                 icon: Brain,
                                 title: "Smart Feedback",
                                 description: "Adaptive learning powered by AI that personalizes your learning journey",
-                                gradient: "from-pink-500 to-rose-500",
+                                gradient: "from-teal- to-rose-500",
                                 delay: 0.3
                             },
                             {
@@ -307,7 +307,7 @@ export default function Home() {
                                 icon: Sparkles,
                                 title: "Interactive Practice",
                                 description: "Engage with writing canvas, quizzes, and interactive exercises for hands-on learning",
-                                gradient: "from-indigo-500 to-purple-500",
+                                gradient: "from-indigo-500 to-cyan-",
                                 delay: 0.6
                             }
                         ].map((feature, index) => (
@@ -343,7 +343,7 @@ export default function Home() {
                     className="max-w-5xl mx-auto"
                 >
                     <div className="glass-dark rounded-3xl p-12 text-center relative overflow-hidden">
-                        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20"></div>
+                        <div className="absolute inset-0 bg-gradient-to-r from-cyan-/20 to-teal-/20"></div>
                         <div className="relative z-10">
                             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
                                 Ready to Start Your Journey?
@@ -353,7 +353,7 @@ export default function Home() {
                             </p>
                             <Link
                                 href="/learn"
-                                className="inline-flex items-center gap-2 px-10 py-5 bg-white text-purple-600 font-bold rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
+                                className="inline-flex items-center gap-2 px-10 py-5 bg-white text-cyan- font-bold rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
                             >
                                 Get Started Free
                                 <ArrowRight className="w-5 h-5" />

@@ -35,8 +35,8 @@ export default function TeacherDashboard() {
             title: 'Manage Syllabus',
             description: 'Create, edit, and organize lesson plans and learning materials',
             icon: BookOpen,
-            gradient: 'from-purple-600 to-pink-600',
-            bgGradient: 'from-purple-50 to-pink-50',
+            gradient: 'from-cyan- to-teal-',
+            bgGradient: 'from-cyan- to-teal-',
             href: '/teacher/syllabus',
         },
     ];

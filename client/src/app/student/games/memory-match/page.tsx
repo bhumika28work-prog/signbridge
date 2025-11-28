@@ -130,7 +130,7 @@ export default function MemoryMatchGame() {
     return (
         <div className="min-h-screen pt-24 pb-12 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
-                <Link href="/student/games" className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-700 font-medium mb-8">
+                <Link href="/student/games" className="inline-flex items-center gap-2 text-cyan- hover:text-cyan- font-medium mb-8">
                     <ArrowLeft className="w-5 h-5" />
                     Back to Games
                 </Link>
@@ -188,7 +188,7 @@ export default function MemoryMatchGame() {
                             </button>
                             <button
                                 onClick={() => initializeGame('hard')}
-                                className="px-8 py-6 bg-gradient-to-r from-red-500 to-pink-500 text-white font-bold text-xl rounded-2xl hover:shadow-xl transition-all hover:scale-105"
+                                className="px-8 py-6 bg-gradient-to-r from-red-500 to-teal- text-white font-bold text-xl rounded-2xl hover:shadow-xl transition-all hover:scale-105"
                             >
                                 Hard (12 Pairs)
                             </button>
@@ -225,7 +225,7 @@ export default function MemoryMatchGame() {
                                     >
                                         {/* Card Back */}
                                         <div
-                                            className="absolute w-full h-full bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center shadow-lg"
+                                            className="absolute w-full h-full bg-gradient-to-br from-cyan- to-teal- rounded-2xl flex items-center justify-center shadow-lg"
                                             style={{ backfaceVisibility: 'hidden' }}
                                         >
                                             <div className="text-6xl">❓</div>
@@ -294,14 +294,14 @@ export default function MemoryMatchGame() {
                                 <div className="flex gap-4">
                                     <button
                                         onClick={() => initializeGame(difficulty)}
-                                        className="flex-1 px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold rounded-xl hover:shadow-xl transition-all flex items-center justify-center gap-2"
+                                        className="flex-1 px-6 py-3 bg-gradient-to-r from-cyan- to-teal- text-white font-bold rounded-xl hover:shadow-xl transition-all flex items-center justify-center gap-2"
                                     >
                                         <RotateCcw className="w-5 h-5" />
                                         Play Again
                                     </button>
                                     <Link
                                         href="/student/games"
-                                        className="flex-1 px-6 py-3 bg-white text-purple-600 font-bold rounded-xl hover:shadow-xl transition-all flex items-center justify-center gap-2"
+                                        className="flex-1 px-6 py-3 bg-white text-cyan- font-bold rounded-xl hover:shadow-xl transition-all flex items-center justify-center gap-2"
                                     >
                                         <ArrowLeft className="w-5 h-5" />
                                         Games Menu

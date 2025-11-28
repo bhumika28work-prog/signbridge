@@ -105,7 +105,7 @@ export default function EnglishModule() {
     return (
         <div className="min-h-screen pt-24 pb-12 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
-                <Link href="/student" className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-700 font-medium mb-8">
+                <Link href="/student" className="inline-flex items-center gap-2 text-cyan- hover:text-cyan- font-medium mb-8">
                     <ArrowLeft className="w-5 h-5" />
                     Back to Dashboard
                 </Link>
@@ -362,7 +362,7 @@ export default function EnglishModule() {
                             <button
                                 onClick={handleSpeechToText}
                                 className={`w-full flex items-center justify-center gap-3 px-6 py-4 rounded-xl font-semibold transition-all ${isListening
-                                        ? 'bg-gradient-to-r from-red-500 to-pink-500 text-white'
+                                        ? 'bg-gradient-to-r from-red-500 to-teal- text-white'
                                         : 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:shadow-lg hover:scale-105'
                                     }`}
                             >

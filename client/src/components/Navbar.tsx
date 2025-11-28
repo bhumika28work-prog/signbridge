@@ -14,30 +14,30 @@ export default function Navbar() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
                     <Link href="/" className="flex items-center gap-2 group">
-                        <div className="w-10 h-10 bg-gradient-to-br from-purple-600 to-pink-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <div className="w-10 h-10 bg-gradient-to-br from-cyan- to-teal- rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
                             <span className="text-white font-bold text-xl">SB</span>
                         </div>
                         <span className="text-2xl font-bold gradient-text">SignBridge</span>
                     </Link>
 
                     <div className="hidden md:flex items-center gap-6">
-                        <a href="#about" className="text-slate-700 hover:text-purple-600 font-medium transition-colors">
+                        <a href="#about" className="text-slate-700 hover:text-cyan- font-medium transition-colors">
                             About
                         </a>
-                        <a href="#mission" className="text-slate-700 hover:text-purple-600 font-medium transition-colors">
+                        <a href="#mission" className="text-slate-700 hover:text-cyan- font-medium transition-colors">
                             Mission
                         </a>
-                        <Link href="/learn" className="text-slate-700 hover:text-purple-600 font-medium transition-colors">
+                        <Link href="/learn" className="text-slate-700 hover:text-cyan- font-medium transition-colors">
                             Learn
                         </Link>
-                        <Link href="/practice" className="text-slate-700 hover:text-purple-600 font-medium transition-colors">
+                        <Link href="/practice" className="text-slate-700 hover:text-cyan- font-medium transition-colors">
                             Practice
                         </Link>
 
                         {user ? (
                             <div className="flex items-center gap-3">
-                                <div className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-50 to-pink-50 rounded-full">
-                                    <div className="w-8 h-8 bg-gradient-to-br from-purple-600 to-pink-600 rounded-full flex items-center justify-center">
+                                <div className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan- to-teal- rounded-full">
+                                    <div className="w-8 h-8 bg-gradient-to-br from-cyan- to-teal- rounded-full flex items-center justify-center">
                                         <User className="w-4 h-4 text-white" />
                                     </div>
                                     <span className="text-sm font-medium text-slate-700">{user.username}</span>
@@ -52,7 +52,7 @@ export default function Navbar() {
                         ) : (
                             <Link
                                 href="/login"
-                                className="px-6 py-2.5 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-full hover:shadow-lg transition-all duration-300 hover:scale-105"
+                                className="px-6 py-2.5 bg-gradient-to-r from-cyan- to-teal- text-white font-semibold rounded-full hover:shadow-lg transition-all duration-300 hover:scale-105"
                             >
                                 Login
                             </Link>
@@ -61,7 +61,7 @@ export default function Navbar() {
 
                     <button
                         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                        className="md:hidden p-2 rounded-lg hover:bg-purple-50 transition-colors"
+                        className="md:hidden p-2 rounded-lg hover:bg-cyan- transition-colors"
                     >
                         {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
                     </button>
@@ -77,22 +77,22 @@ export default function Navbar() {
                         className="md:hidden border-t border-white/20 glass"
                     >
                         <div className="px-4 py-6 space-y-4">
-                            <a href="#about" className="block px-4 py-3 rounded-xl hover:bg-purple-50 font-medium transition-colors" onClick={() => setMobileMenuOpen(false)}>
+                            <a href="#about" className="block px-4 py-3 rounded-xl hover:bg-cyan- font-medium transition-colors" onClick={() => setMobileMenuOpen(false)}>
                                 About
                             </a>
-                            <a href="#mission" className="block px-4 py-3 rounded-xl hover:bg-purple-50 font-medium transition-colors" onClick={() => setMobileMenuOpen(false)}>
+                            <a href="#mission" className="block px-4 py-3 rounded-xl hover:bg-cyan- font-medium transition-colors" onClick={() => setMobileMenuOpen(false)}>
                                 Mission
                             </a>
                             <Link
                                 href="/learn"
-                                className="block px-4 py-3 rounded-xl hover:bg-purple-50 font-medium transition-colors"
+                                className="block px-4 py-3 rounded-xl hover:bg-cyan- font-medium transition-colors"
                                 onClick={() => setMobileMenuOpen(false)}
                             >
                                 Learn
                             </Link>
                             <Link
                                 href="/practice"
-                                className="block px-4 py-3 rounded-xl hover:bg-purple-50 font-medium transition-colors"
+                                className="block px-4 py-3 rounded-xl hover:bg-cyan- font-medium transition-colors"
                                 onClick={() => setMobileMenuOpen(false)}
                             >
                                 Practice
@@ -100,7 +100,7 @@ export default function Navbar() {
                             {user ? (
                                 <div className="pt-4 border-t border-slate-200">
                                     <div className="flex items-center gap-2 px-4 py-3 mb-2">
-                                        <User className="w-5 h-5 text-purple-600" />
+                                        <User className="w-5 h-5 text-cyan-" />
                                         <span className="font-medium">{user.username}</span>
                                     </div>
                                     <button
@@ -113,7 +113,7 @@ export default function Navbar() {
                             ) : (
                                 <Link
                                     href="/login"
-                                    className="block px-4 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-semibold rounded-xl"
+                                    className="block px-4 py-3 bg-gradient-to-r from-cyan- to-teal- text-white text-center font-semibold rounded-xl"
                                     onClick={() => setMobileMenuOpen(false)}
                                 >
                                     Login

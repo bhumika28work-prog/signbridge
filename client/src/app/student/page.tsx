@@ -35,8 +35,8 @@ export default function StudentDashboard() {
             title: 'Gujarati',
             description: 'Master Gujarati alphabets and writing with ISL',
             icon: BookOpen,
-            gradient: 'from-purple-600 to-pink-600',
-            bgGradient: 'from-purple-50 to-pink-50',
+            gradient: 'from-cyan- to-teal-',
+            bgGradient: 'from-cyan- to-teal-',
             href: '/student/gujarati',
         },
         {
@@ -62,8 +62,8 @@ export default function StudentDashboard() {
             title: 'Games',
             description: 'Practice ISL through fun and interactive games',
             icon: Gamepad2,
-            gradient: 'from-pink-600 to-rose-600',
-            bgGradient: 'from-pink-50 to-rose-50',
+            gradient: 'from-teal- to-rose-600',
+            bgGradient: 'from-teal- to-rose-50',
             href: '/student/games',
         },
     ];

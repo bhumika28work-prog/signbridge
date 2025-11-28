@@ -93,7 +93,7 @@ export default function SignQuizGame() {
     return (
         <div className="min-h-screen pt-24 pb-12 px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
-                <Link href="/student/games" className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-700 font-medium mb-8">
+                <Link href="/student/games" className="inline-flex items-center gap-2 text-cyan- hover:text-cyan- font-medium mb-8">
                     <ArrowLeft className="w-5 h-5" />
                     Back to Games
                 </Link>
@@ -114,7 +114,7 @@ export default function SignQuizGame() {
                         animate={{ opacity: 1, scale: 1 }}
                         className="glass rounded-3xl p-12 text-center"
                     >
-                        <Trophy className="w-20 h-20 mx-auto mb-6 text-purple-600" />
+                        <Trophy className="w-20 h-20 mx-auto mb-6 text-cyan-" />
                         <h2 className="text-3xl font-bold mb-6">Choose Quiz Length</h2>
                         <div className="grid gap-4 max-w-md mx-auto">
                             <button
@@ -131,7 +131,7 @@ export default function SignQuizGame() {
                             </button>
                             <button
                                 onClick={() => generateQuestions(15)}
-                                className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold text-lg rounded-xl hover:shadow-xl transition-all hover:scale-105"
+                                className="px-8 py-4 bg-gradient-to-r from-cyan- to-teal- text-white font-bold text-lg rounded-xl hover:shadow-xl transition-all hover:scale-105"
                             >
                                 Challenge Quiz (15 Questions)
                             </button>
@@ -169,7 +169,7 @@ export default function SignQuizGame() {
                             className="glass rounded-3xl p-8 text-center"
                         >
                             <h2 className="text-2xl font-bold mb-6">Which sign represents:</h2>
-                            <div className="inline-block px-12 py-8 bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl mb-8">
+                            <div className="inline-block px-12 py-8 bg-gradient-to-br from-cyan- to-teal- rounded-2xl mb-8">
                                 <p className="text-7xl font-bold gradient-text">{currentQ.correctSign}</p>
                             </div>
                         </motion.div>
@@ -273,13 +273,13 @@ export default function SignQuizGame() {
                                             setGameComplete(false);
                                             setGameStarted(false);
                                         }}
-                                        className="flex-1 px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold rounded-xl hover:shadow-xl transition-all"
+                                        className="flex-1 px-6 py-3 bg-gradient-to-r from-cyan- to-teal- text-white font-bold rounded-xl hover:shadow-xl transition-all"
                                     >
                                         Play Again
                                     </button>
                                     <Link
                                         href="/student/games"
-                                        className="flex-1 px-6 py-3 bg-white text-purple-600 font-bold rounded-xl hover:shadow-xl transition-all flex items-center justify-center gap-2"
+                                        className="flex-1 px-6 py-3 bg-white text-cyan- font-bold rounded-xl hover:shadow-xl transition-all flex items-center justify-center gap-2"
                                     >
                                         Games Menu
                                     </Link>

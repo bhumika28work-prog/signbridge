@@ -93,7 +93,7 @@ export default function SignBuilderGame() {
     return (
         <div className="min-h-screen pt-24 pb-12 px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
-                <Link href="/student/games" className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-700 font-medium mb-8">
+                <Link href="/student/games" className="inline-flex items-center gap-2 text-cyan- hover:text-cyan- font-medium mb-8">
                     <ArrowLeft className="w-5 h-5" />
                     Back to Games
                 </Link>
@@ -125,7 +125,7 @@ export default function SignBuilderGame() {
                         </div>
                         <button
                             onClick={startGame}
-                            className="px-12 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold text-xl rounded-2xl hover:shadow-xl transition-all hover:scale-105"
+                            className="px-12 py-4 bg-gradient-to-r from-cyan- to-teal- text-white font-bold text-xl rounded-2xl hover:shadow-xl transition-all hover:scale-105"
                         >
                             Start Game
                         </button>
@@ -155,7 +155,7 @@ export default function SignBuilderGame() {
                             className="glass rounded-2xl p-8 text-center"
                         >
                             <p className="text-lg text-slate-600 mb-4">Build this word:</p>
-                            <div className="inline-block px-8 py-4 bg-gradient-to-br from-purple-100 to-pink-100 rounded-xl">
+                            <div className="inline-block px-8 py-4 bg-gradient-to-br from-cyan- to-teal- rounded-xl">
                                 <p className="text-5xl font-bold gradient-text tracking-wider">
                                     {showHint ? targetWord : '???'}
                                 </p>
@@ -175,7 +175,7 @@ export default function SignBuilderGame() {
                                             initial={{ scale: 0 }}
                                             animate={{ scale: 1 }}
                                             onClick={() => handleRemoveSign(index)}
-                                            className="relative w-24 h-24 bg-white rounded-xl p-2 cursor-pointer hover:shadow-lg transition-all border-2 border-purple-200"
+                                            className="relative w-24 h-24 bg-white rounded-xl p-2 cursor-pointer hover:shadow-lg transition-all border-2 border-cyan-"
                                         >
                                             <Image
                                                 src={islDictionary[sign]}
@@ -229,7 +229,7 @@ export default function SignBuilderGame() {
                             <button
                                 onClick={checkAnswer}
                                 disabled={userAnswer.length !== targetWord.length}
-                                className="flex-1 px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold rounded-xl hover:shadow-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                                className="flex-1 px-6 py-3 bg-gradient-to-r from-cyan- to-teal- text-white font-bold rounded-xl hover:shadow-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                             >
                                 <Check className="w-5 h-5" />
                                 Check Answer
@@ -286,14 +286,14 @@ export default function SignBuilderGame() {
                                 <div className="flex gap-4">
                                     <button
                                         onClick={startGame}
-                                        className="flex-1 px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold rounded-xl hover:shadow-xl transition-all flex items-center justify-center gap-2"
+                                        className="flex-1 px-6 py-3 bg-gradient-to-r from-cyan- to-teal- text-white font-bold rounded-xl hover:shadow-xl transition-all flex items-center justify-center gap-2"
                                     >
                                         <RotateCcw className="w-5 h-5" />
                                         Play Again
                                     </button>
                                     <Link
                                         href="/student/games"
-                                        className="flex-1 px-6 py-3 bg-white text-purple-600 font-bold rounded-xl hover:shadow-xl transition-all flex items-center justify-center gap-2"
+                                        className="flex-1 px-6 py-3 bg-white text-cyan- font-bold rounded-xl hover:shadow-xl transition-all flex items-center justify-center gap-2"
                                     >
                                         Games Menu
                                     </Link>

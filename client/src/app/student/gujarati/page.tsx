@@ -107,7 +107,7 @@ export default function GujaratiModule() {
     return (
         <div className="min-h-screen pt-24 pb-12 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
-                <Link href="/student" className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-700 font-medium mb-8">
+                <Link href="/student" className="inline-flex items-center gap-2 text-cyan- hover:text-cyan- font-medium mb-8">
                     <ArrowLeft className="w-5 h-5" />
                     Back to Dashboard
                 </Link>
@@ -133,7 +133,7 @@ export default function GujaratiModule() {
                         <button
                             onClick={() => setActiveTab('lessons')}
                             className={`flex items-center gap-2 px-4 py-2 rounded-xl font-semibold transition-all ${activeTab === 'lessons'
-                                    ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
+                                    ? 'bg-gradient-to-r from-cyan- to-teal- text-white shadow-lg'
                                     : 'text-slate-600 hover:bg-white/50'
                                 }`}
                         >
@@ -143,7 +143,7 @@ export default function GujaratiModule() {
                         <button
                             onClick={() => setActiveTab('alphabet')}
                             className={`flex items-center gap-2 px-4 py-2 rounded-xl font-semibold transition-all ${activeTab === 'alphabet'
-                                    ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
+                                    ? 'bg-gradient-to-r from-cyan- to-teal- text-white shadow-lg'
                                     : 'text-slate-600 hover:bg-white/50'
                                 }`}
                         >
@@ -153,7 +153,7 @@ export default function GujaratiModule() {
                         <button
                             onClick={() => setActiveTab('text-to-sign')}
                             className={`flex items-center gap-2 px-4 py-2 rounded-xl font-semibold transition-all ${activeTab === 'text-to-sign'
-                                    ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
+                                    ? 'bg-gradient-to-r from-cyan- to-teal- text-white shadow-lg'
                                     : 'text-slate-600 hover:bg-white/50'
                                 }`}
                         >
@@ -163,7 +163,7 @@ export default function GujaratiModule() {
                         <button
                             onClick={() => setActiveTab('sign-to-text')}
                             className={`flex items-center gap-2 px-4 py-2 rounded-xl font-semibold transition-all ${activeTab === 'sign-to-text'
-                                    ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
+                                    ? 'bg-gradient-to-r from-cyan- to-teal- text-white shadow-lg'
                                     : 'text-slate-600 hover:bg-white/50'
                                 }`}
                         >
@@ -173,7 +173,7 @@ export default function GujaratiModule() {
                         <button
                             onClick={() => setActiveTab('speech-to-sign')}
                             className={`flex items-center gap-2 px-4 py-2 rounded-xl font-semibold transition-all ${activeTab === 'speech-to-sign'
-                                    ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
+                                    ? 'bg-gradient-to-r from-cyan- to-teal- text-white shadow-lg'
                                     : 'text-slate-600 hover:bg-white/50'
                                 }`}
                         >
@@ -196,8 +196,8 @@ export default function GujaratiModule() {
                                             key={lesson.id}
                                             onClick={() => setSelectedLesson(index)}
                                             className={`w-full text-left px-4 py-3 rounded-xl transition-all ${selectedLesson === index
-                                                    ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
-                                                    : 'hover:bg-purple-50 text-slate-700'
+                                                    ? 'bg-gradient-to-r from-cyan- to-teal- text-white shadow-lg'
+                                                    : 'hover:bg-cyan- text-slate-700'
                                                 }`}
                                         >
                                             <div className="flex items-center justify-between">
@@ -218,9 +218,9 @@ export default function GujaratiModule() {
                                     <div className="text-6xl font-bold gradient-text">{currentLesson.character}</div>
                                 </div>
 
-                                <div className="mb-6 p-6 bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl">
+                                <div className="mb-6 p-6 bg-gradient-to-br from-cyan- to-teal- rounded-2xl">
                                     <p className="text-lg text-slate-700 mb-4">{currentLesson.content}</p>
-                                    <div className="flex items-center gap-2 text-purple-700">
+                                    <div className="flex items-center gap-2 text-cyan-">
                                         <Volume2 className="w-5 h-5" />
                                         <span className="font-semibold">Pronunciation: {currentLesson.pronunciation}</span>
                                     </div>
@@ -229,7 +229,7 @@ export default function GujaratiModule() {
                                 {/* ISL Button */}
                                 <button
                                     onClick={() => handleShowISL(currentLesson.character)}
-                                    className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl hover:shadow-lg transition-all mb-6"
+                                    className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-cyan- to-teal- text-white font-semibold rounded-xl hover:shadow-lg transition-all mb-6"
                                 >
                                     <BookOpen className="w-5 h-5" />
                                     Show in ISL
@@ -267,7 +267,7 @@ export default function GujaratiModule() {
                                     <button
                                         onClick={() => setSelectedLesson(Math.min(lessons.length - 1, selectedLesson + 1))}
                                         disabled={selectedLesson === lessons.length - 1}
-                                        className="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                                        className="px-6 py-3 bg-gradient-to-r from-cyan- to-teal- text-white font-semibold rounded-xl hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                                     >
                                         Next
                                     </button>
@@ -322,7 +322,7 @@ export default function GujaratiModule() {
                                 value={inputText}
                                 onChange={(e) => handleTextConversion(e.target.value)}
                                 placeholder="ગુજરાતી લખો..."
-                                className="w-full h-40 px-4 py-3 rounded-xl border-2 border-slate-200 focus:border-purple-500 focus:ring-4 focus:ring-purple-100 transition-all resize-none mb-4"
+                                className="w-full h-40 px-4 py-3 rounded-xl border-2 border-slate-200 focus:border-cyan- focus:ring-4 focus:ring-cyan- transition-all resize-none mb-4"
                             />
                             <div className="space-y-2">
                                 <p className="text-sm font-semibold text-slate-700">Quick Phrases:</p>
@@ -331,7 +331,7 @@ export default function GujaratiModule() {
                                         <button
                                             key={phrase}
                                             onClick={() => handleTextConversion(phrase)}
-                                            className="px-4 py-2 bg-white rounded-lg text-sm font-medium text-slate-700 hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-600 hover:text-white transition-all"
+                                            className="px-4 py-2 bg-white rounded-lg text-sm font-medium text-slate-700 hover:bg-gradient-to-r hover:from-cyan- hover:to-teal- hover:text-white transition-all"
                                         >
                                             {phrase}
                                         </button>
@@ -344,7 +344,7 @@ export default function GujaratiModule() {
                             {inputText ? (
                                 <ISLSignDisplay signs={gujaratiToISL(inputText)} autoPlay={false} />
                             ) : (
-                                <div className="h-40 flex items-center justify-center bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl">
+                                <div className="h-40 flex items-center justify-center bg-gradient-to-br from-cyan- to-teal- rounded-xl">
                                     <p className="text-slate-500">Type Gujarati text to see ISL signs</p>
                                 </div>
                             )}
@@ -366,12 +366,12 @@ export default function GujaratiModule() {
                     <div className="grid lg:grid-cols-2 gap-8">
                         <div className="glass rounded-3xl p-8">
                             <h2 className="text-2xl font-bold mb-6 gradient-text">Speak in Gujarati</h2>
-                            <div className="h-40 flex items-center justify-center bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl mb-4">
+                            <div className="h-40 flex items-center justify-center bg-gradient-to-br from-cyan- to-teal- rounded-xl mb-4">
                                 <button
                                     onClick={handleSpeechToText}
                                     className={`p-8 rounded-full transition-all duration-300 ${isListening
                                             ? 'bg-red-500 text-white animate-pulse scale-110'
-                                            : 'bg-white text-purple-600 hover:scale-110'
+                                            : 'bg-white text-cyan- hover:scale-110'
                                         } shadow-xl`}
                                 >
                                     <Mic className="w-12 h-12" />
@@ -380,8 +380,8 @@ export default function GujaratiModule() {
                             <button
                                 onClick={handleSpeechToText}
                                 className={`w-full flex items-center justify-center gap-3 px-6 py-4 rounded-xl font-semibold transition-all ${isListening
-                                        ? 'bg-gradient-to-r from-red-500 to-pink-500 text-white'
-                                        : 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:shadow-lg hover:scale-105'
+                                        ? 'bg-gradient-to-r from-red-500 to-teal- text-white'
+                                        : 'bg-gradient-to-r from-cyan- to-teal- text-white hover:shadow-lg hover:scale-105'
                                     }`}
                             >
                                 <Mic className="w-5 h-5" />
@@ -399,7 +399,7 @@ export default function GujaratiModule() {
                             {inputText ? (
                                 <ISLSignDisplay signs={gujaratiToISL(inputText)} autoPlay={true} />
                             ) : (
-                                <div className="h-40 flex items-center justify-center bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl">
+                                <div className="h-40 flex items-center justify-center bg-gradient-to-br from-cyan- to-teal- rounded-xl">
                                     <p className="text-slate-500">Speak to see ISL signs</p>
                                 </div>
                             )}

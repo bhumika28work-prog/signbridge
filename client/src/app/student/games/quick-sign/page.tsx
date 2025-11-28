@@ -113,7 +113,7 @@ export default function QuickSignGame() {
     return (
         <div className="min-h-screen pt-24 pb-12 px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
-                <Link href="/student/games" className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-700 font-medium mb-8">
+                <Link href="/student/games" className="inline-flex items-center gap-2 text-cyan- hover:text-cyan- font-medium mb-8">
                     <ArrowLeft className="w-5 h-5" />
                     Back to Games
                 </Link>
@@ -172,7 +172,7 @@ export default function QuickSignGame() {
                                 <p className="text-2xl font-bold text-slate-900">{combo}x</p>
                             </div>
                             <div className="glass rounded-xl p-4 text-center">
-                                <Zap className="w-6 h-6 mx-auto mb-2 text-purple-600" />
+                                <Zap className="w-6 h-6 mx-auto mb-2 text-cyan-" />
                                 <p className="text-2xl font-bold text-slate-900">{round + 1}/{totalRounds}</p>
                             </div>
                         </div>

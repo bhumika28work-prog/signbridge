@@ -40,8 +40,8 @@ export default function LoginPage() {
         <div className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
             {/* Animated Background */}
             <div className="fixed inset-0 -z-10 overflow-hidden">
-                <div className="absolute top-0 left-0 w-96 h-96 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-float"></div>
-                <div className="absolute bottom-0 right-0 w-96 h-96 bg-pink-300 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-float" style={{ animationDelay: '2s' }}></div>
+                <div className="absolute top-0 left-0 w-96 h-96 bg-cyan- rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-float"></div>
+                <div className="absolute bottom-0 right-0 w-96 h-96 bg-teal- rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-float" style={{ animationDelay: '2s' }}></div>
             </div>
 
             <motion.div
@@ -53,8 +53,8 @@ export default function LoginPage() {
                 {/* Header */}
                 <div className="text-center mb-8">
                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-6">
-                        <Sparkles className="w-4 h-4 text-purple-600" />
-                        <span className="text-sm font-medium text-purple-600">Welcome Back</span>
+                        <Sparkles className="w-4 h-4 text-cyan-" />
+                        <span className="text-sm font-medium text-cyan-">Welcome Back</span>
                     </div>
                     <h1 className="text-4xl font-extrabold mb-2">
                         <span className="gradient-text">Sign In</span>
@@ -80,7 +80,7 @@ export default function LoginPage() {
                                     required
                                     value={username}
                                     onChange={(e) => setUsername(e.target.value)}
-                                    className="block w-full pl-12 pr-4 py-3 border-2 border-slate-200 rounded-xl focus:ring-4 focus:ring-purple-100 focus:border-purple-500 transition-all duration-300"
+                                    className="block w-full pl-12 pr-4 py-3 border-2 border-slate-200 rounded-xl focus:ring-4 focus:ring-cyan- focus:border-cyan- transition-all duration-300"
                                     placeholder="Enter your username"
                                 />
                             </div>
@@ -101,7 +101,7 @@ export default function LoginPage() {
                                     required
                                     value={password}
                                     onChange={(e) => setPassword(e.target.value)}
-                                    className="block w-full pl-12 pr-4 py-3 border-2 border-slate-200 rounded-xl focus:ring-4 focus:ring-purple-100 focus:border-purple-500 transition-all duration-300"
+                                    className="block w-full pl-12 pr-4 py-3 border-2 border-slate-200 rounded-xl focus:ring-4 focus:ring-cyan- focus:border-cyan- transition-all duration-300"
                                     placeholder="Enter your password"
                                 />
                             </div>
@@ -122,7 +122,7 @@ export default function LoginPage() {
                         <button
                             type="submit"
                             disabled={loading}
-                            className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+                            className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-cyan- to-teal- text-white font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
                         >
                             {loading ? (
                                 <>
@@ -149,7 +149,7 @@ export default function LoginPage() {
 
                 {/* Back to Home */}
                 <div className="mt-6 text-center">
-                    <Link href="/" className="text-sm text-slate-600 hover:text-purple-600 font-medium transition-colors">
+                    <Link href="/" className="text-sm text-slate-600 hover:text-cyan- font-medium transition-colors">
                         ← Back to Home
                     </Link>
                 </div>
