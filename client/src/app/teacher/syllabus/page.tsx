@@ -77,8 +77,8 @@ export default function TeacherSyllabus() {
                                 key={module}
                                 onClick={() => setActiveModule(module)}
                                 className={`w-full text-left px-4 py-3 rounded-xl font-medium transition-all ${activeModule === module
-                                        ? 'bg-purple-600 text-slate-100 shadow-lg'
-                                        : 'bg-slate-800 text-cyan-400 hover:bg-purple-50'
+                                    ? 'bg-purple-600 text-slate-100 shadow-lg'
+                                    : 'bg-slate-800 text-cyan-400 hover:bg-purple-50'
                                     }`}
                             >
                                 {module}
@@ -168,7 +168,7 @@ export default function TeacherSyllabus() {
                         {/* Lessons List */}
                         <div className="space-y-4">
                             {filteredLessons.length === 0 ? (
-                                <div className="text-center py-12 text-slate-400 bg-white/50 rounded-2xl border-2 border-dashed border-cyan-500/30">
+                                <div className="text-center py-12 text-slate-400 bg-slate-800/50 rounded-2xl border-2 border-dashed border-cyan-500/30">
                                     No lessons found for this module. Add one to get started!
                                 </div>
                             ) : (
@@ -181,8 +181,8 @@ export default function TeacherSyllabus() {
                                     >
                                         <div className="flex items-center gap-4">
                                             <div className={`p-3 rounded-lg ${lesson.type === 'Video' ? 'bg-cyan-100 text-cyan-600' :
-                                                    lesson.type === 'Text' ? 'bg-green-100 text-green-600' :
-                                                        'bg-purple-100 text-purple-600'
+                                                lesson.type === 'Text' ? 'bg-green-100 text-green-600' :
+                                                    'bg-purple-100 text-purple-600'
                                                 }`}>
                                                 {lesson.type === 'Video' ? <Video className="w-6 h-6" /> :
                                                     lesson.type === 'Text' ? <FileText className="w-6 h-6" /> :

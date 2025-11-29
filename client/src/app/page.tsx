@@ -9,9 +9,9 @@ export default function Home() {
         <div className="min-h-screen overflow-hidden">
             {/* Animated Background Blobs */}
             <div className="fixed inset-0 -z-10 overflow-hidden">
-                <div className="absolute top-0 -left-4 w-96 h-96 bg-cyan- rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-float"></div>
-                <div className="absolute top-0 -right-4 w-96 h-96 bg-emerald-300 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-float" style={{ animationDelay: '2s' }}></div>
-                <div className="absolute -bottom-8 left-20 w-96 h-96 bg-teal- rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-float" style={{ animationDelay: '4s' }}></div>
+                <div className="absolute top-0 -left-4 w-96 h-96 bg-cyan-900/20 rounded-full mix-blend-screen filter blur-3xl opacity-30 animate-float"></div>
+                <div className="absolute top-0 -right-4 w-96 h-96 bg-blue-900/20 rounded-full mix-blend-screen filter blur-3xl opacity-30 animate-float" style={{ animationDelay: '2s' }}></div>
+                <div className="absolute -bottom-8 left-20 w-96 h-96 bg-teal-900/20 rounded-full mix-blend-screen filter blur-3xl opacity-30 animate-float" style={{ animationDelay: '4s' }}></div>
             </div>
 
             {/* Hero Section */}
