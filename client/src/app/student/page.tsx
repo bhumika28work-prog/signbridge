@@ -26,8 +26,8 @@ export default function StudentDashboard() {
             title: 'English',
             description: 'Learn English alphabets and vocabulary with ISL',
             icon: Globe,
-            gradient: 'from-cyan-600 to-cyan-600',
-            bgGradient: 'from-cyan-50 to-cyan-50',
+            gradient: 'from-cyan-500 to-blue-500',
+            bgGradient: 'from-cyan-900/40 to-blue-900/40',
             href: '/student/english',
         },
         {
@@ -35,8 +35,8 @@ export default function StudentDashboard() {
             title: 'Gujarati',
             description: 'Master Gujarati alphabets and writing with ISL',
             icon: BookOpen,
-            gradient: 'from-cyan- to-teal-',
-            bgGradient: 'from-cyan- to-teal-',
+            gradient: 'from-teal-500 to-emerald-500',
+            bgGradient: 'from-teal-900/40 to-emerald-900/40',
             href: '/student/gujarati',
         },
         {
@@ -44,8 +44,8 @@ export default function StudentDashboard() {
             title: 'Science',
             description: 'Explore scientific concepts through visual learning',
             icon: Beaker,
-            gradient: 'from-green-600 to-emerald-600',
-            bgGradient: 'from-green-50 to-emerald-50',
+            gradient: 'from-purple-500 to-indigo-500',
+            bgGradient: 'from-purple-900/40 to-indigo-900/40',
             href: '/student/science',
         },
         {
@@ -53,8 +53,8 @@ export default function StudentDashboard() {
             title: 'Maths',
             description: 'Practice numbers and basic mathematics',
             icon: Calculator,
-            gradient: 'from-teal-600 to-red-600',
-            bgGradient: 'from-teal-50 to-red-50',
+            gradient: 'from-orange-500 to-red-500',
+            bgGradient: 'from-orange-900/40 to-red-900/40',
             href: '/student/maths',
         },
         {
@@ -62,11 +62,26 @@ export default function StudentDashboard() {
             title: 'Games',
             description: 'Practice ISL through fun and interactive games',
             icon: Gamepad2,
-            gradient: 'from-teal- to-rose-600',
-            bgGradient: 'from-teal- to-rose-50',
+            gradient: 'from-pink-500 to-rose-500',
+            bgGradient: 'from-pink-900/40 to-rose-900/40',
             href: '/student/games',
         },
     ];
+
+    const container = {
+        hidden: { opacity: 0 },
+        show: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.1
+            }
+        }
+    };
+
+    const item = {
+        hidden: { opacity: 0, y: 20 },
+        show: { opacity: 1, y: 0 }
+    };
 
     return (
         <div className="min-h-screen pt-24 pb-12 px-4 sm:px-6 lg:px-8">
@@ -85,23 +100,26 @@ export default function StudentDashboard() {
                     </p>
                 </motion.div>
 
-                <div className="grid md:grid-cols-2 gap-8">
-                    {modules.map((module, index) => (
+                <motion.div
+                    variants={container}
+                    initial="hidden"
+                    animate="show"
+                    className="grid md:grid-cols-2 gap-8"
+                >
+                    {modules.map((module) => (
                         <motion.div
                             key={module.id}
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: index * 0.1 + 0.2, duration: 0.6 }}
+                            variants={item}
                             whileHover={{ y: -8, transition: { duration: 0.2 } }}
                         >
                             <Link href={module.href}>
-                                <div className={`glass rounded-3xl p-8 h-full hover:shadow-2xl transition-all duration-300 bg-gradient-to-br ${module.bgGradient} cursor-pointer group`}>
-                                    <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-br ${module.gradient} mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                                        <module.icon className="w-10 h-10 text-slate-100" />
+                                <div className={`glass rounded-3xl p-8 h-full hover:shadow-2xl transition-all duration-300 bg-gradient-to-br ${module.bgGradient} cursor-pointer group border border-white/5`}>
+                                    <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-br ${module.gradient} mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                                        <module.icon className="w-10 h-10 text-white" />
                                     </div>
                                     <h3 className="text-3xl font-bold mb-3 text-slate-100">{module.title}</h3>
-                                    <p className="text-lg text-cyan-400 leading-relaxed mb-6">{module.description}</p>
-                                    <div className={`inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r ${module.gradient} text-slate-100 font-semibold rounded-xl group-hover:shadow-lg transition-all`}>
+                                    <p className="text-lg text-slate-300 leading-relaxed mb-6">{module.description}</p>
+                                    <div className={`inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r ${module.gradient} text-white font-semibold rounded-xl group-hover:shadow-lg transition-all`}>
                                         Start Learning
                                         <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                                     </div>
@@ -109,7 +127,7 @@ export default function StudentDashboard() {
                             </Link>
                         </motion.div>
                     ))}
-                </div>
+                </motion.div>
 
                 {/* Progress Overview */}
                 <motion.div

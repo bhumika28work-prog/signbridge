@@ -19,6 +19,21 @@ export default function ParentDashboard() {
 
     if (!user || user.role !== 'parent') return null;
 
+    const container = {
+        hidden: { opacity: 0 },
+        show: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.1
+            }
+        }
+    };
+
+    const item = {
+        hidden: { opacity: 0, y: 20 },
+        show: { opacity: 1, y: 0 }
+    };
+
     return (
         <div className="min-h-screen pt-24 pb-12 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
@@ -46,47 +61,50 @@ export default function ParentDashboard() {
                     <label className="block text-sm font-semibold text-slate-300 mb-2">
                         Select Student
                     </label>
-                    <select className="w-full px-4 py-3 border-2 border-cyan-500/30 rounded-xl focus:ring-4 focus:ring-purple-100 focus:border-purple-500 transition-all">
+                    <select className="w-full px-4 py-3 bg-slate-800 border-2 border-cyan-500/30 rounded-xl focus:ring-4 focus:ring-cyan-500/20 focus:border-cyan-500 transition-all text-white">
                         <option>John Doe (Your Child)</option>
                     </select>
                 </motion.div>
 
                 {/* Stats Overview */}
-                <div className="grid md:grid-cols-4 gap-6 mb-8">
+                <motion.div
+                    variants={container}
+                    initial="hidden"
+                    animate="show"
+                    className="grid md:grid-cols-4 gap-6 mb-8"
+                >
                     {[
-                        { icon: TrendingUp, label: 'Overall Progress', value: '75%', color: 'purple' },
-                        { icon: Clock, label: 'Time Spent', value: '24h', color: 'blue' },
-                        { icon: Award, label: 'Achievements', value: '12', color: 'green' },
-                        { icon: Target, label: 'Avg. Score', value: '88%', color: 'pink' },
+                        { icon: TrendingUp, label: 'Overall Progress', value: '75%', color: 'purple', bg: 'bg-purple-900/40', text: 'text-purple-400' },
+                        { icon: Clock, label: 'Time Spent', value: '24h', color: 'blue', bg: 'bg-blue-900/40', text: 'text-blue-400' },
+                        { icon: Award, label: 'Achievements', value: '12', color: 'green', bg: 'bg-green-900/40', text: 'text-green-400' },
+                        { icon: Target, label: 'Avg. Score', value: '88%', color: 'pink', bg: 'bg-pink-900/40', text: 'text-pink-400' },
                     ].map((stat, index) => (
                         <motion.div
                             key={index}
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.3 + index * 0.1, duration: 0.6 }}
-                            className="glass rounded-2xl p-6"
+                            variants={item}
+                            className="glass rounded-2xl p-6 border border-white/5"
                         >
-                            <div className={`inline-flex p-3 rounded-xl bg-${stat.color}-100 mb-4`}>
-                                <stat.icon className={`w-6 h-6 text-${stat.color}-600`} />
+                            <div className={`inline-flex p-3 rounded-xl ${stat.bg} mb-4`}>
+                                <stat.icon className={`w-6 h-6 ${stat.text}`} />
                             </div>
                             <div className="text-3xl font-bold gradient-text mb-1">{stat.value}</div>
-                            <div className="text-sm text-cyan-400">{stat.label}</div>
+                            <div className="text-sm text-slate-400">{stat.label}</div>
                         </motion.div>
                     ))}
-                </div>
+                </motion.div>
 
                 {/* Performance by Subject */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.7, duration: 0.6 }}
+                    transition={{ delay: 0.4, duration: 0.6 }}
                     className="glass rounded-3xl p-8 mb-8"
                 >
-                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-                        <BarChart3 className="w-6 h-6" />
+                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2 text-slate-100">
+                        <BarChart3 className="w-6 h-6 text-cyan-400" />
                         Performance by Subject
                     </h2>
-                    <div className="space-y-4">
+                    <div className="space-y-6">
                         {[
                             { subject: 'English', progress: 85, color: 'blue' },
                             { subject: 'Gujarati', progress: 92, color: 'purple' },
@@ -98,12 +116,12 @@ export default function ParentDashboard() {
                                     <span className="font-semibold text-slate-300">{item.subject}</span>
                                     <span className="font-bold text-slate-100">{item.progress}%</span>
                                 </div>
-                                <div className="w-full h-3 bg-slate-700 rounded-full overflow-hidden">
+                                <div className="w-full h-3 bg-slate-800 rounded-full overflow-hidden border border-slate-700">
                                     <motion.div
                                         initial={{ width: 0 }}
                                         animate={{ width: `${item.progress}%` }}
-                                        transition={{ delay: 0.8 + index * 0.1, duration: 0.8 }}
-                                        className={`h-full bg-gradient-to-r from-${item.color}-500 to-${item.color}-600`}
+                                        transition={{ delay: 0.5 + index * 0.1, duration: 0.8 }}
+                                        className={`h-full bg-gradient-to-r from-${item.color}-500 to-${item.color}-600 shadow-[0_0_10px_rgba(0,0,0,0.3)]`}
                                     />
                                 </div>
                             </div>
@@ -115,10 +133,10 @@ export default function ParentDashboard() {
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.9, duration: 0.6 }}
+                    transition={{ delay: 0.6, duration: 0.6 }}
                     className="glass rounded-3xl p-8"
                 >
-                    <h2 className="text-2xl font-bold mb-6">Recent Activity</h2>
+                    <h2 className="text-2xl font-bold mb-6 text-slate-100">Recent Activity</h2>
                     <div className="space-y-4">
                         {[
                             { activity: 'Completed Gujarati Alphabet Lesson 5', time: '2 hours ago', type: 'success' },
@@ -126,8 +144,8 @@ export default function ParentDashboard() {
                             { activity: 'Scored 95% in Maths Quiz', time: '1 day ago', type: 'success' },
                             { activity: 'Started Science Module', time: '2 days ago', type: 'info' },
                         ].map((item, index) => (
-                            <div key={index} className="flex items-start gap-4 p-4 bg-slate-800 rounded-xl">
-                                <div className={`w-2 h-2 rounded-full mt-2 ${item.type === 'success' ? 'bg-slate-8000' : 'bg-slate-8000'}`} />
+                            <div key={index} className="flex items-start gap-4 p-4 bg-slate-800/50 border border-slate-700/50 rounded-xl hover:bg-slate-800 transition-colors">
+                                <div className={`w-2 h-2 rounded-full mt-2 ${item.type === 'success' ? 'bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.4)]' : 'bg-blue-500 shadow-[0_0_8px_rgba(59,130,246,0.4)]'}`} />
                                 <div className="flex-1">
                                     <p className="font-medium text-slate-100">{item.activity}</p>
                                     <p className="text-sm text-slate-400">{item.time}</p>
