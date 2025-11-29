@@ -133,8 +133,8 @@ export default function GujaratiModule() {
                         <button
                             onClick={() => setActiveTab('lessons')}
                             className={`flex items-center gap-2 px-4 py-2 rounded-xl font-semibold transition-all ${activeTab === 'lessons'
-                                    ? 'bg-gradient-to-r from-cyan- to-teal- text-white shadow-lg'
-                                    : 'text-cyan-400 hover:bg-white/50'
+                                    ? 'bg-gradient-to-r from-cyan- to-teal- text-slate-100 shadow-lg'
+                                    : 'text-cyan-400 hover:bg-slate-700/50'
                                 }`}
                         >
                             <BookOpen className="w-4 h-4" />
@@ -143,8 +143,8 @@ export default function GujaratiModule() {
                         <button
                             onClick={() => setActiveTab('alphabet')}
                             className={`flex items-center gap-2 px-4 py-2 rounded-xl font-semibold transition-all ${activeTab === 'alphabet'
-                                    ? 'bg-gradient-to-r from-cyan- to-teal- text-white shadow-lg'
-                                    : 'text-cyan-400 hover:bg-white/50'
+                                    ? 'bg-gradient-to-r from-cyan- to-teal- text-slate-100 shadow-lg'
+                                    : 'text-cyan-400 hover:bg-slate-700/50'
                                 }`}
                         >
                             <Grid3x3 className="w-4 h-4" />
@@ -153,8 +153,8 @@ export default function GujaratiModule() {
                         <button
                             onClick={() => setActiveTab('text-to-sign')}
                             className={`flex items-center gap-2 px-4 py-2 rounded-xl font-semibold transition-all ${activeTab === 'text-to-sign'
-                                    ? 'bg-gradient-to-r from-cyan- to-teal- text-white shadow-lg'
-                                    : 'text-cyan-400 hover:bg-white/50'
+                                    ? 'bg-gradient-to-r from-cyan- to-teal- text-slate-100 shadow-lg'
+                                    : 'text-cyan-400 hover:bg-slate-700/50'
                                 }`}
                         >
                             <MessageSquare className="w-4 h-4" />
@@ -163,8 +163,8 @@ export default function GujaratiModule() {
                         <button
                             onClick={() => setActiveTab('sign-to-text')}
                             className={`flex items-center gap-2 px-4 py-2 rounded-xl font-semibold transition-all ${activeTab === 'sign-to-text'
-                                    ? 'bg-gradient-to-r from-cyan- to-teal- text-white shadow-lg'
-                                    : 'text-cyan-400 hover:bg-white/50'
+                                    ? 'bg-gradient-to-r from-cyan- to-teal- text-slate-100 shadow-lg'
+                                    : 'text-cyan-400 hover:bg-slate-700/50'
                                 }`}
                         >
                             <Camera className="w-4 h-4" />
@@ -173,8 +173,8 @@ export default function GujaratiModule() {
                         <button
                             onClick={() => setActiveTab('speech-to-sign')}
                             className={`flex items-center gap-2 px-4 py-2 rounded-xl font-semibold transition-all ${activeTab === 'speech-to-sign'
-                                    ? 'bg-gradient-to-r from-cyan- to-teal- text-white shadow-lg'
-                                    : 'text-cyan-400 hover:bg-white/50'
+                                    ? 'bg-gradient-to-r from-cyan- to-teal- text-slate-100 shadow-lg'
+                                    : 'text-cyan-400 hover:bg-slate-700/50'
                                 }`}
                         >
                             <Mic className="w-4 h-4" />
@@ -189,14 +189,14 @@ export default function GujaratiModule() {
                         {/* Lesson List */}
                         <div className="lg:col-span-1">
                             <div className="glass rounded-3xl p-6 sticky top-24">
-                                <h2 className="text-xl font-bold mb-4 text-white">Lessons</h2>
+                                <h2 className="text-xl font-bold mb-4 text-slate-100">Lessons</h2>
                                 <div className="space-y-2">
                                     {lessons.map((lesson, index) => (
                                         <button
                                             key={lesson.id}
                                             onClick={() => setSelectedLesson(index)}
                                             className={`w-full text-left px-4 py-3 rounded-xl transition-all ${selectedLesson === index
-                                                    ? 'bg-gradient-to-r from-cyan- to-teal- text-white shadow-lg'
+                                                    ? 'bg-gradient-to-r from-cyan- to-teal- text-slate-100 shadow-lg'
                                                     : 'hover:bg-cyan- text-slate-300'
                                                 }`}
                                         >
@@ -214,7 +214,7 @@ export default function GujaratiModule() {
                         <div className="lg:col-span-2">
                             <div className="glass rounded-3xl p-8">
                                 <div className="flex items-center justify-between mb-6">
-                                    <h2 className="text-3xl font-bold text-white">{currentLesson.title}</h2>
+                                    <h2 className="text-3xl font-bold text-slate-100">{currentLesson.title}</h2>
                                     <div className="text-6xl font-bold gradient-text">{currentLesson.character}</div>
                                 </div>
 
@@ -229,7 +229,7 @@ export default function GujaratiModule() {
                                 {/* ISL Button */}
                                 <button
                                     onClick={() => handleShowISL(currentLesson.character)}
-                                    className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-cyan- to-teal- text-white font-semibold rounded-xl hover:shadow-lg transition-all mb-6"
+                                    className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-cyan- to-teal- text-slate-100 font-semibold rounded-xl hover:shadow-lg transition-all mb-6"
                                 >
                                     <BookOpen className="w-5 h-5" />
                                     Show in ISL
@@ -243,7 +243,7 @@ export default function GujaratiModule() {
                                 )}
 
                                 {/* Practice Section */}
-                                <div className="mt-8 p-6 bg-blue-50 rounded-2xl">
+                                <div className="mt-8 p-6 bg-slate-800 rounded-2xl">
                                     <h3 className="text-xl font-bold mb-4 text-blue-900">Practice Writing</h3>
                                     <div className="bg-slate-800 rounded-xl p-8 border-2 border-dashed border-blue-300">
                                         <p className="text-center text-7xl font-bold text-slate-300 select-none">
@@ -267,7 +267,7 @@ export default function GujaratiModule() {
                                     <button
                                         onClick={() => setSelectedLesson(Math.min(lessons.length - 1, selectedLesson + 1))}
                                         disabled={selectedLesson === lessons.length - 1}
-                                        className="px-6 py-3 bg-gradient-to-r from-cyan- to-teal- text-white font-semibold rounded-xl hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                                        className="px-6 py-3 bg-gradient-to-r from-cyan- to-teal- text-slate-100 font-semibold rounded-xl hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                                     >
                                         Next
                                     </button>
@@ -282,7 +282,7 @@ export default function GujaratiModule() {
                         <h2 className="text-3xl font-bold mb-6 gradient-text">Complete Gujarati Alphabet Chart</h2>
                         <p className="text-cyan-400 mb-6">Click any character to see its ISL sign</p>
 
-                        <h3 className="text-xl font-bold mb-4 text-white">Vowels (સ્વરો)</h3>
+                        <h3 className="text-xl font-bold mb-4 text-slate-100">Vowels (સ્વરો)</h3>
                         <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-12 gap-4 mb-8">
                             {gujaratiVowels.map((char) => (
                                 <button
@@ -295,7 +295,7 @@ export default function GujaratiModule() {
                             ))}
                         </div>
 
-                        <h3 className="text-xl font-bold mb-4 text-white">Consonants (વ્યંજનો)</h3>
+                        <h3 className="text-xl font-bold mb-4 text-slate-100">Consonants (વ્યંજનો)</h3>
                         <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-12 gap-4 mb-8">
                             {gujaratiConsonants.map((char) => (
                                 <button
@@ -331,7 +331,7 @@ export default function GujaratiModule() {
                                         <button
                                             key={phrase}
                                             onClick={() => handleTextConversion(phrase)}
-                                            className="px-4 py-2 bg-slate-800 rounded-lg text-sm font-medium text-slate-300 hover:bg-gradient-to-r hover:from-cyan- hover:to-teal- hover:text-white transition-all"
+                                            className="px-4 py-2 bg-slate-800 rounded-lg text-sm font-medium text-slate-300 hover:bg-gradient-to-r hover:from-cyan- hover:to-teal- hover:text-slate-100 transition-all"
                                         >
                                             {phrase}
                                         </button>
@@ -370,7 +370,7 @@ export default function GujaratiModule() {
                                 <button
                                     onClick={handleSpeechToText}
                                     className={`p-8 rounded-full transition-all duration-300 ${isListening
-                                            ? 'bg-red-500 text-white animate-pulse scale-110'
+                                            ? 'bg-slate-8000 text-slate-100 animate-pulse scale-110'
                                             : 'bg-slate-800 text-cyan- hover:scale-110'
                                         } shadow-xl`}
                                 >
@@ -380,8 +380,8 @@ export default function GujaratiModule() {
                             <button
                                 onClick={handleSpeechToText}
                                 className={`w-full flex items-center justify-center gap-3 px-6 py-4 rounded-xl font-semibold transition-all ${isListening
-                                        ? 'bg-gradient-to-r from-red-500 to-teal- text-white'
-                                        : 'bg-gradient-to-r from-cyan- to-teal- text-white hover:shadow-lg hover:scale-105'
+                                        ? 'bg-gradient-to-r from-red-500 to-teal- text-slate-100'
+                                        : 'bg-gradient-to-r from-cyan- to-teal- text-slate-100 hover:shadow-lg hover:scale-105'
                                     }`}
                             >
                                 <Mic className="w-5 h-5" />

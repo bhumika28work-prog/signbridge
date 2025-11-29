@@ -117,7 +117,7 @@ export default function WritingCanvas() {
                                 max="20"
                                 value={lineWidth}
                                 onChange={(e) => setLineWidth(Number(e.target.value))}
-                                className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-purple-600"
+                                className="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-purple-600"
                             />
                         </div>
                     </div>
@@ -146,7 +146,7 @@ export default function WritingCanvas() {
                 <div className="flex flex-wrap gap-4 justify-center">
                     <button
                         onClick={clearCanvas}
-                        className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-red-500 to-pink-500 text-white font-semibold rounded-xl hover:shadow-lg transition-all duration-300 hover:scale-105"
+                        className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-red-500 to-pink-500 text-slate-100 font-semibold rounded-xl hover:shadow-lg transition-all duration-300 hover:scale-105"
                     >
                         <Eraser className="w-5 h-5" />
                         Clear Canvas
@@ -154,14 +154,14 @@ export default function WritingCanvas() {
 
                     <button
                         onClick={downloadCanvas}
-                        className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-xl hover:shadow-lg transition-all duration-300 hover:scale-105"
+                        className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-slate-100 font-semibold rounded-xl hover:shadow-lg transition-all duration-300 hover:scale-105"
                     >
                         <Download className="w-5 h-5" />
                         Download
                     </button>
 
                     <button
-                        className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl hover:shadow-lg transition-all duration-300 hover:scale-105"
+                        className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-slate-100 font-semibold rounded-xl hover:shadow-lg transition-all duration-300 hover:scale-105"
                     >
                         <Sparkles className="w-5 h-5" />
                         AI Check

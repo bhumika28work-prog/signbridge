@@ -79,7 +79,7 @@ export default function GamesPage() {
                 >
                     <div className="flex items-center gap-4 mb-4">
                         <div className="p-4 bg-gradient-to-br from-cyan- to-teal- rounded-2xl">
-                            <Gamepad2 className="w-10 h-10 text-white" />
+                            <Gamepad2 className="w-10 h-10 text-slate-100" />
                         </div>
                         <div>
                             <h1 className="text-4xl sm:text-5xl font-bold gradient-text">
@@ -159,11 +159,11 @@ export default function GamesPage() {
                             <Link href={game.href}>
                                 <div className={`glass rounded-3xl p-8 h-full hover:shadow-2xl transition-all duration-300 bg-gradient-to-br ${game.bgGradient} cursor-pointer group`}>
                                     <div className={`inline-flex p-6 rounded-2xl bg-gradient-to-br ${game.gradient} mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                                        <game.icon className="w-12 h-12 text-white" />
+                                        <game.icon className="w-12 h-12 text-slate-100" />
                                     </div>
 
                                     <div className="flex items-center justify-between mb-3">
-                                        <h3 className="text-2xl font-bold text-white">{game.title}</h3>
+                                        <h3 className="text-2xl font-bold text-slate-100">{game.title}</h3>
                                         <span className={`px-3 py-1 rounded-full text-xs font-bold ${game.difficulty === 'Easy' ? 'bg-green-100 text-green-700' :
                                                 game.difficulty === 'Medium' ? 'bg-yellow-100 text-yellow-700' :
                                                     'bg-red-100 text-red-700'
@@ -176,7 +176,7 @@ export default function GamesPage() {
                                         {game.description}
                                     </p>
 
-                                    <div className={`inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r ${game.gradient} text-white font-semibold rounded-xl group-hover:shadow-lg transition-all`}>
+                                    <div className={`inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r ${game.gradient} text-slate-100 font-semibold rounded-xl group-hover:shadow-lg transition-all`}>
                                         Play Now
                                         <Gamepad2 className="w-5 h-5 group-hover:scale-110 transition-transform" />
                                     </div>

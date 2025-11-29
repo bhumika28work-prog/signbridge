@@ -70,11 +70,11 @@ export default function TeacherDashboard() {
                             <Link href={section.href}>
                                 <div className={`glass rounded-3xl p-8 h-full hover:shadow-2xl transition-all duration-300 bg-gradient-to-br ${section.bgGradient} cursor-pointer group`}>
                                     <div className={`inline-flex p-6 rounded-2xl bg-gradient-to-br ${section.gradient} mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                                        <section.icon className="w-12 h-12 text-white" />
+                                        <section.icon className="w-12 h-12 text-slate-100" />
                                     </div>
-                                    <h3 className="text-3xl font-bold mb-4 text-white">{section.title}</h3>
+                                    <h3 className="text-3xl font-bold mb-4 text-slate-100">{section.title}</h3>
                                     <p className="text-lg text-cyan-400 leading-relaxed mb-6">{section.description}</p>
-                                    <div className={`inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r ${section.gradient} text-white font-semibold rounded-xl group-hover:shadow-lg transition-all`}>
+                                    <div className={`inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r ${section.gradient} text-slate-100 font-semibold rounded-xl group-hover:shadow-lg transition-all`}>
                                         Open
                                         <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                                     </div>
@@ -91,7 +91,7 @@ export default function TeacherDashboard() {
                     transition={{ delay: 0.4, duration: 0.6 }}
                     className="mt-12 glass rounded-3xl p-8"
                 >
-                    <h2 className="text-2xl font-bold mb-6 text-white">Quick Overview</h2>
+                    <h2 className="text-2xl font-bold mb-6 text-slate-100">Quick Overview</h2>
                     <div className="grid md:grid-cols-4 gap-6">
                         <div className="text-center">
                             <div className="text-4xl font-bold gradient-text mb-2">45</div>

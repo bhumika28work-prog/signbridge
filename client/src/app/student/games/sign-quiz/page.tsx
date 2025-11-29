@@ -119,19 +119,19 @@ export default function SignQuizGame() {
                         <div className="grid gap-4 max-w-md mx-auto">
                             <button
                                 onClick={() => generateQuestions(5)}
-                                className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-bold text-lg rounded-xl hover:shadow-xl transition-all hover:scale-105"
+                                className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-slate-100 font-bold text-lg rounded-xl hover:shadow-xl transition-all hover:scale-105"
                             >
                                 Quick Quiz (5 Questions)
                             </button>
                             <button
                                 onClick={() => generateQuestions(10)}
-                                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-bold text-lg rounded-xl hover:shadow-xl transition-all hover:scale-105"
+                                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-slate-100 font-bold text-lg rounded-xl hover:shadow-xl transition-all hover:scale-105"
                             >
                                 Standard Quiz (10 Questions)
                             </button>
                             <button
                                 onClick={() => generateQuestions(15)}
-                                className="px-8 py-4 bg-gradient-to-r from-cyan- to-teal- text-white font-bold text-lg rounded-xl hover:shadow-xl transition-all hover:scale-105"
+                                className="px-8 py-4 bg-gradient-to-r from-cyan- to-teal- text-slate-100 font-bold text-lg rounded-xl hover:shadow-xl transition-all hover:scale-105"
                             >
                                 Challenge Quiz (15 Questions)
                             </button>
@@ -146,17 +146,17 @@ export default function SignQuizGame() {
                         <div className="grid grid-cols-3 gap-4">
                             <div className="glass rounded-xl p-4 text-center">
                                 <Target className="w-6 h-6 mx-auto mb-2 text-blue-600" />
-                                <p className="text-2xl font-bold text-white">{currentQuestion + 1}/{questions.length}</p>
+                                <p className="text-2xl font-bold text-slate-100">{currentQuestion + 1}/{questions.length}</p>
                                 <p className="text-sm text-cyan-400">Question</p>
                             </div>
                             <div className="glass rounded-xl p-4 text-center">
                                 <Trophy className="w-6 h-6 mx-auto mb-2 text-green-600" />
-                                <p className="text-2xl font-bold text-white">{score}</p>
+                                <p className="text-2xl font-bold text-slate-100">{score}</p>
                                 <p className="text-sm text-cyan-400">Score</p>
                             </div>
                             <div className="glass rounded-xl p-4 text-center">
                                 <Zap className="w-6 h-6 mx-auto mb-2 text-yellow-600" />
-                                <p className="text-2xl font-bold text-white">{streak}</p>
+                                <p className="text-2xl font-bold text-slate-100">{streak}</p>
                                 <p className="text-sm text-cyan-400">Streak</p>
                             </div>
                         </div>
@@ -185,9 +185,9 @@ export default function SignQuizGame() {
                                     onClick={() => handleAnswer(option)}
                                     disabled={showFeedback}
                                     className={`glass rounded-2xl p-6 hover:shadow-xl transition-all relative overflow-hidden ${showFeedback && option === currentQ.correctSign
-                                            ? 'ring-4 ring-green-500 bg-green-50'
+                                            ? 'ring-4 ring-green-500 bg-slate-800'
                                             : showFeedback && option === selectedAnswer
-                                                ? 'ring-4 ring-red-500 bg-red-50'
+                                                ? 'ring-4 ring-red-500 bg-slate-800'
                                                 : 'hover:scale-105'
                                         }`}
                                 >
@@ -199,7 +199,7 @@ export default function SignQuizGame() {
                                             className="object-contain"
                                         />
                                     </div>
-                                    <p className="text-3xl font-bold text-white">{option}</p>
+                                    <p className="text-3xl font-bold text-slate-100">{option}</p>
 
                                     {/* Feedback Icons */}
                                     <AnimatePresence>
@@ -207,18 +207,18 @@ export default function SignQuizGame() {
                                             <motion.div
                                                 initial={{ scale: 0 }}
                                                 animate={{ scale: 1 }}
-                                                className="absolute top-4 right-4 w-12 h-12 bg-green-500 rounded-full flex items-center justify-center"
+                                                className="absolute top-4 right-4 w-12 h-12 bg-slate-8000 rounded-full flex items-center justify-center"
                                             >
-                                                <Check className="w-8 h-8 text-white" />
+                                                <Check className="w-8 h-8 text-slate-100" />
                                             </motion.div>
                                         )}
                                         {showFeedback && option === selectedAnswer && !isCorrect && (
                                             <motion.div
                                                 initial={{ scale: 0 }}
                                                 animate={{ scale: 1 }}
-                                                className="absolute top-4 right-4 w-12 h-12 bg-red-500 rounded-full flex items-center justify-center"
+                                                className="absolute top-4 right-4 w-12 h-12 bg-slate-8000 rounded-full flex items-center justify-center"
                                             >
-                                                <X className="w-8 h-8 text-white" />
+                                                <X className="w-8 h-8 text-slate-100" />
                                             </motion.div>
                                         )}
                                     </AnimatePresence>
@@ -245,7 +245,7 @@ export default function SignQuizGame() {
                                 <div className="text-6xl mb-4">
                                     {score >= questions.length * 8 ? '🏆' : score >= questions.length * 5 ? '🎉' : '👍'}
                                 </div>
-                                <h2 className="text-4xl font-bold text-white mb-4">Quiz Complete!</h2>
+                                <h2 className="text-4xl font-bold text-slate-100 mb-4">Quiz Complete!</h2>
                                 <p className="text-xl text-slate-200 mb-6">
                                     {score >= questions.length * 8 ? 'Outstanding!' :
                                         score >= questions.length * 5 ? 'Great job!' :
@@ -253,15 +253,15 @@ export default function SignQuizGame() {
                                 </p>
 
                                 <div className="space-y-3 mb-8">
-                                    <div className="flex justify-between text-white">
+                                    <div className="flex justify-between text-slate-100">
                                         <span>Final Score:</span>
                                         <span className="font-bold">{score}</span>
                                     </div>
-                                    <div className="flex justify-between text-white">
+                                    <div className="flex justify-between text-slate-100">
                                         <span>Questions:</span>
                                         <span className="font-bold">{questions.length}</span>
                                     </div>
-                                    <div className="flex justify-between text-white">
+                                    <div className="flex justify-between text-slate-100">
                                         <span>Best Streak:</span>
                                         <span className="font-bold">{streak}</span>
                                     </div>
@@ -273,7 +273,7 @@ export default function SignQuizGame() {
                                             setGameComplete(false);
                                             setGameStarted(false);
                                         }}
-                                        className="flex-1 px-6 py-3 bg-gradient-to-r from-cyan- to-teal- text-white font-bold rounded-xl hover:shadow-xl transition-all"
+                                        className="flex-1 px-6 py-3 bg-gradient-to-r from-cyan- to-teal- text-slate-100 font-bold rounded-xl hover:shadow-xl transition-all"
                                     >
                                         Play Again
                                     </button>

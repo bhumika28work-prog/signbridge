@@ -81,8 +81,8 @@ export default function PracticePage() {
                         <button
                             onClick={() => setActiveTab('text')}
                             className={`flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${activeTab === 'text'
-                                    ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
-                                    : 'text-cyan-400 hover:bg-white/50'
+                                    ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-slate-100 shadow-lg'
+                                    : 'text-cyan-400 hover:bg-slate-700/50'
                                 }`}
                         >
                             <MessageSquare className="w-5 h-5" />
@@ -91,8 +91,8 @@ export default function PracticePage() {
                         <button
                             onClick={() => setActiveTab('speech')}
                             className={`flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${activeTab === 'speech'
-                                    ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
-                                    : 'text-cyan-400 hover:bg-white/50'
+                                    ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-slate-100 shadow-lg'
+                                    : 'text-cyan-400 hover:bg-slate-700/50'
                                 }`}
                         >
                             <Mic className="w-5 h-5" />
@@ -101,8 +101,8 @@ export default function PracticePage() {
                         <button
                             onClick={() => setActiveTab('gujarati')}
                             className={`flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${activeTab === 'gujarati'
-                                    ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
-                                    : 'text-cyan-400 hover:bg-white/50'
+                                    ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-slate-100 shadow-lg'
+                                    : 'text-cyan-400 hover:bg-slate-700/50'
                                 }`}
                         >
                             <Languages className="w-5 h-5" />
@@ -111,8 +111,8 @@ export default function PracticePage() {
                         <button
                             onClick={() => setActiveTab('camera')}
                             className={`flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${activeTab === 'camera'
-                                    ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
-                                    : 'text-cyan-400 hover:bg-white/50'
+                                    ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-slate-100 shadow-lg'
+                                    : 'text-cyan-400 hover:bg-slate-700/50'
                                 }`}
                         >
                             <Camera className="w-5 h-5" />
@@ -150,7 +150,7 @@ export default function PracticePage() {
                                             <button
                                                 onClick={handleSpeechToText}
                                                 className={`p-8 rounded-full transition-all duration-300 ${isListening
-                                                        ? 'bg-red-500 text-white animate-pulse scale-110'
+                                                        ? 'bg-slate-8000 text-slate-100 animate-pulse scale-110'
                                                         : 'bg-slate-800 text-purple-600 hover:scale-110'
                                                     } shadow-xl`}
                                             >
@@ -163,8 +163,8 @@ export default function PracticePage() {
                                         <button
                                             onClick={handleSpeechToText}
                                             className={`w-full flex items-center justify-center gap-3 px-6 py-4 rounded-xl font-semibold transition-all duration-300 ${isListening
-                                                    ? 'bg-gradient-to-r from-red-500 to-pink-500 text-white'
-                                                    : 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:shadow-lg hover:scale-105'
+                                                    ? 'bg-gradient-to-r from-red-500 to-pink-500 text-slate-100'
+                                                    : 'bg-gradient-to-r from-purple-600 to-pink-600 text-slate-100 hover:shadow-lg hover:scale-105'
                                                 }`}
                                         >
                                             <Mic className="w-5 h-5" />
@@ -194,7 +194,7 @@ export default function PracticePage() {
                                             <button
                                                 key={phrase}
                                                 onClick={() => handleTextConversion(phrase)}
-                                                className="px-4 py-2 bg-slate-800 rounded-lg text-sm font-medium text-slate-300 hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-600 hover:text-white transition-all duration-300"
+                                                className="px-4 py-2 bg-slate-800 rounded-lg text-sm font-medium text-slate-300 hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-600 hover:text-slate-100 transition-all duration-300"
                                             >
                                                 {phrase}
                                             </button>
@@ -260,7 +260,7 @@ export default function PracticePage() {
                     ].map((card, index) => (
                         <div key={index} className="glass rounded-2xl p-6 hover:shadow-xl transition-all duration-300">
                             <div className={`inline-flex p-3 rounded-xl bg-gradient-to-br ${card.gradient} mb-4`}>
-                                <card.icon className="w-6 h-6 text-white" />
+                                <card.icon className="w-6 h-6 text-slate-100" />
                             </div>
                             <h3 className="font-bold text-lg mb-2">{card.title}</h3>
                             <p className="text-cyan-400 text-sm">{card.description}</p>

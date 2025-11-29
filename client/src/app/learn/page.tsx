@@ -97,11 +97,11 @@ export default function LearnPage() {
                                     <div className="relative z-10">
                                         {/* Icon */}
                                         <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-br ${module.gradient} mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                                            <module.icon className="w-8 h-8 text-white" />
+                                            <module.icon className="w-8 h-8 text-slate-100" />
                                         </div>
 
                                         {/* Content */}
-                                        <h3 className="text-2xl font-bold mb-3 text-white group-hover:gradient-text transition-all duration-300">
+                                        <h3 className="text-2xl font-bold mb-3 text-slate-100 group-hover:gradient-text transition-all duration-300">
                                             {module.title}
                                         </h3>
                                         <p className="text-cyan-400 mb-6 leading-relaxed">
@@ -144,7 +144,7 @@ export default function LearnPage() {
                         </p>
                         <Link
                             href="/practice"
-                            className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl hover:shadow-lg transition-all duration-300 hover:scale-105"
+                            className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-slate-100 font-semibold rounded-xl hover:shadow-lg transition-all duration-300 hover:scale-105"
                         >
                             Try Practice Mode
                             <ArrowRight className="w-5 h-5" />

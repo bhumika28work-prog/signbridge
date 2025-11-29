@@ -116,7 +116,7 @@ export default function ISLSignDisplay({ signs, autoPlay = false, speed = 1500 }
                             {currentIndex + 1} / {signs.length}
                         </span>
                     </div>
-                    <div className="w-full h-2 bg-slate-200 rounded-full overflow-hidden">
+                    <div className="w-full h-2 bg-slate-700 rounded-full overflow-hidden">
                         <motion.div
                             className="h-full bg-gradient-to-r from-cyan- to-teal-"
                             initial={{ width: 0 }}
@@ -128,7 +128,7 @@ export default function ISLSignDisplay({ signs, autoPlay = false, speed = 1500 }
 
                 <button
                     onClick={handlePlayPause}
-                    className="p-4 bg-gradient-to-r from-cyan- to-teal- text-white rounded-full hover:shadow-lg transition-all duration-300 hover:scale-110"
+                    className="p-4 bg-gradient-to-r from-cyan- to-teal- text-slate-100 rounded-full hover:shadow-lg transition-all duration-300 hover:scale-110"
                 >
                     {isPlaying ? <Pause className="w-6 h-6" /> : <Play className="w-6 h-6 ml-1" />}
                 </button>
@@ -162,7 +162,7 @@ export default function ISLSignDisplay({ signs, autoPlay = false, speed = 1500 }
                                 stopAutoPlay();
                             }}
                             className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${index === currentIndex
-                                ? 'bg-gradient-to-r from-cyan- to-teal- text-white shadow-lg scale-110'
+                                ? 'bg-gradient-to-r from-cyan- to-teal- text-slate-100 shadow-lg scale-110'
                                 : 'bg-slate-800 text-slate-300 hover:bg-slate-900'
                                 }`}
                         >

@@ -131,8 +131,8 @@ export default function EnglishModule() {
                         <button
                             onClick={() => setActiveTab('lessons')}
                             className={`flex items-center gap-2 px-4 py-2 rounded-xl font-semibold transition-all ${activeTab === 'lessons'
-                                    ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg'
-                                    : 'text-cyan-400 hover:bg-white/50'
+                                    ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-slate-100 shadow-lg'
+                                    : 'text-cyan-400 hover:bg-slate-700/50'
                                 }`}
                         >
                             <BookOpen className="w-4 h-4" />
@@ -141,8 +141,8 @@ export default function EnglishModule() {
                         <button
                             onClick={() => setActiveTab('alphabet')}
                             className={`flex items-center gap-2 px-4 py-2 rounded-xl font-semibold transition-all ${activeTab === 'alphabet'
-                                    ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg'
-                                    : 'text-cyan-400 hover:bg-white/50'
+                                    ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-slate-100 shadow-lg'
+                                    : 'text-cyan-400 hover:bg-slate-700/50'
                                 }`}
                         >
                             <Grid3x3 className="w-4 h-4" />
@@ -151,8 +151,8 @@ export default function EnglishModule() {
                         <button
                             onClick={() => setActiveTab('text-to-sign')}
                             className={`flex items-center gap-2 px-4 py-2 rounded-xl font-semibold transition-all ${activeTab === 'text-to-sign'
-                                    ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg'
-                                    : 'text-cyan-400 hover:bg-white/50'
+                                    ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-slate-100 shadow-lg'
+                                    : 'text-cyan-400 hover:bg-slate-700/50'
                                 }`}
                         >
                             <MessageSquare className="w-4 h-4" />
@@ -161,8 +161,8 @@ export default function EnglishModule() {
                         <button
                             onClick={() => setActiveTab('sign-to-text')}
                             className={`flex items-center gap-2 px-4 py-2 rounded-xl font-semibold transition-all ${activeTab === 'sign-to-text'
-                                    ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg'
-                                    : 'text-cyan-400 hover:bg-white/50'
+                                    ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-slate-100 shadow-lg'
+                                    : 'text-cyan-400 hover:bg-slate-700/50'
                                 }`}
                         >
                             <Camera className="w-4 h-4" />
@@ -171,8 +171,8 @@ export default function EnglishModule() {
                         <button
                             onClick={() => setActiveTab('speech-to-sign')}
                             className={`flex items-center gap-2 px-4 py-2 rounded-xl font-semibold transition-all ${activeTab === 'speech-to-sign'
-                                    ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg'
-                                    : 'text-cyan-400 hover:bg-white/50'
+                                    ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-slate-100 shadow-lg'
+                                    : 'text-cyan-400 hover:bg-slate-700/50'
                                 }`}
                         >
                             <Mic className="w-4 h-4" />
@@ -187,15 +187,15 @@ export default function EnglishModule() {
                         {/* Lesson List */}
                         <div className="lg:col-span-1">
                             <div className="glass rounded-3xl p-6 sticky top-24">
-                                <h2 className="text-xl font-bold mb-4 text-white">Lessons</h2>
+                                <h2 className="text-xl font-bold mb-4 text-slate-100">Lessons</h2>
                                 <div className="space-y-2">
                                     {lessons.map((lesson, index) => (
                                         <button
                                             key={lesson.id}
                                             onClick={() => setSelectedLesson(index)}
                                             className={`w-full text-left px-4 py-3 rounded-xl transition-all ${selectedLesson === index
-                                                    ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg'
-                                                    : 'hover:bg-blue-50 text-slate-300'
+                                                    ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-slate-100 shadow-lg'
+                                                    : 'hover:bg-slate-800 text-slate-300'
                                                 }`}
                                         >
                                             <span className="font-medium">{lesson.title}</span>
@@ -208,7 +208,7 @@ export default function EnglishModule() {
                         {/* Lesson Content */}
                         <div className="lg:col-span-2">
                             <div className="glass rounded-3xl p-8">
-                                <h2 className="text-3xl font-bold text-white mb-6">{currentLesson.title}</h2>
+                                <h2 className="text-3xl font-bold text-slate-100 mb-6">{currentLesson.title}</h2>
                                 <div className="mb-6 p-6 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl">
                                     <p className="text-lg text-slate-300">{currentLesson.content}</p>
                                 </div>
@@ -231,7 +231,7 @@ export default function EnglishModule() {
 
                                 {/* Words Section */}
                                 <div className="mb-6">
-                                    <h3 className="text-xl font-bold mb-4 text-white">Practice Words</h3>
+                                    <h3 className="text-xl font-bold mb-4 text-slate-100">Practice Words</h3>
                                     <div className="grid sm:grid-cols-2 gap-4">
                                         {currentLesson.words.map((word, index) => (
                                             <button
@@ -239,7 +239,7 @@ export default function EnglishModule() {
                                                 onClick={() => handleShowISL(word)}
                                                 className="flex items-center justify-between p-4 glass rounded-xl hover:shadow-lg transition-all group"
                                             >
-                                                <span className="font-semibold text-white">{word}</span>
+                                                <span className="font-semibold text-slate-100">{word}</span>
                                                 <BookOpen className="w-5 h-5 text-blue-600 group-hover:scale-110 transition-transform" />
                                             </button>
                                         ))}
@@ -265,7 +265,7 @@ export default function EnglishModule() {
                                     <button
                                         onClick={() => setSelectedLesson(Math.min(lessons.length - 1, selectedLesson + 1))}
                                         disabled={selectedLesson === lessons.length - 1}
-                                        className="px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-xl hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                                        className="px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-slate-100 font-semibold rounded-xl hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                                     >
                                         Next
                                     </button>
@@ -313,7 +313,7 @@ export default function EnglishModule() {
                                         <button
                                             key={phrase}
                                             onClick={() => handleTextConversion(phrase)}
-                                            className="px-4 py-2 bg-slate-800 rounded-lg text-sm font-medium text-slate-300 hover:bg-gradient-to-r hover:from-blue-600 hover:to-cyan-600 hover:text-white transition-all"
+                                            className="px-4 py-2 bg-slate-800 rounded-lg text-sm font-medium text-slate-300 hover:bg-gradient-to-r hover:from-blue-600 hover:to-cyan-600 hover:text-slate-100 transition-all"
                                         >
                                             {phrase}
                                         </button>
@@ -352,7 +352,7 @@ export default function EnglishModule() {
                                 <button
                                     onClick={handleSpeechToText}
                                     className={`p-8 rounded-full transition-all duration-300 ${isListening
-                                            ? 'bg-red-500 text-white animate-pulse scale-110'
+                                            ? 'bg-slate-8000 text-slate-100 animate-pulse scale-110'
                                             : 'bg-slate-800 text-blue-600 hover:scale-110'
                                         } shadow-xl`}
                                 >
@@ -362,8 +362,8 @@ export default function EnglishModule() {
                             <button
                                 onClick={handleSpeechToText}
                                 className={`w-full flex items-center justify-center gap-3 px-6 py-4 rounded-xl font-semibold transition-all ${isListening
-                                        ? 'bg-gradient-to-r from-red-500 to-teal- text-white'
-                                        : 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:shadow-lg hover:scale-105'
+                                        ? 'bg-gradient-to-r from-red-500 to-teal- text-slate-100'
+                                        : 'bg-gradient-to-r from-blue-600 to-cyan-600 text-slate-100 hover:shadow-lg hover:scale-105'
                                     }`}
                             >
                                 <Mic className="w-5 h-5" />

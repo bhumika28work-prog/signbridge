@@ -62,7 +62,7 @@ export default function TeacherSyllabus() {
                     </div>
                     <button
                         onClick={() => setIsAdding(true)}
-                        className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl hover:shadow-lg transition-all"
+                        className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-slate-100 font-semibold rounded-xl hover:shadow-lg transition-all"
                     >
                         <Plus className="w-5 h-5" />
                         Add Lesson
@@ -77,7 +77,7 @@ export default function TeacherSyllabus() {
                                 key={module}
                                 onClick={() => setActiveModule(module)}
                                 className={`w-full text-left px-4 py-3 rounded-xl font-medium transition-all ${activeModule === module
-                                        ? 'bg-purple-600 text-white shadow-lg'
+                                        ? 'bg-purple-600 text-slate-100 shadow-lg'
                                         : 'bg-slate-800 text-cyan-400 hover:bg-purple-50'
                                     }`}
                             >
@@ -155,7 +155,7 @@ export default function TeacherSyllabus() {
                                         </button>
                                         <button
                                             onClick={handleAddLesson}
-                                            className="px-6 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors flex items-center gap-2"
+                                            className="px-6 py-2 bg-purple-600 text-slate-100 rounded-lg hover:bg-purple-700 transition-colors flex items-center gap-2"
                                         >
                                             <Save className="w-4 h-4" />
                                             Save Lesson
@@ -189,17 +189,17 @@ export default function TeacherSyllabus() {
                                                         <BookOpen className="w-6 h-6" />}
                                             </div>
                                             <div>
-                                                <h3 className="font-bold text-white">{lesson.title}</h3>
+                                                <h3 className="font-bold text-slate-100">{lesson.title}</h3>
                                                 <p className="text-sm text-slate-400">{lesson.duration} • {lesson.type}</p>
                                             </div>
                                         </div>
                                         <div className="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                                            <button className="p-2 hover:bg-blue-50 rounded-lg text-blue-600 transition-colors">
+                                            <button className="p-2 hover:bg-slate-800 rounded-lg text-blue-600 transition-colors">
                                                 <Edit className="w-5 h-5" />
                                             </button>
                                             <button
                                                 onClick={() => handleDelete(lesson.id)}
-                                                className="p-2 hover:bg-red-50 rounded-lg text-red-600 transition-colors"
+                                                className="p-2 hover:bg-slate-800 rounded-lg text-red-600 transition-colors"
                                             >
                                                 <Trash2 className="w-5 h-5" />
                                             </button>

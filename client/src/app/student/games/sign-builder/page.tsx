@@ -125,7 +125,7 @@ export default function SignBuilderGame() {
                         </div>
                         <button
                             onClick={startGame}
-                            className="px-12 py-4 bg-gradient-to-r from-cyan- to-teal- text-white font-bold text-xl rounded-2xl hover:shadow-xl transition-all hover:scale-105"
+                            className="px-12 py-4 bg-gradient-to-r from-cyan- to-teal- text-slate-100 font-bold text-xl rounded-2xl hover:shadow-xl transition-all hover:scale-105"
                         >
                             Start Game
                         </button>
@@ -183,7 +183,7 @@ export default function SignBuilderGame() {
                                                 fill
                                                 className="object-contain p-2"
                                             />
-                                            <div className="absolute -top-2 -right-2 w-6 h-6 bg-red-500 rounded-full flex items-center justify-center text-white text-xs font-bold">
+                                            <div className="absolute -top-2 -right-2 w-6 h-6 bg-slate-8000 rounded-full flex items-center justify-center text-slate-100 text-xs font-bold">
                                                 ×
                                             </div>
                                         </motion.div>
@@ -221,7 +221,7 @@ export default function SignBuilderGame() {
                             <button
                                 onClick={useHint}
                                 disabled={showHint}
-                                className="flex-1 px-6 py-3 bg-yellow-500 text-white font-bold rounded-xl hover:bg-yellow-600 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                                className="flex-1 px-6 py-3 bg-slate-8000 text-slate-100 font-bold rounded-xl hover:bg-yellow-600 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                             >
                                 <Lightbulb className="w-5 h-5" />
                                 Hint (-2 pts)
@@ -229,7 +229,7 @@ export default function SignBuilderGame() {
                             <button
                                 onClick={checkAnswer}
                                 disabled={userAnswer.length !== targetWord.length}
-                                className="flex-1 px-6 py-3 bg-gradient-to-r from-cyan- to-teal- text-white font-bold rounded-xl hover:shadow-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                                className="flex-1 px-6 py-3 bg-gradient-to-r from-cyan- to-teal- text-slate-100 font-bold rounded-xl hover:shadow-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                             >
                                 <Check className="w-5 h-5" />
                                 Check Answer
@@ -269,15 +269,15 @@ export default function SignBuilderGame() {
                                 className="glass-dark rounded-3xl p-12 text-center max-w-md"
                             >
                                 <div className="text-6xl mb-4">🎉</div>
-                                <h2 className="text-4xl font-bold text-white mb-4">Game Complete!</h2>
+                                <h2 className="text-4xl font-bold text-slate-100 mb-4">Game Complete!</h2>
                                 <p className="text-xl text-slate-200 mb-6">You finished all rounds!</p>
 
                                 <div className="mb-8">
-                                    <div className="flex justify-between text-white mb-2">
+                                    <div className="flex justify-between text-slate-100 mb-2">
                                         <span>Final Score:</span>
                                         <span className="font-bold">{score}</span>
                                     </div>
-                                    <div className="flex justify-between text-white">
+                                    <div className="flex justify-between text-slate-100">
                                         <span>Rounds Completed:</span>
                                         <span className="font-bold">{totalRounds}</span>
                                     </div>
@@ -286,7 +286,7 @@ export default function SignBuilderGame() {
                                 <div className="flex gap-4">
                                     <button
                                         onClick={startGame}
-                                        className="flex-1 px-6 py-3 bg-gradient-to-r from-cyan- to-teal- text-white font-bold rounded-xl hover:shadow-xl transition-all flex items-center justify-center gap-2"
+                                        className="flex-1 px-6 py-3 bg-gradient-to-r from-cyan- to-teal- text-slate-100 font-bold rounded-xl hover:shadow-xl transition-all flex items-center justify-center gap-2"
                                     >
                                         <RotateCcw className="w-5 h-5" />
                                         Play Again

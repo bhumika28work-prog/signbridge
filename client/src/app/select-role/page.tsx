@@ -79,11 +79,11 @@ export default function SelectRole() {
                         >
                             <div className={`glass rounded-3xl p-8 h-full hover:shadow-2xl transition-all duration-300 bg-gradient-to-br ${role.bgGradient}`}>
                                 <div className={`inline-flex p-6 rounded-2xl bg-gradient-to-br ${role.gradient} mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                                    <role.icon className="w-12 h-12 text-white" />
+                                    <role.icon className="w-12 h-12 text-slate-100" />
                                 </div>
-                                <h3 className="text-3xl font-bold mb-4 text-white">{role.title}</h3>
+                                <h3 className="text-3xl font-bold mb-4 text-slate-100">{role.title}</h3>
                                 <p className="text-lg text-cyan-400 leading-relaxed mb-6">{role.description}</p>
-                                <div className={`inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r ${role.gradient} text-white font-semibold rounded-xl group-hover:shadow-lg transition-all`}>
+                                <div className={`inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r ${role.gradient} text-slate-100 font-semibold rounded-xl group-hover:shadow-lg transition-all`}>
                                     Continue as {role.title}
                                 </div>
                             </div>

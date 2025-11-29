@@ -108,15 +108,15 @@ export default function ScienceModule() {
                         className="lg:col-span-1"
                     >
                         <div className="glass rounded-3xl p-6 sticky top-24">
-                            <h2 className="text-xl font-bold mb-4 text-white">Topics</h2>
+                            <h2 className="text-xl font-bold mb-4 text-slate-100">Topics</h2>
                             <div className="space-y-2">
                                 {lessons.map((lesson, index) => (
                                     <button
                                         key={lesson.id}
                                         onClick={() => setSelectedLesson(index)}
                                         className={`w-full text-left px-4 py-3 rounded-xl transition-all ${selectedLesson === index
-                                                ? 'bg-gradient-to-r from-green-600 to-emerald-600 text-white shadow-lg'
-                                                : 'hover:bg-green-50 text-slate-300'
+                                                ? 'bg-gradient-to-r from-green-600 to-emerald-600 text-slate-100 shadow-lg'
+                                                : 'hover:bg-slate-800 text-slate-300'
                                             }`}
                                     >
                                         <div className="flex items-center gap-3">
@@ -139,7 +139,7 @@ export default function ScienceModule() {
                         <div className="glass rounded-3xl p-8">
                             <div className="flex items-center gap-4 mb-6">
                                 <span className="text-6xl">{currentLesson.image}</span>
-                                <h2 className="text-3xl font-bold text-white">{currentLesson.title}</h2>
+                                <h2 className="text-3xl font-bold text-slate-100">{currentLesson.title}</h2>
                             </div>
 
                             <div className="mb-6 p-6 bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl">
@@ -148,12 +148,12 @@ export default function ScienceModule() {
 
                             {/* Key Points */}
                             <div className="mb-6">
-                                <h3 className="text-xl font-bold mb-4 text-white">Key Points</h3>
+                                <h3 className="text-xl font-bold mb-4 text-slate-100">Key Points</h3>
                                 <div className="space-y-3">
                                     {currentLesson.details.map((detail, index) => (
                                         <div key={index} className="flex items-start gap-3 p-4 bg-slate-800 rounded-xl">
                                             <div className="w-6 h-6 rounded-full bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center flex-shrink-0 mt-0.5">
-                                                <span className="text-white text-sm font-bold">{index + 1}</span>
+                                                <span className="text-slate-100 text-sm font-bold">{index + 1}</span>
                                             </div>
                                             <p className="text-slate-300">{detail}</p>
                                         </div>
@@ -164,7 +164,7 @@ export default function ScienceModule() {
                             {/* ISL Button */}
                             <button
                                 onClick={() => handleShowISL(currentLesson.title)}
-                                className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-xl hover:shadow-lg transition-all mb-6"
+                                className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-green-600 to-emerald-600 text-slate-100 font-semibold rounded-xl hover:shadow-lg transition-all mb-6"
                             >
                                 <BookOpen className="w-5 h-5" />
                                 Show Topic in ISL
@@ -189,7 +189,7 @@ export default function ScienceModule() {
                                 <button
                                     onClick={() => setSelectedLesson(Math.min(lessons.length - 1, selectedLesson + 1))}
                                     disabled={selectedLesson === lessons.length - 1}
-                                    className="px-6 py-3 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-xl hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                                    className="px-6 py-3 bg-gradient-to-r from-green-600 to-emerald-600 text-slate-100 font-semibold rounded-xl hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                                 >
                                     Next
                                 </button>

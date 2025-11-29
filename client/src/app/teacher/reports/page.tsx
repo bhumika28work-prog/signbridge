@@ -60,7 +60,7 @@ export default function TeacherReports() {
                             <h3 className="text-slate-400 font-medium">Class Average</h3>
                             <TrendingUp className="w-5 h-5 text-green-500" />
                         </div>
-                        <p className="text-3xl font-bold text-white">72.8%</p>
+                        <p className="text-3xl font-bold text-slate-100">72.8%</p>
                         <p className="text-sm text-green-600 mt-1">+4.2% from last week</p>
                     </div>
                     <div className="glass rounded-2xl p-6 border-l-4 border-purple-500">
@@ -68,7 +68,7 @@ export default function TeacherReports() {
                             <h3 className="text-slate-400 font-medium">Active Students</h3>
                             <CheckCircle className="w-5 h-5 text-purple-500" />
                         </div>
-                        <p className="text-3xl font-bold text-white">24/30</p>
+                        <p className="text-3xl font-bold text-slate-100">24/30</p>
                         <p className="text-sm text-purple-600 mt-1">80% attendance rate</p>
                     </div>
                     <div className="glass rounded-2xl p-6 border-l-4 border-red-500">
@@ -76,7 +76,7 @@ export default function TeacherReports() {
                             <h3 className="text-slate-400 font-medium">Needs Attention</h3>
                             <AlertCircle className="w-5 h-5 text-red-500" />
                         </div>
-                        <p className="text-3xl font-bold text-white">3</p>
+                        <p className="text-3xl font-bold text-slate-100">3</p>
                         <p className="text-sm text-red-600 mt-1">Students falling behind</p>
                     </div>
                 </div>
@@ -125,11 +125,11 @@ export default function TeacherReports() {
                                     >
                                         <td className="px-6 py-4">
                                             <div className="flex items-center gap-3">
-                                                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold">
+                                                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-slate-100 font-bold">
                                                     {student.name.charAt(0)}
                                                 </div>
                                                 <div>
-                                                    <p className="font-semibold text-white">{student.name}</p>
+                                                    <p className="font-semibold text-slate-100">{student.name}</p>
                                                     <p className="text-xs text-slate-400">{student.grade}</p>
                                                 </div>
                                             </div>
@@ -147,11 +147,11 @@ export default function TeacherReports() {
                                                 <div className="flex justify-between text-xs mb-1">
                                                     <span className="font-medium text-slate-300">{student.progress}%</span>
                                                 </div>
-                                                <div className="w-full bg-slate-200 rounded-full h-2">
+                                                <div className="w-full bg-slate-700 rounded-full h-2">
                                                     <div
-                                                        className={`h-2 rounded-full ${student.progress >= 80 ? 'bg-green-500' :
-                                                                student.progress >= 60 ? 'bg-yellow-500' :
-                                                                    'bg-red-500'
+                                                        className={`h-2 rounded-full ${student.progress >= 80 ? 'bg-slate-8000' :
+                                                                student.progress >= 60 ? 'bg-slate-8000' :
+                                                                    'bg-slate-8000'
                                                             }`}
                                                         style={{ width: `${student.progress}%` }}
                                                     ></div>
@@ -161,7 +161,7 @@ export default function TeacherReports() {
                                         <td className="px-6 py-4">
                                             <div className="flex flex-wrap gap-1">
                                                 {student.strengths.map(s => (
-                                                    <span key={s} className="px-2 py-1 bg-green-50 text-green-700 text-xs rounded-md border border-green-100">
+                                                    <span key={s} className="px-2 py-1 bg-slate-800 text-green-700 text-xs rounded-md border border-green-100">
                                                         {s}
                                                     </span>
                                                 ))}
@@ -170,7 +170,7 @@ export default function TeacherReports() {
                                         <td className="px-6 py-4">
                                             <div className="flex flex-wrap gap-1">
                                                 {student.weak.map(w => (
-                                                    <span key={w} className="px-2 py-1 bg-red-50 text-red-700 text-xs rounded-md border border-red-100">
+                                                    <span key={w} className="px-2 py-1 bg-slate-800 text-red-700 text-xs rounded-md border border-red-100">
                                                         {w}
                                                     </span>
                                                 ))}

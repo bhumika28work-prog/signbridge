@@ -43,7 +43,7 @@ export default function LessonView({ lessons, onComplete }: LessonViewProps) {
                         Lesson {currentIndex + 1} of {lessons.length}
                     </span>
                 </div>
-                <div className="w-full h-2 bg-slate-200 rounded-full overflow-hidden">
+                <div className="w-full h-2 bg-slate-700 rounded-full overflow-hidden">
                     <motion.div
                         className="h-full bg-gradient-to-r from-purple-600 to-pink-600"
                         initial={{ width: 0 }}
@@ -88,7 +88,7 @@ export default function LessonView({ lessons, onComplete }: LessonViewProps) {
                             </div>
 
                             {/* Audio Pronunciation Button */}
-                            <button className="flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-xl hover:shadow-lg transition-all duration-300 hover:scale-105">
+                            <button className="flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-slate-100 rounded-xl hover:shadow-lg transition-all duration-300 hover:scale-105">
                                 <Volume2 className="w-5 h-5" />
                                 <span className="font-semibold">Listen to Pronunciation</span>
                             </button>
@@ -142,7 +142,7 @@ export default function LessonView({ lessons, onComplete }: LessonViewProps) {
                 <button
                     onClick={handleNext}
                     disabled={currentIndex === lessons.length - 1}
-                    className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl font-semibold hover:shadow-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed hover:scale-105 disabled:hover:scale-100"
+                    className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-slate-100 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed hover:scale-105 disabled:hover:scale-100"
                 >
                     Next
                     <ChevronRight className="w-5 h-5" />

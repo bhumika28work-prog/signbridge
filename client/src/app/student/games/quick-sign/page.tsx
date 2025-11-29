@@ -145,7 +145,7 @@ export default function QuickSignGame() {
                         </div>
                         <button
                             onClick={startGame}
-                            className="px-12 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold text-xl rounded-2xl hover:shadow-xl transition-all hover:scale-105 animate-pulse"
+                            className="px-12 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-slate-100 font-bold text-xl rounded-2xl hover:shadow-xl transition-all hover:scale-105 animate-pulse"
                         >
                             Start Quick Sign!
                         </button>
@@ -159,21 +159,21 @@ export default function QuickSignGame() {
                         <div className="grid grid-cols-4 gap-4">
                             <div className="glass rounded-xl p-4 text-center">
                                 <Timer className="w-6 h-6 mx-auto mb-2 text-blue-600" />
-                                <p className={`text-3xl font-bold ${timeLeft <= 1 ? 'text-red-500 animate-pulse' : 'text-white'}`}>
+                                <p className={`text-3xl font-bold ${timeLeft <= 1 ? 'text-red-500 animate-pulse' : 'text-slate-100'}`}>
                                     {timeLeft}s
                                 </p>
                             </div>
                             <div className="glass rounded-xl p-4 text-center">
                                 <Trophy className="w-6 h-6 mx-auto mb-2 text-green-600" />
-                                <p className="text-2xl font-bold text-white">{score}</p>
+                                <p className="text-2xl font-bold text-slate-100">{score}</p>
                             </div>
                             <div className="glass rounded-xl p-4 text-center">
                                 <Flame className="w-6 h-6 mx-auto mb-2 text-orange-600" />
-                                <p className="text-2xl font-bold text-white">{combo}x</p>
+                                <p className="text-2xl font-bold text-slate-100">{combo}x</p>
                             </div>
                             <div className="glass rounded-xl p-4 text-center">
                                 <Zap className="w-6 h-6 mx-auto mb-2 text-cyan-" />
-                                <p className="text-2xl font-bold text-white">{round + 1}/{totalRounds}</p>
+                                <p className="text-2xl font-bold text-slate-100">{round + 1}/{totalRounds}</p>
                             </div>
                         </div>
 
@@ -205,9 +205,9 @@ export default function QuickSignGame() {
                                     onClick={() => handleAnswer(option)}
                                     disabled={feedback !== null}
                                     className={`glass rounded-2xl p-6 text-3xl font-bold hover:shadow-xl transition-all hover:scale-105 ${feedback === 'correct' && option === currentSign
-                                            ? 'ring-4 ring-green-500 bg-green-50'
+                                            ? 'ring-4 ring-green-500 bg-slate-800'
                                             : feedback === 'wrong' && option === currentSign
-                                                ? 'ring-4 ring-green-500 bg-green-50'
+                                                ? 'ring-4 ring-green-500 bg-slate-800'
                                                 : ''
                                         }`}
                                 >
@@ -252,21 +252,21 @@ export default function QuickSignGame() {
                                 <div className="text-6xl mb-4">
                                     {score >= 200 ? '🏆' : score >= 150 ? '🎉' : '⚡'}
                                 </div>
-                                <h2 className="text-4xl font-bold text-white mb-4">Time's Up!</h2>
+                                <h2 className="text-4xl font-bold text-slate-100 mb-4">Time's Up!</h2>
                                 <p className="text-xl text-slate-200 mb-6">
                                     {score >= 200 ? 'Lightning Fast!' : score >= 150 ? 'Great Speed!' : 'Keep Practicing!'}
                                 </p>
 
                                 <div className="space-y-3 mb-8">
-                                    <div className="flex justify-between text-white">
+                                    <div className="flex justify-between text-slate-100">
                                         <span>Final Score:</span>
                                         <span className="font-bold">{score}</span>
                                     </div>
-                                    <div className="flex justify-between text-white">
+                                    <div className="flex justify-between text-slate-100">
                                         <span>Best Combo:</span>
                                         <span className="font-bold">{combo}x</span>
                                     </div>
-                                    <div className="flex justify-between text-white">
+                                    <div className="flex justify-between text-slate-100">
                                         <span>Questions:</span>
                                         <span className="font-bold">{totalRounds}</span>
                                     </div>
@@ -275,7 +275,7 @@ export default function QuickSignGame() {
                                 <div className="flex gap-4">
                                     <button
                                         onClick={startGame}
-                                        className="flex-1 px-6 py-3 bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold rounded-xl hover:shadow-xl transition-all"
+                                        className="flex-1 px-6 py-3 bg-gradient-to-r from-orange-500 to-red-500 text-slate-100 font-bold rounded-xl hover:shadow-xl transition-all"
                                     >
                                         Play Again
                                     </button>

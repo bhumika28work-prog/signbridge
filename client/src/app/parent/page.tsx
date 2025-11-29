@@ -96,9 +96,9 @@ export default function ParentDashboard() {
                             <div key={index}>
                                 <div className="flex justify-between mb-2">
                                     <span className="font-semibold text-slate-300">{item.subject}</span>
-                                    <span className="font-bold text-white">{item.progress}%</span>
+                                    <span className="font-bold text-slate-100">{item.progress}%</span>
                                 </div>
-                                <div className="w-full h-3 bg-slate-200 rounded-full overflow-hidden">
+                                <div className="w-full h-3 bg-slate-700 rounded-full overflow-hidden">
                                     <motion.div
                                         initial={{ width: 0 }}
                                         animate={{ width: `${item.progress}%` }}
@@ -127,9 +127,9 @@ export default function ParentDashboard() {
                             { activity: 'Started Science Module', time: '2 days ago', type: 'info' },
                         ].map((item, index) => (
                             <div key={index} className="flex items-start gap-4 p-4 bg-slate-800 rounded-xl">
-                                <div className={`w-2 h-2 rounded-full mt-2 ${item.type === 'success' ? 'bg-green-500' : 'bg-blue-500'}`} />
+                                <div className={`w-2 h-2 rounded-full mt-2 ${item.type === 'success' ? 'bg-slate-8000' : 'bg-slate-8000'}`} />
                                 <div className="flex-1">
-                                    <p className="font-medium text-white">{item.activity}</p>
+                                    <p className="font-medium text-slate-100">{item.activity}</p>
                                     <p className="text-sm text-slate-400">{item.time}</p>
                                 </div>
                             </div>

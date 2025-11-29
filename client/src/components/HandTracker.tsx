@@ -185,12 +185,12 @@ export default function HandTracker() {
 
     if (error) {
         return (
-            <div className="flex flex-col items-center justify-center p-12 bg-red-50 rounded-2xl border-2 border-red-200">
+            <div className="flex flex-col items-center justify-center p-12 bg-slate-800 rounded-2xl border-2 border-red-200">
                 <p className="text-lg font-bold text-red-600 mb-2">Error Loading Model</p>
                 <p className="text-red-500 mb-4">{error}</p>
                 <button
                     onClick={() => window.location.reload()}
-                    className="flex items-center gap-2 px-6 py-3 bg-red-600 text-white rounded-xl hover:bg-red-700 transition-all"
+                    className="flex items-center gap-2 px-6 py-3 bg-red-600 text-slate-100 rounded-xl hover:bg-red-700 transition-all"
                 >
                     <RefreshCw className="w-5 h-5" />
                     Retry
@@ -211,14 +211,14 @@ export default function HandTracker() {
                         <h3 className="text-xl font-bold gradient-text">Recognized Text</h3>
                         <button
                             onClick={clearText}
-                            className="flex items-center gap-2 px-4 py-2 bg-red-500 text-white rounded-xl hover:bg-red-600 transition-all"
+                            className="flex items-center gap-2 px-4 py-2 bg-slate-8000 text-slate-100 rounded-xl hover:bg-red-600 transition-all"
                         >
                             <Trash2 className="w-4 h-4" />
                             Clear
                         </button>
                     </div>
                     <div className="bg-slate-800 rounded-xl p-6 border-2 border-purple-200 min-h-24">
-                        <p className="text-3xl font-bold text-white">
+                        <p className="text-3xl font-bold text-slate-100">
                             {recognizedText || <span className="text-slate-300">Make a sign to start...</span>}
                         </p>
                     </div>
@@ -230,13 +230,13 @@ export default function HandTracker() {
                             </div>
                             <div className="flex items-center gap-2">
                                 <span className="text-sm font-semibold text-cyan-400">Confidence:</span>
-                                <div className="w-32 h-2 bg-slate-200 rounded-full overflow-hidden">
+                                <div className="w-32 h-2 bg-slate-700 rounded-full overflow-hidden">
                                     <div
                                         className="h-full bg-gradient-to-r from-green-500 to-emerald-500 transition-all duration-300"
                                         style={{ width: `${confidence * 100}%` }}
                                     />
                                 </div>
-                                <span className="text-sm font-bold text-white">{Math.round(confidence * 100)}%</span>
+                                <span className="text-sm font-bold text-slate-100">{Math.round(confidence * 100)}%</span>
                             </div>
                         </div>
                     )}
@@ -259,15 +259,15 @@ export default function HandTracker() {
                         />
                         <div className="absolute top-4 left-4 right-4 flex justify-between items-start">
                             <div className="glass px-4 py-2 rounded-xl">
-                                <p className="text-sm font-semibold text-white">
+                                <p className="text-sm font-semibold text-slate-100">
                                     {handsDetected > 0 ? `${handsDetected} Hand${handsDetected > 1 ? 's' : ''} Detected` : 'No Hands Detected'}
                                 </p>
                             </div>
-                            <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
+                            <div className="w-3 h-3 bg-slate-8000 rounded-full animate-pulse"></div>
                         </div>
                     </>
                 ) : (
-                    <div className="flex flex-col items-center justify-center h-full text-white p-8">
+                    <div className="flex flex-col items-center justify-center h-full text-slate-100 p-8">
                         <motion.div
                             initial={{ scale: 0.9, opacity: 0 }}
                             animate={{ scale: 1, opacity: 1 }}
@@ -275,7 +275,7 @@ export default function HandTracker() {
                             className="text-center"
                         >
                             <div className="w-24 h-24 bg-gradient-to-br from-purple-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                                <svg className="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <svg className="w-12 h-12 text-slate-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
                                 </svg>
                             </div>
@@ -289,7 +289,7 @@ export default function HandTracker() {
             <div className="flex gap-4">
                 <button
                     onClick={enableCam}
-                    className={`flex-1 px-8 py-4 rounded-xl font-bold text-white transition-all duration-300 hover:scale-105 ${webcamRunning
+                    className={`flex-1 px-8 py-4 rounded-xl font-bold text-slate-100 transition-all duration-300 hover:scale-105 ${webcamRunning
                         ? 'bg-gradient-to-r from-red-500 to-pink-500 hover:shadow-lg'
                         : 'bg-gradient-to-r from-purple-600 to-pink-600 hover:shadow-lg animate-glow'
                         }`}
@@ -321,7 +321,7 @@ export default function HandTracker() {
                     animate={{ opacity: 1, y: 0 }}
                     className="glass rounded-2xl p-6"
                 >
-                    <h4 className="font-bold text-white mb-3">✋ Supported Signs</h4>
+                    <h4 className="font-bold text-slate-100 mb-3">✋ Supported Signs</h4>
                     <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                         <div className="bg-slate-800 rounded-xl p-3 text-center">
                             <p className="text-2xl font-bold gradient-text mb-1">0-5</p>
