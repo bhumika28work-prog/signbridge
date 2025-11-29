@@ -20,8 +20,8 @@ const modules = [
         title: "Numbers & Maths",
         description: "Learn counting, arithmetic operations, and mathematical concepts",
         icon: Calculator,
-        gradient: "from-blue-500 to-cyan-500",
-        bgGradient: "from-blue-50 to-cyan-50",
+        gradient: "from-amber-500 to-amber-500",
+        bgGradient: "from-amber-50 to-amber-50",
         href: "/learn/numbers",
         lessons: 35,
         difficulty: "Beginner"
@@ -31,8 +31,8 @@ const modules = [
         title: "Science Concepts",
         description: "Explore the natural world with sign language demonstrations",
         icon: Microscope,
-        gradient: "from-green-500 to-emerald-500",
-        bgGradient: "from-green-50 to-emerald-50",
+        gradient: "from-green-500 to-yellow-500",
+        bgGradient: "from-green-50 to-yellow-50",
         href: "/learn/science",
         lessons: 40,
         difficulty: "Intermediate"
@@ -56,7 +56,7 @@ export default function LearnPage() {
             {/* Animated Background */}
             <div className="fixed inset-0 -z-10 overflow-hidden">
                 <div className="absolute top-20 right-0 w-96 h-96 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-float"></div>
-                <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-float" style={{ animationDelay: '2s' }}></div>
+                <div className="absolute bottom-0 left-0 w-96 h-96 bg-amber-200 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-float" style={{ animationDelay: '2s' }}></div>
             </div>
 
             <div className="max-w-7xl mx-auto">
@@ -74,7 +74,7 @@ export default function LearnPage() {
                     <h1 className="text-5xl sm:text-6xl font-extrabold mb-6">
                         <span className="gradient-text">Learning Modules</span>
                     </h1>
-                    <p className="text-xl text-cyan-400 max-w-2xl mx-auto">
+                    <p className="text-xl text-amber-400 max-w-2xl mx-auto">
                         Select a module to begin your sign language learning journey
                     </p>
                 </motion.div>
@@ -97,23 +97,23 @@ export default function LearnPage() {
                                     <div className="relative z-10">
                                         {/* Icon */}
                                         <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-br ${module.gradient} mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                                            <module.icon className="w-8 h-8 text-slate-100" />
+                                            <module.icon className="w-8 h-8 text-stone-100" />
                                         </div>
 
                                         {/* Content */}
-                                        <h3 className="text-2xl font-bold mb-3 text-slate-100 group-hover:gradient-text transition-all duration-300">
+                                        <h3 className="text-2xl font-bold mb-3 text-stone-100 group-hover:gradient-text transition-all duration-300">
                                             {module.title}
                                         </h3>
-                                        <p className="text-cyan-400 mb-6 leading-relaxed">
+                                        <p className="text-amber-400 mb-6 leading-relaxed">
                                             {module.description}
                                         </p>
 
                                         {/* Meta Info */}
                                         <div className="flex items-center gap-4 mb-6">
-                                            <span className="px-3 py-1 bg-slate-800 rounded-full text-sm font-medium text-slate-300">
+                                            <span className="px-3 py-1 bg-stone-800 rounded-full text-sm font-medium text-stone-300">
                                                 {module.lessons} Lessons
                                             </span>
-                                            <span className="px-3 py-1 bg-slate-800 rounded-full text-sm font-medium text-slate-300">
+                                            <span className="px-3 py-1 bg-stone-800 rounded-full text-sm font-medium text-stone-300">
                                                 {module.difficulty}
                                             </span>
                                         </div>
@@ -139,12 +139,12 @@ export default function LearnPage() {
                 >
                     <div className="glass rounded-3xl p-8 max-w-2xl mx-auto">
                         <h3 className="text-2xl font-bold mb-3">Need Help Getting Started?</h3>
-                        <p className="text-cyan-400 mb-6">
+                        <p className="text-amber-400 mb-6">
                             Not sure which module to choose? Try our AI-powered practice mode to assess your current level.
                         </p>
                         <Link
                             href="/practice"
-                            className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-slate-100 font-semibold rounded-xl hover:shadow-lg transition-all duration-300 hover:scale-105"
+                            className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-stone-100 font-semibold rounded-xl hover:shadow-lg transition-all duration-300 hover:scale-105"
                         >
                             Try Practice Mode
                             <ArrowRight className="w-5 h-5" />

@@ -43,7 +43,7 @@ export default function TeacherReports() {
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
                     <div>
                         <h1 className="text-4xl font-bold gradient-text">Student Reports</h1>
-                        <p className="text-cyan-400 mt-2">Track performance and progress of your class</p>
+                        <p className="text-amber-400 mt-2">Track performance and progress of your class</p>
                     </div>
                     <div className="flex gap-4">
                         <button className="inline-flex items-center gap-2 px-6 py-3 glass font-semibold rounded-xl hover:shadow-lg transition-all">
@@ -57,26 +57,26 @@ export default function TeacherReports() {
                 <div className="grid md:grid-cols-3 gap-6 mb-8">
                     <div className="glass rounded-2xl p-6 border-l-4 border-green-500">
                         <div className="flex items-center justify-between mb-2">
-                            <h3 className="text-slate-400 font-medium">Class Average</h3>
+                            <h3 className="text-stone-400 font-medium">Class Average</h3>
                             <TrendingUp className="w-5 h-5 text-green-500" />
                         </div>
-                        <p className="text-3xl font-bold text-slate-100">72.8%</p>
+                        <p className="text-3xl font-bold text-stone-100">72.8%</p>
                         <p className="text-sm text-green-600 mt-1">+4.2% from last week</p>
                     </div>
                     <div className="glass rounded-2xl p-6 border-l-4 border-purple-500">
                         <div className="flex items-center justify-between mb-2">
-                            <h3 className="text-slate-400 font-medium">Active Students</h3>
+                            <h3 className="text-stone-400 font-medium">Active Students</h3>
                             <CheckCircle className="w-5 h-5 text-purple-500" />
                         </div>
-                        <p className="text-3xl font-bold text-slate-100">24/30</p>
+                        <p className="text-3xl font-bold text-stone-100">24/30</p>
                         <p className="text-sm text-purple-600 mt-1">80% attendance rate</p>
                     </div>
                     <div className="glass rounded-2xl p-6 border-l-4 border-red-500">
                         <div className="flex items-center justify-between mb-2">
-                            <h3 className="text-slate-400 font-medium">Needs Attention</h3>
+                            <h3 className="text-stone-400 font-medium">Needs Attention</h3>
                             <AlertCircle className="w-5 h-5 text-red-500" />
                         </div>
-                        <p className="text-3xl font-bold text-slate-100">3</p>
+                        <p className="text-3xl font-bold text-stone-100">3</p>
                         <p className="text-sm text-red-600 mt-1">Students falling behind</p>
                     </div>
                 </div>
@@ -85,17 +85,17 @@ export default function TeacherReports() {
                 <div className="glass rounded-3xl p-6 mb-8">
                     <div className="flex flex-col md:flex-row gap-4">
                         <div className="relative flex-1">
-                            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
+                            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-stone-400" />
                             <input
                                 type="text"
                                 placeholder="Search students..."
                                 value={searchTerm}
                                 onChange={(e) => setSearchTerm(e.target.value)}
-                                className="w-full pl-12 pr-4 py-3 rounded-xl border border-cyan-500/30 focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition-all"
+                                className="w-full pl-12 pr-4 py-3 rounded-xl border border-amber-500/30 focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition-all"
                             />
                         </div>
-                        <button className="inline-flex items-center gap-2 px-6 py-3 bg-slate-800 border border-cyan-500/30 font-semibold rounded-xl hover:bg-slate-900 transition-all">
-                            <Filter className="w-5 h-5 text-slate-400" />
+                        <button className="inline-flex items-center gap-2 px-6 py-3 bg-stone-800 border border-amber-500/30 font-semibold rounded-xl hover:bg-stone-900 transition-all">
+                            <Filter className="w-5 h-5 text-stone-400" />
                             Filter
                         </button>
                     </div>
@@ -105,17 +105,17 @@ export default function TeacherReports() {
                 <div className="glass rounded-3xl overflow-hidden">
                     <div className="overflow-x-auto">
                         <table className="w-full">
-                            <thead className="bg-slate-900/50 border-b border-cyan-500/30">
+                            <thead className="bg-stone-900/50 border-b border-amber-500/30">
                                 <tr>
-                                    <th className="px-6 py-4 text-left text-sm font-semibold text-cyan-400">Student Name</th>
-                                    <th className="px-6 py-4 text-left text-sm font-semibold text-cyan-400">Status</th>
-                                    <th className="px-6 py-4 text-left text-sm font-semibold text-cyan-400">Progress</th>
-                                    <th className="px-6 py-4 text-left text-sm font-semibold text-cyan-400">Strengths</th>
-                                    <th className="px-6 py-4 text-left text-sm font-semibold text-cyan-400">Weaknesses</th>
-                                    <th className="px-6 py-4 text-right text-sm font-semibold text-cyan-400">Actions</th>
+                                    <th className="px-6 py-4 text-left text-sm font-semibold text-amber-400">Student Name</th>
+                                    <th className="px-6 py-4 text-left text-sm font-semibold text-amber-400">Status</th>
+                                    <th className="px-6 py-4 text-left text-sm font-semibold text-amber-400">Progress</th>
+                                    <th className="px-6 py-4 text-left text-sm font-semibold text-amber-400">Strengths</th>
+                                    <th className="px-6 py-4 text-left text-sm font-semibold text-amber-400">Weaknesses</th>
+                                    <th className="px-6 py-4 text-right text-sm font-semibold text-amber-400">Actions</th>
                                 </tr>
                             </thead>
-                            <tbody className="divide-y divide-slate-100">
+                            <tbody className="divide-y divide-stone-100">
                                 {filteredStudents.map((student) => (
                                     <motion.tr
                                         key={student.id}
@@ -125,18 +125,18 @@ export default function TeacherReports() {
                                     >
                                         <td className="px-6 py-4">
                                             <div className="flex items-center gap-3">
-                                                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-slate-100 font-bold">
+                                                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-stone-100 font-bold">
                                                     {student.name.charAt(0)}
                                                 </div>
                                                 <div>
-                                                    <p className="font-semibold text-slate-100">{student.name}</p>
-                                                    <p className="text-xs text-slate-400">{student.grade}</p>
+                                                    <p className="font-semibold text-stone-100">{student.name}</p>
+                                                    <p className="text-xs text-stone-400">{student.grade}</p>
                                                 </div>
                                             </div>
                                         </td>
                                         <td className="px-6 py-4">
                                             <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${student.status === 'Active' ? 'bg-green-100 text-green-800' :
-                                                    student.status === 'Inactive' ? 'bg-slate-800 text-slate-100' :
+                                                    student.status === 'Inactive' ? 'bg-stone-800 text-stone-100' :
                                                         'bg-red-100 text-red-800'
                                                 }`}>
                                                 {student.status}
@@ -145,13 +145,13 @@ export default function TeacherReports() {
                                         <td className="px-6 py-4">
                                             <div className="w-full max-w-[140px]">
                                                 <div className="flex justify-between text-xs mb-1">
-                                                    <span className="font-medium text-slate-300">{student.progress}%</span>
+                                                    <span className="font-medium text-stone-300">{student.progress}%</span>
                                                 </div>
-                                                <div className="w-full bg-slate-700 rounded-full h-2">
+                                                <div className="w-full bg-stone-700 rounded-full h-2">
                                                     <div
-                                                        className={`h-2 rounded-full ${student.progress >= 80 ? 'bg-slate-8000' :
-                                                                student.progress >= 60 ? 'bg-slate-8000' :
-                                                                    'bg-slate-8000'
+                                                        className={`h-2 rounded-full ${student.progress >= 80 ? 'bg-stone-8000' :
+                                                                student.progress >= 60 ? 'bg-stone-8000' :
+                                                                    'bg-stone-8000'
                                                             }`}
                                                         style={{ width: `${student.progress}%` }}
                                                     ></div>
@@ -161,7 +161,7 @@ export default function TeacherReports() {
                                         <td className="px-6 py-4">
                                             <div className="flex flex-wrap gap-1">
                                                 {student.strengths.map(s => (
-                                                    <span key={s} className="px-2 py-1 bg-slate-800 text-green-700 text-xs rounded-md border border-green-100">
+                                                    <span key={s} className="px-2 py-1 bg-stone-800 text-green-700 text-xs rounded-md border border-green-100">
                                                         {s}
                                                     </span>
                                                 ))}
@@ -170,14 +170,14 @@ export default function TeacherReports() {
                                         <td className="px-6 py-4">
                                             <div className="flex flex-wrap gap-1">
                                                 {student.weak.map(w => (
-                                                    <span key={w} className="px-2 py-1 bg-slate-800 text-red-700 text-xs rounded-md border border-red-100">
+                                                    <span key={w} className="px-2 py-1 bg-stone-800 text-red-700 text-xs rounded-md border border-red-100">
                                                         {w}
                                                     </span>
                                                 ))}
                                             </div>
                                         </td>
                                         <td className="px-6 py-4 text-right">
-                                            <button className="p-2 hover:bg-slate-800 rounded-lg text-slate-400 hover:text-purple-600 transition-colors">
+                                            <button className="p-2 hover:bg-stone-800 rounded-lg text-stone-400 hover:text-purple-600 transition-colors">
                                                 <MoreVertical className="w-5 h-5" />
                                             </button>
                                         </td>

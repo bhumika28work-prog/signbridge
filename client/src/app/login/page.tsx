@@ -59,7 +59,7 @@ export default function LoginPage() {
                     <h1 className="text-4xl font-extrabold mb-2">
                         <span className="gradient-text">Sign In</span>
                     </h1>
-                    <p className="text-cyan-400">Continue your learning journey</p>
+                    <p className="text-amber-400">Continue your learning journey</p>
                 </div>
 
                 {/* Login Form */}
@@ -67,12 +67,12 @@ export default function LoginPage() {
                     <form onSubmit={handleLogin} className="space-y-6">
                         {/* Username Input */}
                         <div>
-                            <label htmlFor="username" className="block text-sm font-semibold text-slate-300 mb-2">
+                            <label htmlFor="username" className="block text-sm font-semibold text-stone-300 mb-2">
                                 Username
                             </label>
                             <div className="relative">
                                 <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                                    <User className="h-5 w-5 text-slate-400" />
+                                    <User className="h-5 w-5 text-stone-400" />
                                 </div>
                                 <input
                                     id="username"
@@ -80,7 +80,7 @@ export default function LoginPage() {
                                     required
                                     value={username}
                                     onChange={(e) => setUsername(e.target.value)}
-                                    className="block w-full pl-12 pr-4 py-3 border-2 border-cyan-500/30 rounded-xl focus:ring-4 focus:ring-cyan- focus:border-cyan- transition-all duration-300"
+                                    className="block w-full pl-12 pr-4 py-3 border-2 border-amber-500/30 rounded-xl focus:ring-4 focus:ring-cyan- focus:border-cyan- transition-all duration-300"
                                     placeholder="Enter your username"
                                 />
                             </div>
@@ -88,12 +88,12 @@ export default function LoginPage() {
 
                         {/* Password Input */}
                         <div>
-                            <label htmlFor="password" className="block text-sm font-semibold text-slate-300 mb-2">
+                            <label htmlFor="password" className="block text-sm font-semibold text-stone-300 mb-2">
                                 Password
                             </label>
                             <div className="relative">
                                 <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                                    <Lock className="h-5 w-5 text-slate-400" />
+                                    <Lock className="h-5 w-5 text-stone-400" />
                                 </div>
                                 <input
                                     id="password"
@@ -101,7 +101,7 @@ export default function LoginPage() {
                                     required
                                     value={password}
                                     onChange={(e) => setPassword(e.target.value)}
-                                    className="block w-full pl-12 pr-4 py-3 border-2 border-cyan-500/30 rounded-xl focus:ring-4 focus:ring-cyan- focus:border-cyan- transition-all duration-300"
+                                    className="block w-full pl-12 pr-4 py-3 border-2 border-amber-500/30 rounded-xl focus:ring-4 focus:ring-cyan- focus:border-cyan- transition-all duration-300"
                                     placeholder="Enter your password"
                                 />
                             </div>
@@ -112,7 +112,7 @@ export default function LoginPage() {
                             <motion.div
                                 initial={{ opacity: 0, y: -10 }}
                                 animate={{ opacity: 1, y: 0 }}
-                                className="p-4 bg-slate-800 border-2 border-red-200 rounded-xl"
+                                className="p-4 bg-stone-800 border-2 border-red-200 rounded-xl"
                             >
                                 <p className="text-sm text-red-600 font-medium">{error}</p>
                             </motion.div>
@@ -122,11 +122,11 @@ export default function LoginPage() {
                         <button
                             type="submit"
                             disabled={loading}
-                            className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-cyan- to-teal- text-slate-100 font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+                            className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-cyan- to-teal- text-stone-100 font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
                         >
                             {loading ? (
                                 <>
-                                    <div className="w-5 h-5 border-2 border-cyan-500/30 border-t-transparent rounded-full animate-spin"></div>
+                                    <div className="w-5 h-5 border-2 border-amber-500/30 border-t-transparent rounded-full animate-spin"></div>
                                     <span>Signing in...</span>
                                 </>
                             ) : (
@@ -139,9 +139,9 @@ export default function LoginPage() {
                     </form>
 
                     {/* Demo Account Info */}
-                    <div className="mt-6 p-4 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl border-2 border-blue-200">
-                        <p className="text-sm font-semibold text-blue-900 mb-2">💡 Demo Account</p>
-                        <p className="text-xs text-blue-700">
+                    <div className="mt-6 p-4 bg-gradient-to-br from-amber-50 to-amber-50 rounded-xl border-2 border-amber-200">
+                        <p className="text-sm font-semibold text-amber-900 mb-2">💡 Demo Account</p>
+                        <p className="text-xs text-amber-700">
                             Just enter any username and password to create a new account automatically!
                         </p>
                     </div>
@@ -149,7 +149,7 @@ export default function LoginPage() {
 
                 {/* Back to Home */}
                 <div className="mt-6 text-center">
-                    <Link href="/" className="text-sm text-cyan-400 hover:text-cyan- font-medium transition-colors">
+                    <Link href="/" className="text-sm text-amber-400 hover:text-cyan- font-medium transition-colors">
                         ← Back to Home
                     </Link>
                 </div>

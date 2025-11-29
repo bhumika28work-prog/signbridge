@@ -91,7 +91,7 @@ export default function WritingCanvas() {
                     <div className="flex flex-wrap gap-6 items-center justify-between">
                         {/* Color Picker */}
                         <div>
-                            <label className="block text-sm font-semibold text-slate-300 mb-3">Color</label>
+                            <label className="block text-sm font-semibold text-stone-300 mb-3">Color</label>
                             <div className="flex gap-2">
                                 {colors.map((c) => (
                                     <button
@@ -108,7 +108,7 @@ export default function WritingCanvas() {
 
                         {/* Brush Size */}
                         <div className="flex-1 min-w-[200px]">
-                            <label className="block text-sm font-semibold text-slate-300 mb-3">
+                            <label className="block text-sm font-semibold text-stone-300 mb-3">
                                 Brush Size: {lineWidth}px
                             </label>
                             <input
@@ -117,7 +117,7 @@ export default function WritingCanvas() {
                                 max="20"
                                 value={lineWidth}
                                 onChange={(e) => setLineWidth(Number(e.target.value))}
-                                className="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-purple-600"
+                                className="w-full h-2 bg-stone-700 rounded-lg appearance-none cursor-pointer accent-purple-600"
                             />
                         </div>
                     </div>
@@ -125,7 +125,7 @@ export default function WritingCanvas() {
 
                 {/* Canvas */}
                 <div className="glass rounded-2xl p-4 mb-6">
-                    <div className="bg-slate-800 rounded-xl overflow-hidden shadow-inner border-4 border-slate-100">
+                    <div className="bg-stone-800 rounded-xl overflow-hidden shadow-inner border-4 border-stone-100">
                         <canvas
                             ref={canvasRef}
                             width={800}
@@ -146,7 +146,7 @@ export default function WritingCanvas() {
                 <div className="flex flex-wrap gap-4 justify-center">
                     <button
                         onClick={clearCanvas}
-                        className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-red-500 to-pink-500 text-slate-100 font-semibold rounded-xl hover:shadow-lg transition-all duration-300 hover:scale-105"
+                        className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-red-500 to-pink-500 text-stone-100 font-semibold rounded-xl hover:shadow-lg transition-all duration-300 hover:scale-105"
                     >
                         <Eraser className="w-5 h-5" />
                         Clear Canvas
@@ -154,14 +154,14 @@ export default function WritingCanvas() {
 
                     <button
                         onClick={downloadCanvas}
-                        className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-slate-100 font-semibold rounded-xl hover:shadow-lg transition-all duration-300 hover:scale-105"
+                        className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-amber-500 to-amber-500 text-stone-100 font-semibold rounded-xl hover:shadow-lg transition-all duration-300 hover:scale-105"
                     >
                         <Download className="w-5 h-5" />
                         Download
                     </button>
 
                     <button
-                        className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-slate-100 font-semibold rounded-xl hover:shadow-lg transition-all duration-300 hover:scale-105"
+                        className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-stone-100 font-semibold rounded-xl hover:shadow-lg transition-all duration-300 hover:scale-105"
                     >
                         <Sparkles className="w-5 h-5" />
                         AI Check
@@ -176,7 +176,7 @@ export default function WritingCanvas() {
                     className="mt-8 glass rounded-2xl p-6"
                 >
                     <h3 className="font-bold text-lg mb-3 gradient-text">💡 Practice Tips</h3>
-                    <ul className="space-y-2 text-cyan-400">
+                    <ul className="space-y-2 text-amber-400">
                         <li>• Start with light strokes and gradually increase pressure</li>
                         <li>• Practice each character multiple times for muscle memory</li>
                         <li>• Use the AI Check feature to get instant feedback on your writing</li>

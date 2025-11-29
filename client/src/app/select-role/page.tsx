@@ -36,16 +36,16 @@ export default function SelectRole() {
             title: 'Teacher',
             description: 'View student reports and manage syllabus',
             icon: BookOpen,
-            gradient: 'from-blue-600 to-cyan-600',
-            bgGradient: 'from-blue-50 to-cyan-50',
+            gradient: 'from-amber-600 to-amber-600',
+            bgGradient: 'from-amber-50 to-amber-50',
         },
         {
             id: 'parent',
             title: 'Parent',
             description: 'Monitor your child\'s progress and view detailed reports',
             icon: Users,
-            gradient: 'from-green-600 to-emerald-600',
-            bgGradient: 'from-green-50 to-emerald-50',
+            gradient: 'from-green-600 to-yellow-600',
+            bgGradient: 'from-green-50 to-yellow-50',
         },
     ];
 
@@ -61,7 +61,7 @@ export default function SelectRole() {
                     <h1 className="text-4xl sm:text-5xl font-bold mb-4">
                         Welcome, <span className="gradient-text">{user.username}</span>!
                     </h1>
-                    <p className="text-xl text-cyan-400">
+                    <p className="text-xl text-amber-400">
                         Please select your role to continue
                     </p>
                 </motion.div>
@@ -79,11 +79,11 @@ export default function SelectRole() {
                         >
                             <div className={`glass rounded-3xl p-8 h-full hover:shadow-2xl transition-all duration-300 bg-gradient-to-br ${role.bgGradient}`}>
                                 <div className={`inline-flex p-6 rounded-2xl bg-gradient-to-br ${role.gradient} mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                                    <role.icon className="w-12 h-12 text-slate-100" />
+                                    <role.icon className="w-12 h-12 text-stone-100" />
                                 </div>
-                                <h3 className="text-3xl font-bold mb-4 text-slate-100">{role.title}</h3>
-                                <p className="text-lg text-cyan-400 leading-relaxed mb-6">{role.description}</p>
-                                <div className={`inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r ${role.gradient} text-slate-100 font-semibold rounded-xl group-hover:shadow-lg transition-all`}>
+                                <h3 className="text-3xl font-bold mb-4 text-stone-100">{role.title}</h3>
+                                <p className="text-lg text-amber-400 leading-relaxed mb-6">{role.description}</p>
+                                <div className={`inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r ${role.gradient} text-stone-100 font-semibold rounded-xl group-hover:shadow-lg transition-all`}>
                                     Continue as {role.title}
                                 </div>
                             </div>

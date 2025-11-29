@@ -36,8 +36,8 @@ export default function GamesPage() {
             title: 'Sign Quiz Challenge',
             description: 'Test your knowledge by identifying the correct ISL signs',
             icon: Trophy,
-            gradient: 'from-blue-500 to-cyan-500',
-            bgGradient: 'from-blue-50 to-cyan-50',
+            gradient: 'from-amber-500 to-amber-500',
+            bgGradient: 'from-amber-50 to-amber-50',
             difficulty: 'Medium',
             href: '/student/games/sign-quiz',
         },
@@ -46,8 +46,8 @@ export default function GamesPage() {
             title: 'Sign Builder',
             description: 'Build words by arranging ISL signs in the correct order',
             icon: Puzzle,
-            gradient: 'from-green-500 to-emerald-500',
-            bgGradient: 'from-green-50 to-emerald-50',
+            gradient: 'from-green-500 to-yellow-500',
+            bgGradient: 'from-green-50 to-yellow-50',
             difficulty: 'Medium',
             href: '/student/games/sign-builder',
         },
@@ -79,13 +79,13 @@ export default function GamesPage() {
                 >
                     <div className="flex items-center gap-4 mb-4">
                         <div className="p-4 bg-gradient-to-br from-cyan- to-teal- rounded-2xl">
-                            <Gamepad2 className="w-10 h-10 text-slate-100" />
+                            <Gamepad2 className="w-10 h-10 text-stone-100" />
                         </div>
                         <div>
                             <h1 className="text-4xl sm:text-5xl font-bold gradient-text">
                                 Learning Games
                             </h1>
-                            <p className="text-xl text-cyan-400 mt-2">
+                            <p className="text-xl text-amber-400 mt-2">
                                 Practice ISL through fun and interactive games
                             </p>
                         </div>
@@ -102,7 +102,7 @@ export default function GamesPage() {
                     >
                         <div className="flex items-center justify-between">
                             <div>
-                                <p className="text-cyan-400 text-sm font-medium mb-1">Games Played</p>
+                                <p className="text-amber-400 text-sm font-medium mb-1">Games Played</p>
                                 <p className="text-3xl font-bold gradient-text">0</p>
                             </div>
                             <div className="p-3 bg-cyan- rounded-xl">
@@ -119,7 +119,7 @@ export default function GamesPage() {
                     >
                         <div className="flex items-center justify-between">
                             <div>
-                                <p className="text-cyan-400 text-sm font-medium mb-1">High Score</p>
+                                <p className="text-amber-400 text-sm font-medium mb-1">High Score</p>
                                 <p className="text-3xl font-bold gradient-text">0</p>
                             </div>
                             <div className="p-3 bg-green-100 rounded-xl">
@@ -136,7 +136,7 @@ export default function GamesPage() {
                     >
                         <div className="flex items-center justify-between">
                             <div>
-                                <p className="text-cyan-400 text-sm font-medium mb-1">Achievements</p>
+                                <p className="text-amber-400 text-sm font-medium mb-1">Achievements</p>
                                 <p className="text-3xl font-bold gradient-text">0</p>
                             </div>
                             <div className="p-3 bg-yellow-100 rounded-xl">
@@ -159,11 +159,11 @@ export default function GamesPage() {
                             <Link href={game.href}>
                                 <div className={`glass rounded-3xl p-8 h-full hover:shadow-2xl transition-all duration-300 bg-gradient-to-br ${game.bgGradient} cursor-pointer group`}>
                                     <div className={`inline-flex p-6 rounded-2xl bg-gradient-to-br ${game.gradient} mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                                        <game.icon className="w-12 h-12 text-slate-100" />
+                                        <game.icon className="w-12 h-12 text-stone-100" />
                                     </div>
 
                                     <div className="flex items-center justify-between mb-3">
-                                        <h3 className="text-2xl font-bold text-slate-100">{game.title}</h3>
+                                        <h3 className="text-2xl font-bold text-stone-100">{game.title}</h3>
                                         <span className={`px-3 py-1 rounded-full text-xs font-bold ${game.difficulty === 'Easy' ? 'bg-green-100 text-green-700' :
                                                 game.difficulty === 'Medium' ? 'bg-yellow-100 text-yellow-700' :
                                                     'bg-red-100 text-red-700'
@@ -172,11 +172,11 @@ export default function GamesPage() {
                                         </span>
                                     </div>
 
-                                    <p className="text-lg text-cyan-400 leading-relaxed mb-6">
+                                    <p className="text-lg text-amber-400 leading-relaxed mb-6">
                                         {game.description}
                                     </p>
 
-                                    <div className={`inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r ${game.gradient} text-slate-100 font-semibold rounded-xl group-hover:shadow-lg transition-all`}>
+                                    <div className={`inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r ${game.gradient} text-stone-100 font-semibold rounded-xl group-hover:shadow-lg transition-all`}>
                                         Play Now
                                         <Gamepad2 className="w-5 h-5 group-hover:scale-110 transition-transform" />
                                     </div>
@@ -191,13 +191,13 @@ export default function GamesPage() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.9 }}
-                    className="mt-12 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-6 border-2 border-blue-200"
+                    className="mt-12 bg-gradient-to-br from-amber-50 to-amber-50 rounded-2xl p-6 border-2 border-amber-200"
                 >
-                    <h4 className="font-bold text-blue-900 mb-3 flex items-center gap-2">
+                    <h4 className="font-bold text-amber-900 mb-3 flex items-center gap-2">
                         <Brain className="w-5 h-5" />
                         💡 Game Tips
                     </h4>
-                    <ul className="space-y-2 text-blue-800 text-sm">
+                    <ul className="space-y-2 text-amber-800 text-sm">
                         <li>• Start with easier games to build confidence</li>
                         <li>• Take your time to learn each ISL sign properly</li>
                         <li>• Practice regularly to improve your scores</li>

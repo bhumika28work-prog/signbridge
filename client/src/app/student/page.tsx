@@ -26,8 +26,8 @@ export default function StudentDashboard() {
             title: 'English',
             description: 'Learn English alphabets and vocabulary with ISL',
             icon: Globe,
-            gradient: 'from-blue-600 to-cyan-600',
-            bgGradient: 'from-blue-50 to-cyan-50',
+            gradient: 'from-amber-600 to-amber-600',
+            bgGradient: 'from-amber-50 to-amber-50',
             href: '/student/english',
         },
         {
@@ -44,8 +44,8 @@ export default function StudentDashboard() {
             title: 'Science',
             description: 'Explore scientific concepts through visual learning',
             icon: Beaker,
-            gradient: 'from-green-600 to-emerald-600',
-            bgGradient: 'from-green-50 to-emerald-50',
+            gradient: 'from-green-600 to-yellow-600',
+            bgGradient: 'from-green-50 to-yellow-50',
             href: '/student/science',
         },
         {
@@ -80,7 +80,7 @@ export default function StudentDashboard() {
                     <h1 className="text-4xl sm:text-5xl font-bold mb-4">
                         Welcome back, <span className="gradient-text">{user.username}</span>!
                     </h1>
-                    <p className="text-xl text-cyan-400">
+                    <p className="text-xl text-amber-400">
                         Choose a subject to continue your learning journey
                     </p>
                 </motion.div>
@@ -97,11 +97,11 @@ export default function StudentDashboard() {
                             <Link href={module.href}>
                                 <div className={`glass rounded-3xl p-8 h-full hover:shadow-2xl transition-all duration-300 bg-gradient-to-br ${module.bgGradient} cursor-pointer group`}>
                                     <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-br ${module.gradient} mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                                        <module.icon className="w-10 h-10 text-slate-100" />
+                                        <module.icon className="w-10 h-10 text-stone-100" />
                                     </div>
-                                    <h3 className="text-3xl font-bold mb-3 text-slate-100">{module.title}</h3>
-                                    <p className="text-lg text-cyan-400 leading-relaxed mb-6">{module.description}</p>
-                                    <div className={`inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r ${module.gradient} text-slate-100 font-semibold rounded-xl group-hover:shadow-lg transition-all`}>
+                                    <h3 className="text-3xl font-bold mb-3 text-stone-100">{module.title}</h3>
+                                    <p className="text-lg text-amber-400 leading-relaxed mb-6">{module.description}</p>
+                                    <div className={`inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r ${module.gradient} text-stone-100 font-semibold rounded-xl group-hover:shadow-lg transition-all`}>
                                         Start Learning
                                         <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                                     </div>
@@ -118,23 +118,23 @@ export default function StudentDashboard() {
                     transition={{ delay: 0.6, duration: 0.6 }}
                     className="mt-12 glass rounded-3xl p-8"
                 >
-                    <h2 className="text-2xl font-bold mb-6 text-slate-100">Your Progress</h2>
+                    <h2 className="text-2xl font-bold mb-6 text-stone-100">Your Progress</h2>
                     <div className="grid md:grid-cols-4 gap-6">
                         <div className="text-center">
                             <div className="text-4xl font-bold gradient-text mb-2">12</div>
-                            <p className="text-cyan-400">Lessons Completed</p>
+                            <p className="text-amber-400">Lessons Completed</p>
                         </div>
                         <div className="text-center">
                             <div className="text-4xl font-bold gradient-text mb-2">45</div>
-                            <p className="text-cyan-400">Practice Sessions</p>
+                            <p className="text-amber-400">Practice Sessions</p>
                         </div>
                         <div className="text-center">
                             <div className="text-4xl font-bold gradient-text mb-2">8</div>
-                            <p className="text-cyan-400">Achievements</p>
+                            <p className="text-amber-400">Achievements</p>
                         </div>
                         <div className="text-center">
                             <div className="text-4xl font-bold gradient-text mb-2">92%</div>
-                            <p className="text-cyan-400">Average Score</p>
+                            <p className="text-amber-400">Average Score</p>
                         </div>
                     </div>
                 </motion.div>
