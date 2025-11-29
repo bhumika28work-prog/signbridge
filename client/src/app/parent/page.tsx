@@ -31,7 +31,7 @@ export default function ParentDashboard() {
                     <h1 className="text-4xl sm:text-5xl font-bold mb-4">
                         Parent Dashboard
                     </h1>
-                    <p className="text-xl text-amber-400">
+                    <p className="text-xl text-cyan-400">
                         Monitor your child's learning progress
                     </p>
                 </motion.div>
@@ -43,10 +43,10 @@ export default function ParentDashboard() {
                     transition={{ delay: 0.2, duration: 0.6 }}
                     className="glass rounded-3xl p-6 mb-8"
                 >
-                    <label className="block text-sm font-semibold text-stone-300 mb-2">
+                    <label className="block text-sm font-semibold text-slate-300 mb-2">
                         Select Student
                     </label>
-                    <select className="w-full px-4 py-3 border-2 border-amber-500/30 rounded-xl focus:ring-4 focus:ring-purple-100 focus:border-purple-500 transition-all">
+                    <select className="w-full px-4 py-3 border-2 border-cyan-500/30 rounded-xl focus:ring-4 focus:ring-purple-100 focus:border-purple-500 transition-all">
                         <option>John Doe (Your Child)</option>
                     </select>
                 </motion.div>
@@ -70,7 +70,7 @@ export default function ParentDashboard() {
                                 <stat.icon className={`w-6 h-6 text-${stat.color}-600`} />
                             </div>
                             <div className="text-3xl font-bold gradient-text mb-1">{stat.value}</div>
-                            <div className="text-sm text-amber-400">{stat.label}</div>
+                            <div className="text-sm text-cyan-400">{stat.label}</div>
                         </motion.div>
                     ))}
                 </div>
@@ -95,10 +95,10 @@ export default function ParentDashboard() {
                         ].map((item, index) => (
                             <div key={index}>
                                 <div className="flex justify-between mb-2">
-                                    <span className="font-semibold text-stone-300">{item.subject}</span>
-                                    <span className="font-bold text-stone-100">{item.progress}%</span>
+                                    <span className="font-semibold text-slate-300">{item.subject}</span>
+                                    <span className="font-bold text-slate-100">{item.progress}%</span>
                                 </div>
-                                <div className="w-full h-3 bg-stone-700 rounded-full overflow-hidden">
+                                <div className="w-full h-3 bg-slate-700 rounded-full overflow-hidden">
                                     <motion.div
                                         initial={{ width: 0 }}
                                         animate={{ width: `${item.progress}%` }}
@@ -126,11 +126,11 @@ export default function ParentDashboard() {
                             { activity: 'Scored 95% in Maths Quiz', time: '1 day ago', type: 'success' },
                             { activity: 'Started Science Module', time: '2 days ago', type: 'info' },
                         ].map((item, index) => (
-                            <div key={index} className="flex items-start gap-4 p-4 bg-stone-800 rounded-xl">
-                                <div className={`w-2 h-2 rounded-full mt-2 ${item.type === 'success' ? 'bg-stone-8000' : 'bg-stone-8000'}`} />
+                            <div key={index} className="flex items-start gap-4 p-4 bg-slate-800 rounded-xl">
+                                <div className={`w-2 h-2 rounded-full mt-2 ${item.type === 'success' ? 'bg-slate-8000' : 'bg-slate-8000'}`} />
                                 <div className="flex-1">
-                                    <p className="font-medium text-stone-100">{item.activity}</p>
-                                    <p className="text-sm text-stone-400">{item.time}</p>
+                                    <p className="font-medium text-slate-100">{item.activity}</p>
+                                    <p className="text-sm text-slate-400">{item.time}</p>
                                 </div>
                             </div>
                         ))}

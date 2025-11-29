@@ -58,7 +58,7 @@ export default function ISLSignDisplay({ signs, autoPlay = false, speed = 1500 }
     if (signs.length === 0) {
         return (
             <div className="glass rounded-2xl p-12 text-center">
-                <p className="text-amber-400">Enter text to see ISL signs</p>
+                <p className="text-cyan-400">Enter text to see ISL signs</p>
             </div>
         );
     }
@@ -99,7 +99,7 @@ export default function ISLSignDisplay({ signs, autoPlay = false, speed = 1500 }
                                 {currentSign.character.toUpperCase()}
                             </h3>
                             {currentSign.description && (
-                                <p className="text-amber-400">{currentSign.description}</p>
+                                <p className="text-cyan-400">{currentSign.description}</p>
                             )}
                             <span className="inline-block px-3 py-1 bg-cyan- text-cyan- rounded-full text-sm font-medium">
                                 {currentSign.category}
@@ -112,11 +112,11 @@ export default function ISLSignDisplay({ signs, autoPlay = false, speed = 1500 }
             <div className="flex items-center justify-between gap-4">
                 <div className="flex-1">
                     <div className="flex items-center gap-2 mb-2">
-                        <span className="text-sm font-medium text-stone-300">
+                        <span className="text-sm font-medium text-slate-300">
                             {currentIndex + 1} / {signs.length}
                         </span>
                     </div>
-                    <div className="w-full h-2 bg-stone-700 rounded-full overflow-hidden">
+                    <div className="w-full h-2 bg-slate-700 rounded-full overflow-hidden">
                         <motion.div
                             className="h-full bg-gradient-to-r from-cyan- to-teal-"
                             initial={{ width: 0 }}
@@ -128,7 +128,7 @@ export default function ISLSignDisplay({ signs, autoPlay = false, speed = 1500 }
 
                 <button
                     onClick={handlePlayPause}
-                    className="p-4 bg-gradient-to-r from-cyan- to-teal- text-stone-100 rounded-full hover:shadow-lg transition-all duration-300 hover:scale-110"
+                    className="p-4 bg-gradient-to-r from-cyan- to-teal- text-slate-100 rounded-full hover:shadow-lg transition-all duration-300 hover:scale-110"
                 >
                     {isPlaying ? <Pause className="w-6 h-6" /> : <Play className="w-6 h-6 ml-1" />}
                 </button>
@@ -144,7 +144,7 @@ export default function ISLSignDisplay({ signs, autoPlay = false, speed = 1500 }
                         }}
                         className={`transition-all duration-300 ${index === currentIndex
                             ? 'w-8 h-3 bg-gradient-to-r from-cyan- to-teal- rounded-full'
-                            : 'w-3 h-3 bg-stone-300 hover:bg-stone-400 rounded-full'
+                            : 'w-3 h-3 bg-slate-300 hover:bg-slate-400 rounded-full'
                             }`}
                         title={sign.character}
                     />
@@ -152,7 +152,7 @@ export default function ISLSignDisplay({ signs, autoPlay = false, speed = 1500 }
             </div>
 
             <div className="glass rounded-2xl p-6">
-                <h4 className="font-semibold text-stone-300 mb-4">Sign Sequence:</h4>
+                <h4 className="font-semibold text-slate-300 mb-4">Sign Sequence:</h4>
                 <div className="flex flex-wrap gap-2">
                     {signs.map((sign, index) => (
                         <button
@@ -162,8 +162,8 @@ export default function ISLSignDisplay({ signs, autoPlay = false, speed = 1500 }
                                 stopAutoPlay();
                             }}
                             className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${index === currentIndex
-                                ? 'bg-gradient-to-r from-cyan- to-teal- text-stone-100 shadow-lg scale-110'
-                                : 'bg-stone-800 text-stone-300 hover:bg-stone-900'
+                                ? 'bg-gradient-to-r from-cyan- to-teal- text-slate-100 shadow-lg scale-110'
+                                : 'bg-slate-800 text-slate-300 hover:bg-slate-900'
                                 }`}
                         >
                             {sign.character.toUpperCase()}

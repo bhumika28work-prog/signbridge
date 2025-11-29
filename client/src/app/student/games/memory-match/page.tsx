@@ -141,26 +141,26 @@ export default function MemoryMatchGame() {
                     className="mb-8"
                 >
                     <h1 className="text-4xl font-bold gradient-text mb-2">Sign Memory Match</h1>
-                    <p className="text-xl text-amber-400">Match pairs of ISL signs!</p>
+                    <p className="text-xl text-cyan-400">Match pairs of ISL signs!</p>
                 </motion.div>
 
                 {/* Game Stats */}
                 {isPlaying && (
                     <div className="grid grid-cols-3 gap-4 mb-8">
                         <div className="glass rounded-xl p-4 text-center">
-                            <Timer className="w-6 h-6 mx-auto mb-2 text-amber-600" />
-                            <p className="text-2xl font-bold text-stone-100">{formatTime(timer)}</p>
-                            <p className="text-sm text-amber-400">Time</p>
+                            <Timer className="w-6 h-6 mx-auto mb-2 text-cyan-600" />
+                            <p className="text-2xl font-bold text-slate-100">{formatTime(timer)}</p>
+                            <p className="text-sm text-cyan-400">Time</p>
                         </div>
                         <div className="glass rounded-xl p-4 text-center">
                             <Trophy className="w-6 h-6 mx-auto mb-2 text-green-600" />
-                            <p className="text-2xl font-bold text-stone-100">{moves}</p>
-                            <p className="text-sm text-amber-400">Moves</p>
+                            <p className="text-2xl font-bold text-slate-100">{moves}</p>
+                            <p className="text-sm text-cyan-400">Moves</p>
                         </div>
                         <div className="glass rounded-xl p-4 text-center">
-                            <Star className="w-6 h-6 mx-auto mb-2 text-yellow-600" />
-                            <p className="text-2xl font-bold text-stone-100">{matches}/{cards.length / 2}</p>
-                            <p className="text-sm text-amber-400">Matches</p>
+                            <Star className="w-6 h-6 mx-auto mb-2 text-emerald-600" />
+                            <p className="text-2xl font-bold text-slate-100">{matches}/{cards.length / 2}</p>
+                            <p className="text-sm text-cyan-400">Matches</p>
                         </div>
                     </div>
                 )}
@@ -176,19 +176,19 @@ export default function MemoryMatchGame() {
                         <div className="grid gap-4">
                             <button
                                 onClick={() => initializeGame('easy')}
-                                className="px-8 py-6 bg-gradient-to-r from-green-500 to-yellow-500 text-stone-100 font-bold text-xl rounded-2xl hover:shadow-xl transition-all hover:scale-105"
+                                className="px-8 py-6 bg-gradient-to-r from-green-500 to-emerald-500 text-slate-100 font-bold text-xl rounded-2xl hover:shadow-xl transition-all hover:scale-105"
                             >
                                 Easy (6 Pairs)
                             </button>
                             <button
                                 onClick={() => initializeGame('medium')}
-                                className="px-8 py-6 bg-gradient-to-r from-yellow-500 to-orange-500 text-stone-100 font-bold text-xl rounded-2xl hover:shadow-xl transition-all hover:scale-105"
+                                className="px-8 py-6 bg-gradient-to-r from-emerald-500 to-teal-500 text-slate-100 font-bold text-xl rounded-2xl hover:shadow-xl transition-all hover:scale-105"
                             >
                                 Medium (8 Pairs)
                             </button>
                             <button
                                 onClick={() => initializeGame('hard')}
-                                className="px-8 py-6 bg-gradient-to-r from-red-500 to-teal- text-stone-100 font-bold text-xl rounded-2xl hover:shadow-xl transition-all hover:scale-105"
+                                className="px-8 py-6 bg-gradient-to-r from-red-500 to-teal- text-slate-100 font-bold text-xl rounded-2xl hover:shadow-xl transition-all hover:scale-105"
                             >
                                 Hard (12 Pairs)
                             </button>
@@ -233,7 +233,7 @@ export default function MemoryMatchGame() {
 
                                         {/* Card Front */}
                                         <div
-                                            className="absolute w-full h-full bg-stone-800 rounded-2xl p-3 shadow-lg flex items-center justify-center"
+                                            className="absolute w-full h-full bg-slate-800 rounded-2xl p-3 shadow-lg flex items-center justify-center"
                                             style={{
                                                 backfaceVisibility: 'hidden',
                                                 transform: 'rotateY(180deg)'
@@ -273,19 +273,19 @@ export default function MemoryMatchGame() {
                                 onClick={(e) => e.stopPropagation()}
                             >
                                 <div className="text-6xl mb-4">🎉</div>
-                                <h2 className="text-4xl font-bold text-stone-100 mb-4">Congratulations!</h2>
-                                <p className="text-xl text-stone-200 mb-6">You completed the game!</p>
+                                <h2 className="text-4xl font-bold text-slate-100 mb-4">Congratulations!</h2>
+                                <p className="text-xl text-slate-200 mb-6">You completed the game!</p>
 
                                 <div className="space-y-3 mb-8">
-                                    <div className="flex justify-between text-stone-100">
+                                    <div className="flex justify-between text-slate-100">
                                         <span>Time:</span>
                                         <span className="font-bold">{formatTime(timer)}</span>
                                     </div>
-                                    <div className="flex justify-between text-stone-100">
+                                    <div className="flex justify-between text-slate-100">
                                         <span>Moves:</span>
                                         <span className="font-bold">{moves}</span>
                                     </div>
-                                    <div className="flex justify-between text-stone-100">
+                                    <div className="flex justify-between text-slate-100">
                                         <span>Difficulty:</span>
                                         <span className="font-bold capitalize">{difficulty}</span>
                                     </div>
@@ -294,14 +294,14 @@ export default function MemoryMatchGame() {
                                 <div className="flex gap-4">
                                     <button
                                         onClick={() => initializeGame(difficulty)}
-                                        className="flex-1 px-6 py-3 bg-gradient-to-r from-cyan- to-teal- text-stone-100 font-bold rounded-xl hover:shadow-xl transition-all flex items-center justify-center gap-2"
+                                        className="flex-1 px-6 py-3 bg-gradient-to-r from-cyan- to-teal- text-slate-100 font-bold rounded-xl hover:shadow-xl transition-all flex items-center justify-center gap-2"
                                     >
                                         <RotateCcw className="w-5 h-5" />
                                         Play Again
                                     </button>
                                     <Link
                                         href="/student/games"
-                                        className="flex-1 px-6 py-3 bg-stone-800 text-cyan- font-bold rounded-xl hover:shadow-xl transition-all flex items-center justify-center gap-2"
+                                        className="flex-1 px-6 py-3 bg-slate-800 text-cyan- font-bold rounded-xl hover:shadow-xl transition-all flex items-center justify-center gap-2"
                                     >
                                         <ArrowLeft className="w-5 h-5" />
                                         Games Menu
