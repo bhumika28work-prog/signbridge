@@ -23,18 +23,30 @@
 
   input,
   textarea,
+  select,
   [contenteditable] {
     cursor: text;
     -webkit-user-select: text;
     -moz-user-select: text;
     -ms-user-select: text;
     user-select: text;
+    @apply bg-slate-700 text-white border-cyan-500/30;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    @apply text-slate-400;
+  }
+
+  input:focus,
+  textarea:focus,
+  select:focus {
+    @apply ring-2 ring-cyan-500 border-cyan-500 bg-slate-600 outline-none;
   }
 
   a,
   button,
   [role="button"],
-  select,
   label[for],
   .cursor-pointer {
     cursor: pointer;
@@ -43,7 +55,7 @@
 
 @layer utilities {
   .glass {
-    @apply bg-slate-800/40 backdrop-blur-xl border border-cyan-500/20 shadow-2xl shadow-cyan-500/10;
+    @apply bg-slate-800/60 backdrop-blur-xl border border-cyan-500/30 shadow-2xl shadow-cyan-500/10;
   }
 
   .glass-dark {
